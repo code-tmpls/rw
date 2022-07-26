@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 
 export const Grid = ({ data }) =>{
- return (<div class="container-fluid">
+ return (<div class="container-fluid grid-layout">
     {data?.map((row)=>{
         return (<div className="row">
             {row.map((column)=>{
