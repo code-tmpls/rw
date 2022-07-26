@@ -41,6 +41,11 @@ export const SideWrapperData = [
                { id:"range", url:"FormElement/Range", title:"Range" },
                { id:"inputGroup", url:"FormElement/InputGroup", title:"InputGroup" }]
     },
+    { id:"layouts",
+      url:"#", 
+      title:"Layouts",
+      children:[{ id:"grid", url:"Layout/Grid", title:"Grid" }]
+    },
     { id:"Visualization",
       url:"#", 
       title:"Visualization",

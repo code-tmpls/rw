@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from '@LibComponents/Forms/index.js';
+import { Select } from '@LibFormElements/Select/index.js';
 import { NavBarTabs } from '@LibComponents/Tabs/NavBarTabs.js';
 import { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 

@@ -1,5 +1,6 @@
 import React from 'react';
+import { Range } from '@LibFormElements/Range/index.js';
 
 export const RangePage = () =>{
- return (<div>RangePage</div>);
+ return (<Range />);
 };

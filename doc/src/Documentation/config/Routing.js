@@ -26,6 +26,8 @@ import { ToolTipPage } from '@DocComponents/toolTip/index.js';
 import { AppRoutingPage } from '@DocFeatures/appRouting/index.js';
 import { SpeechListenerPage } from '@DocFeatures/speechListener/index.js';
 
+import { GridPage } from '@DocLayout/grid/index.js';
+
 import { SelectPage } from '@DocFormElements/select/index.js';
 import { TextBoxPage } from '@DocFormElements/textBox/index.js';
 import { TextAreaPage } from '@DocFormElements/textArea/index.js';
@@ -100,6 +102,9 @@ export const Routes = [
     { path:"FormElement/Range", component:<Page content={<RangePage />} /> },
     { path:"FormElement/InputGroup", component:<Page content={<InputGroupPage />} /> },
 
+    { path:"Layout/Grid", component:<Page content={<GridPage />} /> },
+
+    
     { path:"Visualization/AreaChart", component:<Page content={<AreaChartPage />} /> },
     { path:"Visualization/BarChart", component:<Page content={<BarChartPage />} /> },
     { path:"Visualization/BoxChart", component:<Page content={<BoxChartPage />} /> },
