@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { Page } from '@DocCore/Page.js';
-
 import { AccordianPage } from '@DocComponents/accordian/index.js';
 import { AccordianListItemsPage } from '@DocComponents/accordianListItems/index.js';
 import { AlertPage } from '@DocComponents/alert/index.js';
@@ -59,13 +58,6 @@ import { ReduxPage } from '@DocAdvancedTopics/redux/index.js';
 import { AuthenticationPage } from '@DocReadyMadeScreen/authentication/index.js';
 import { ReadyMadeDropdownsPage } from '@DocReadyMadeScreen/readyMadeDropdowns/index.js';
 
-
-
-const baseURL = 'http://localhost:8080/';
-
-const Home = ({ param }) =>{
- return (<div>{param}</div>);
-};
 
 export const Routes = [
     { path:"/", component: <Navigate to="Component/AccordianList" /> },
