@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { Page } from '@DocCore/Page.js';
+const Page  = React.lazy( ()=>import('@DocCore/Page.js') );
+
 import { AccordianPage } from '@DocComponents/accordian/index.js';
 import { AccordianListItemsPage } from '@DocComponents/accordianListItems/index.js';
-import { AlertPage } from '@DocComponents/alert/index.js';
+const AlertPage = React.lazy( ()=>import('@DocComponents/alert/index.js') );
 import { AvatarPage } from '@DocComponents/avatar/index.js';
 import { BadgePage } from '@DocComponents/badge/index.js';
 import { BreadcrumbPage } from '@DocComponents/breadcrumb/index.js';
@@ -55,9 +56,17 @@ import { WaterfallChartPage } from '@DocVisualization/waterfallChart/index.js';
 import { AppColorsPage } from '@DocThemes/appColors/index.js';
 import { HighlightPage } from '@DocCodeEditorsViewers/highlight/index.js';
 import { ReduxPage } from '@DocAdvancedTopics/redux/index.js';
+import { RxJSPage } from '@DocAdvancedTopics/rxjs/index.js';
 import { AuthenticationPage } from '@DocReadyMadeScreen/authentication/index.js';
 import { ReadyMadeDropdownsPage } from '@DocReadyMadeScreen/readyMadeDropdowns/index.js';
 
+
+
+const baseURL = 'http://localhost:8080/';
+
+const Home = ({ param }) =>{
+ return (<div>{param}</div>);
+};
 
 export const Routes = [
     { path:"/", component: <Navigate to="Component/AccordianList" /> },
@@ -118,6 +127,7 @@ export const Routes = [
     { path:"CodeEditorsViewers/Highlight", component:<Page content={<HighlightPage />} /> },
 
     { path:"AdvancedTopics/Redux", component:<Page content={<ReduxPage />} /> },
+    { path:"AdvancedTopics/RxJS", component:<Page content={<RxJSPage />} /> },
 
     { path:"ReadyMadeScreen/Authentication", component:<Page content={<AuthenticationPage />} /> },
     { path:"ReadyMadeScreen/ReadyMadeDropdowns", component:<Page content={<ReadyMadeDropdownsPage />} /> }

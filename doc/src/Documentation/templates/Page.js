@@ -4,11 +4,11 @@ import { NavBarTabs } from '@LibComponents/Tabs/NavBarTabs.js';
 import { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 
 import { AccordianListItems } from '@LibComponents/AccordianListItems/index.js';
-import { Colors } from '../../Utils/GlobalStyles.js';
+import { Colors } from '@LibUtils/GlobalStyles.js';
 import { SideWrapperData } from '@DocConfig/SideWrapperData.js';
 import { urlParams } from '@LibUtils/AppConfig.js';
 
-export const Page = ({ content }) =>{
+const Page = ({ content }) =>{
  
  const ChooseTheme = () =>{
   return (<Select 
@@ -61,3 +61,5 @@ export const Page = ({ content }) =>{
             />
  </>);
 };
+
+export default Page;

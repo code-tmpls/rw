@@ -78,7 +78,8 @@ export const SideWrapperData = [
     { id:"advancedTopics",
       url:"#", 
       title:"Advanced Topics",
-      children:[{ id:"redux", url:"advancedTopics/Redux", title:"Redux" }]
+      children:[{ id:"redux", url:"AdvancedTopics/Redux", title:"Redux" },
+      { id:"rxJs", url:"AdvancedTopics/RxJS", title:"RxJS" }]
     },
     { id:"readyMadeScreen",
       url:"#", 

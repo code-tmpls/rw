@@ -1,9 +1,24 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const WebpackObfuscator = require('webpack-obfuscator');
 const Path = require('path');
 const baseUrl = 'http://localhost:8080/';
 
 module.exports = {
- mode: 'development',
+ mode: 'production',
+ performance: {
+    hints: false,
+   // maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+},
+ entry: {
+    index: {
+        dependOn: 'default',
+        import: Path.resolve(__dirname, "src","index.js"),
+    },
+    default: {     
+        import: Path.resolve(__dirname, "src","default.js")
+    }
+ },
  output: {
     path: Path.resolve(__dirname, 'dist/'),
     publicPath: baseUrl, 
@@ -35,14 +50,19 @@ module.exports = {
         },
         {
             test: /\.js$/,
-            use: ["babel-loader"]
+            use: [{
+                loader: "babel-loader",
+                options: {
+                  presets: ['@babel/preset-env']
+                }
+              }]
         }
     ]
  },
  plugins:[
   new HTMLWebpackPlugin({
     template: Path.resolve(__dirname, "public","index.html")
-  })   
+  })
  ],
  optimization:{
     splitChunks : { chunks: "all" }
@@ -50,17 +70,18 @@ module.exports = {
  resolve: {
     symlinks: false,
     alias: {
+        '@Lib': Path.resolve(__dirname, 'src/default.js'),
         '@Assets': Path.resolve(__dirname, 'public/assets'),
-        '@LibAdvancedTopics': Path.resolve(__dirname, 'src/AdvancedTopics'),
-        '@LibCodeEditorsViewers': Path.resolve(__dirname, 'src/CodeEditorsViewers'),
-        '@LibComponents': Path.resolve(__dirname, 'src/Components'),
-        '@LibFeatures': Path.resolve(__dirname, 'src/Features'),
-        '@LibFormElements': Path.resolve(__dirname, 'src/FormElements'),
-        '@LibLayout': Path.resolve(__dirname, 'src/Layout'),
-        '@LibReadyMadeScreens': Path.resolve(__dirname, 'src/ReadyMadeScreens'),
-        '@LibThemes': Path.resolve(__dirname, 'src/Themes'),
-        '@LibUtils': Path.resolve(__dirname, 'src/Utils'),
-        '@LibVisualization': Path.resolve(__dirname, 'src/Visualization'),
+        '@LibAdvancedTopics': Path.resolve(__dirname, 'src/Library/AdvancedTopics'),
+        '@LibCodeEditorsViewers': Path.resolve(__dirname, 'src/Library/CodeEditorsViewers'),
+        '@LibComponents': Path.resolve(__dirname, 'src/Library/Components'),
+        '@LibFeatures': Path.resolve(__dirname, 'src/Library/Features'),
+        '@LibFormElements': Path.resolve(__dirname, 'src/Library/FormElements'),
+        '@LibLayout': Path.resolve(__dirname, 'src/Library/Layout'),
+        '@LibReadyMadeScreens': Path.resolve(__dirname, 'src/Library/ReadyMadeScreens'),
+        '@LibThemes': Path.resolve(__dirname, 'src/Library/Themes'),
+        '@LibUtils': Path.resolve(__dirname, 'src/Library/Utils'),
+        '@LibVisualization': Path.resolve(__dirname, 'src/Library/Visualization'),
         '@DocConfig': Path.resolve(__dirname, 'src/Documentation/config'),
         '@DocCore': Path.resolve(__dirname, 'src/Documentation/templates'),
         '@DocAdvancedTopics': Path.resolve(__dirname, 'src/Documentation/templates/AdvancedTopics'),
