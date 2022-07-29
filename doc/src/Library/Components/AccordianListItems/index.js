@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink   } from 'react-router-dom';
 import { FontAwesomeIcon } from '@LibComponents/Icons/index.js';
 import './index.css';
-import { urlParams } from '@LibUtils/AppConfig.js';
+import { UrlParams } from '@LibUtils/AppConfig.js';
 import { Colors } from '@LibUtils/GlobalStyles.js';
 
 export const AccordianListItems = ({ data, highlightColor, defaultColor, selectKey, selectValue }) =>{
@@ -76,7 +76,7 @@ export const AccordianListItems = ({ data, highlightColor, defaultColor, selectK
             </div>
           );
       } else {
-        return (<NavLink  key={'St-'+index} to={urlParams().basePrefix+'/'+url} style={{ textDecoration:'none' }}>
+        return (<NavLink  key={'St-'+index} to={UrlParams().basePrefix+'/'+url} style={{ textDecoration:'none' }}>
         <div className="row col-12 accordian-title" style={{ 
           cursor:(id === hierarachyPath?.[0])?'pointer':'',
           color: (id === hierarachyPath?.[0])?hColor:dColor,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextArea } from '@LibFormElements/TextArea/index.js';
+import { TextArea } from '@Lib';
 
 export const TextAreaPage = () =>{
  return (<TextArea />);

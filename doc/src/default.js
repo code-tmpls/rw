@@ -17,6 +17,7 @@ export { ListGroup } from '@LibComponents/ListGroup/index.js';
 export { Loading } from '@LibComponents/Loading/index.js';
 export { Modal } from '@LibComponents/Modal/index.js';
 // Navbar
+export { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 export { RuleBuilder } from '@LibComponents/RuleBuilder/index.js';
 export { Table } from '@LibComponents/Table/index.js';
 export { NavBarTabs } from '@LibComponents/Tabs/index.js';
@@ -67,6 +68,8 @@ export { ReadyMadeDropdowns } from '@LibReadyMadeScreens/ReadyMadeDropdowns/inde
 
 
 
-export { UUID } from '@LibUtils/AppConfig.js';
+export { UrlParams, UUID } from '@LibUtils/AppConfig.js';
+export { DeviceRecognizer } from '@LibUtils/DeviceRecognizer.js';
+export { Colors } from '@LibUtils/GlobalStyles.js';
 
 export default RootProvider;

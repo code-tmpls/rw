@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from '@LibFormElements/Select/index.js';
+import { Select } from '@Lib';
 
 export const SelectPage = () =>{
  return (

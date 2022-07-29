@@ -1,5 +1,5 @@
 import React from 'react';
-import { DateTimePicker } from '@LibFormElements/DateTimePicker/index.js';
+import { DateTimePicker } from '@Lib';
 
 export const DateTimePickerPage = () =>{
  return (<DateTimePicker />);

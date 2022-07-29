@@ -1,7 +1,5 @@
 import React from 'react';
-import { Highlight } from '@LibCodeEditorsViewers/Highlight/index.js';
-import { AccordianListItems } from '@LibComponents/AccordianListItems/index.js';
-import { Colors } from '@LibUtils/GlobalStyles.js';
+import { Highlight, AccordianListItems, Colors } from '@Lib';
 
 const data1 = [{
     id:"FirstLevel",

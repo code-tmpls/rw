@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputGroup } from '@LibFormElements/InputGroup/index.js';
+import { InputGroup } from '@Lib';
 
 export const InputGroupPage = () =>{
  return (<InputGroup />);

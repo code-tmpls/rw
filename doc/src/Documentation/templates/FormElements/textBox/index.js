@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextBox } from '@LibFormElements/TextBox/index.js';
+import { TextBox } from '@Lib';
 
 export const TextBoxPage = () =>{
  return (<TextBox />);

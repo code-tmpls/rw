@@ -1,12 +1,6 @@
 import React from 'react';
-import { Select } from '@LibFormElements/Select/index.js';
-import { NavBarTabs } from '@LibComponents/Tabs/index.js';
-import { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
-
-import { AccordianListItems } from '@LibComponents/AccordianListItems/index.js';
-import { Colors } from '@LibUtils/GlobalStyles.js';
+import { Select, NavBarTabs, SideWrapperNavbar, AccordianListItems, Colors, UrlParams } from '@Lib';
 import { SideWrapperData } from '@DocConfig/SideWrapperData.js';
-import { urlParams } from '@LibUtils/AppConfig.js';
 
 const Page = ({ content }) =>{
  
@@ -55,7 +49,7 @@ const Page = ({ content }) =>{
                 highlightColor={Colors.primary} 
                 data={SideWrapperData} 
                 selectKey="url" 
-                selectValue={urlParams().basePath} />  }
+                selectValue={UrlParams().basePath} />  }
             headerContent={NavMenuHeader} 
             bodyContent={content} 
             />

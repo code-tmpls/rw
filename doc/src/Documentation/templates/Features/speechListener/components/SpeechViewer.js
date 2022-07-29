@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { SpeechListener } from '@LibFeatures/SpeechListener/index.js';
-import { Button } from '@LibComponents/Button/index.js';
-import { FontAwesomeIcon } from '@LibComponents/Icons/index.js';
+import { Button, FontAwesomeIcon, SpeechListener } from '@Lib';
 import './SpeechViewer.css';
 
 const SpeechViewer = () =>{

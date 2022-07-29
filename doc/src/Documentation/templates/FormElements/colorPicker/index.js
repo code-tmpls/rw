@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColorPicker } from '@LibFormElements/ColorPicker/index.js';
+import { ColorPicker } from '@Lib';
 
 export const ColorPickerPage = () =>{
  return (<ColorPicker />);

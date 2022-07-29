@@ -1,5 +1,5 @@
 import React from 'react';
-import { Choice } from '@LibFormElements/Choice/index.js';
+import { Choice } from '@Lib';
 
 const CheckBox = () =>{
  return (<div>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@LibComponents/Icons/index.js';
-import { Button } from '@LibComponents/Button/index.js';
-import { DeviceRecognizer } from '@LibUtils/DeviceRecognizer.js';
+import { Button, DeviceRecognizer, FontAwesomeIcon } from '@Lib';
 import './index.css';
 
 export const SideWrapperNavbar = (props) => {

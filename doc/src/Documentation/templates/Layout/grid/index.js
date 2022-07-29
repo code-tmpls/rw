@@ -1,6 +1,5 @@
 import React from 'react';
-import { Grid } from '@LibLayout/Grid/index.js';
-import { Highlight } from '@LibCodeEditorsViewers/Highlight/index.js';
+import { Grid, Highlight } from '@Lib';
 
 const HelloWorld = ()=>{
  return <div style={{ border:'1px solid #ccc'}}>HelloWorld</div>

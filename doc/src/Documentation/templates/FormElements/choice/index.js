@@ -1,7 +1,5 @@
 import React from 'react';
-import { Highlight } from '@LibCodeEditorsViewers/Highlight/index.js';
-import { Grid } from '@LibLayout/Grid/index.js';
-import { Order } from '@LibLayout/Order/index.js';
+import { Card, Grid, Highlight, Order } from '@Lib';
 import CheckBoxBasic from './components/basic-checkbox.js';
 import RadioBasic from './components/basic-radio.js';
 import CheckBoxChecked from './components/checked-checkbox.js';
@@ -10,7 +8,6 @@ import { default as CheckBoxBasicJS }  from '!!raw-loader!./components/basic-che
 import { default as RadioBasicJS }  from '!!raw-loader!./components/basic-radio.js';
 import { default as CheckBoxCheckedJS }  from '!!raw-loader!./components/checked-checkbox.js';
 import { default as RadioCheckedJS }  from '!!raw-loader!./components/checked-radio.js';
-import { Card } from '@LibComponents/Card/index.js';
 
 
 const CheckBoxChoice = ({ component, stringComponent })=>{

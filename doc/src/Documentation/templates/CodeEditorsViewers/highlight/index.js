@@ -1,7 +1,5 @@
 import React from 'react';
-import { Highlight } from '@LibCodeEditorsViewers/Highlight/index.js';
-import { Table } from '@LibComponents/Table/index.js';
-import { Button } from '@LibComponents/Button/index.js';
+import { Highlight, Table } from '@Lib';
 import SampleCode from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
 

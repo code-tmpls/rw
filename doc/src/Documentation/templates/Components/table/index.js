@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from '@LibComponents/Table/index.js';
+import { Table } from '@Lib';
 
 
 export const TablePage = () =>{

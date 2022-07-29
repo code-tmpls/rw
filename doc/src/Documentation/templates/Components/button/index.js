@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@LibComponents/Button/index.js';
-import { Highlight } from '@LibCodeEditorsViewers/Highlight/index.js';
+import { Button, Highlight } from '@Lib';
 
 const m5p = { paddingTop:'15px' };
 export const ButtonPage = ()=>{
