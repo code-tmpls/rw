@@ -4,7 +4,7 @@ const Path = require('path');
 const baseUrl = 'http://localhost:8080/';
 
 module.exports = {
- mode: 'production',
+ mode: 'development',
  performance: {
     hints: false,
    // maxEntrypointSize: 512000,
@@ -35,7 +35,11 @@ module.exports = {
         {
             test: /\.(png|jpe?g|gif)$/i,
             use: [ "file-loader" ],
-        },
+        },/*
+        {
+            test: /\.(woff|woff2|ttf)$/,
+            use: [ "url-loader" ],
+        }, */
         {
             test:/\.css$/,
             use: [ "style-loader", "css-loader" ]

@@ -3,6 +3,13 @@ body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3
 body::-webkit-scrollbar { width:6px;height: 6px;background-color: #F5F5F5; }        
 body::-webkit-scrollbar-thumb { background-color: #000000; }
 
+h1 { font-size: calc(1.375rem + 1.5vw); }
+h2 { font-size: calc(1.325rem + .9vw); }
+h3 { font-size: calc(1.3rem + .6vw); }
+h4 { font-size: calc(1.275rem + .3vw); }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
 hr { margin-bottom: 0px; }
 
 html { overflow-x:hidden; }
