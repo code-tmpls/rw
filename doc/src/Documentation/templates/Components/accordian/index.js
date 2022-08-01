@@ -1,6 +1,6 @@
 import React from 'react';
+import { Accordian } from '@LibComponents/Accordian/index.js';
 
 export const AccordianPage = () =>{
-    console.log('AccordianPage');
- return (<div>AccordianPage</div>);
+ return (<Accordian />);
 };
