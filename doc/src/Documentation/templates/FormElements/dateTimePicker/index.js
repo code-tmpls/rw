@@ -1,5 +1,5 @@
 import React from 'react';
-import { DateTimePicker } from '@Lib';
+import { DateTimePicker } from 'react-webpack-lib';
 
 export const DateTimePickerPage = () =>{
  return (<DateTimePicker />);

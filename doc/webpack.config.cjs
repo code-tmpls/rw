@@ -74,13 +74,14 @@ module.exports = {
  resolve: {
     symlinks: false,
     alias: {
-        '@Lib': Path.resolve(__dirname, 'src/default.js'),
+        'react-webpack-lib': Path.resolve(__dirname, 'src/default.js'),
         '@Assets': Path.resolve(__dirname, 'public/assets'),
         '@LibAdvancedTopics': Path.resolve(__dirname, 'src/Library/AdvancedTopics'),
         '@LibCodeEditorsViewers': Path.resolve(__dirname, 'src/Library/CodeEditorsViewers'),
         '@LibComponents': Path.resolve(__dirname, 'src/Library/Components'),
         '@LibFeatures': Path.resolve(__dirname, 'src/Library/Features'),
         '@LibFormElements': Path.resolve(__dirname, 'src/Library/FormElements'),
+        '@LibHeadersAndFooters': Path.resolve(__dirname, 'src/Library/HeadersAndFooters'),
         '@LibLayout': Path.resolve(__dirname, 'src/Library/Layout'),
         '@LibReadyMadeScreens': Path.resolve(__dirname, 'src/Library/ReadyMadeScreens'),
         '@LibThemes': Path.resolve(__dirname, 'src/Library/Themes'),
@@ -93,6 +94,7 @@ module.exports = {
         '@DocComponents': Path.resolve(__dirname, 'src/Documentation/templates/Components'),
         '@DocFeatures': Path.resolve(__dirname, 'src/Documentation/templates/Features'),
         '@DocFormElements': Path.resolve(__dirname, 'src/Documentation/templates/FormElements'),
+        '@DocHeadersAndFooters': Path.resolve(__dirname, 'src/Documentation/templates/HeadersAndFooters'),
         '@DocLayout': Path.resolve(__dirname, 'src/Documentation/templates/Layout'),
         '@DocReadyMadeScreen': Path.resolve(__dirname, 'src/Documentation/templates/ReadyMadeScreen'),
         '@DocThemes': Path.resolve(__dirname, 'src/Documentation/templates/Themes'),

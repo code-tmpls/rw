@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from '@Lib';
+import { Select } from 'react-webpack-lib';
 
 export const SelectPage = () =>{
  return (

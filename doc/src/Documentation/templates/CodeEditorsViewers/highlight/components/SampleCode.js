@@ -1,5 +1,5 @@
 import React from 'react';
-import { Highlight } from '@Lib';
+import { Highlight } from 'react-webpack-lib';
 
 const SampleCode = () =>{
  return (

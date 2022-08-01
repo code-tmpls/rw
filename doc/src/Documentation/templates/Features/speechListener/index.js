@@ -1,5 +1,5 @@
 import React from 'react';
-import { Highlight } from '@Lib';
+import { Highlight } from 'react-webpack-lib';
 import SpeechViewer from './components/SpeechViewer.js';
 import { default as SpeechViewerJs }  from '!!raw-loader!./components/SpeechViewer.js';
 import { default as SpeechViewerStyles }  from '!!raw-loader!./components/SpeechViewer.css';

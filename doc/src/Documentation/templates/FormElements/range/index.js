@@ -1,5 +1,5 @@
 import React from 'react';
-import { Range } from '@Lib';
+import { Range } from 'react-webpack-lib';
 
 export const RangePage = () =>{
  return (<Range />);

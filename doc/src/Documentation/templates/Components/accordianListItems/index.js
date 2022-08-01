@@ -1,5 +1,5 @@
 import React from 'react';
-import { Highlight, AccordianListItems, Colors } from '@Lib';
+import { Highlight, AccordianListItems, Colors } from 'react-webpack-lib';
 
 const data1 = [{
     id:"FirstLevel",

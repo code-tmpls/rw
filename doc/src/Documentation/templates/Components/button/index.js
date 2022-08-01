@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Highlight } from '@Lib';
+import { Button, Highlight } from 'react-webpack-lib';
 
 const m5p = { paddingTop:'15px' };
 export const ButtonPage = ()=>{

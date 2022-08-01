@@ -40,6 +40,8 @@ export { Select } from '@LibFormElements/Select/index.js';
 export { TextArea } from '@LibFormElements/TextArea/index.js';
 export { TextBox } from '@LibFormElements/TextBox/index.js';
 
+export { SimpleHeader, FilledHeader } from '@LibHeadersAndFooters/Heading/index.js';
+
 export { AreaChart } from '@LibVisualization/AreaChart/index.js';
 export { BarChart } from '@LibVisualization/BarChart/index.js';
 export { BoxChart } from '@LibVisualization/BoxChart/index.js';
@@ -71,5 +73,7 @@ export { ReadyMadeDropdowns } from '@LibReadyMadeScreens/ReadyMadeDropdowns/inde
 export { UrlParams, UUID } from '@LibUtils/AppConfig.js';
 export { DeviceRecognizer } from '@LibUtils/DeviceRecognizer.js';
 export { Colors } from '@LibUtils/GlobalStyles.js';
+
+
 
 export default RootProvider;

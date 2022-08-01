@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, NavBarTabs, SideWrapperNavbar, AccordianListItems, Colors, UrlParams } from '@Lib';
+import { Select, NavBarTabs, SideWrapperNavbar, AccordianListItems, Colors, UrlParams } from 'react-webpack-lib';
 import { SideWrapperData } from '@DocConfig/SideWrapperData.js';
 
 const Page = ({ content }) =>{

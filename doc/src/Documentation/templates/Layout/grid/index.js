@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Highlight } from '@Lib';
+import { Grid, Highlight } from 'react-webpack-lib';
 
 const HelloWorld = ()=>{
  return <div style={{ border:'1px solid #ccc'}}>HelloWorld</div>

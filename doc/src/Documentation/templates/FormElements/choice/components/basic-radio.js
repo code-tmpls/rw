@@ -1,5 +1,5 @@
 import React from 'react';
-import { Choice } from '@Lib';
+import { Choice } from 'react-webpack-lib';
 
 const Radio = () =>{
  return (<>

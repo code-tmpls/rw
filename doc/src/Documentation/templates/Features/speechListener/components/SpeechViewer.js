@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FontAwesomeIcon, SpeechListener } from '@Lib';
+import { Button, FontAwesomeIcon, SpeechListener } from 'react-webpack-lib';
 import './SpeechViewer.css';
 
 const SpeechViewer = () =>{

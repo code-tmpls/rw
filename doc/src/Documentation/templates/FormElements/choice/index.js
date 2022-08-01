@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Grid, Highlight, Order } from '@Lib';
+import { Card, Grid, Highlight, Order } from 'react-webpack-lib';
 import CheckBoxBasic from './components/basic-checkbox.js';
 import RadioBasic from './components/basic-radio.js';
 import CheckBoxChecked from './components/checked-checkbox.js';

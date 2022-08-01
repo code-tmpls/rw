@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from '@Lib';
+import { Table } from 'react-webpack-lib';
 
 
 export const TablePage = () =>{

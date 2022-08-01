@@ -41,6 +41,8 @@ import { DateTimePickerPage } from '@DocFormElements/DateTimePicker/index.js';
 import { RangePage } from '@DocFormElements/Range/index.js';
 import { InputGroupPage } from '@DocFormElements/InputGroup/index.js';
 
+import { HeadingPage } from '@DocHeadersAndFooters/Heading/index.js';
+
 import { FontPage } from '@DocLayout/Fonts/index.js';
 import { GridPage } from '@DocLayout/Grid/index.js';
 import { OrderPage } from '@DocLayout/Order/index.js';
@@ -101,6 +103,8 @@ export const Routes = [
     { path:"FormElement/Range", component:<Page content={<RangePage />} /> },
     { path:"FormElement/InputGroup", component:<Page content={<InputGroupPage />} /> },
 
+    { path:"HeadersAndFooters/Headings", component:<Page content={<HeadingPage />} /> },
+    
     { path:"Layout/Fonts", component:<Page content={<FontPage />} /> },
     { path:"Layout/Grid", component:<Page content={<GridPage />} /> },
     { path:"Layout/Order", component:<Page content={<OrderPage />} /> },
