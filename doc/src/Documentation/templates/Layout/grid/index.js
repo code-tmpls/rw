@@ -15,6 +15,6 @@ export const GridPage = () =>{
     { sm:2, md:'', lg:'', xl:'', xxl:'', component:<HelloWorld /> }],
 
     [{ component:<HelloWorld /> }],
- ]}/>
+ ]} />
  </>);
 };
