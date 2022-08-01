@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import { SimpleHeader } from 'react-webpack-lib';
 import './index.css';
 
 export const FontPage = () =>{
- return (<div>FontPage</div>);
+ return (<><SimpleHeader title="Fonts" /></>);
 };

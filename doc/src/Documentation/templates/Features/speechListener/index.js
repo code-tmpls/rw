@@ -1,17 +1,14 @@
 import React from 'react';
-import { Highlight } from 'react-webpack-lib';
+import { SimpleHeader, Highlight } from 'react-webpack-lib';
 import SpeechViewer from './components/SpeechViewer.js';
 import { default as SpeechViewerJs }  from '!!raw-loader!./components/SpeechViewer.js';
 import { default as SpeechViewerStyles }  from '!!raw-loader!./components/SpeechViewer.css';
 
 export const SpeechListenerPage = () =>{
  
- return (<div className="container-fluid">
-    <div className="row">
-        <div className="col-md-12 pad15p">
-            <h5><b>Speech Listener</b></h5><hr/>
-        </div>
-    </div>
+ return (<>
+ <SimpleHeader title="Speech Listener" />
+ <div className="container-fluid">
    <div className="row">
     <div className="col-md-8 pad15p">
         <Highlight lang="javascript" content={SpeechViewerJs.toString()} />
@@ -23,6 +20,7 @@ export const SpeechListenerPage = () =>{
         <SpeechViewer />
     </div>
    </div>
- </div>); 
+ </div>
+ </>); 
 
 };

@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const DendogramChartPage = () =>{
- return (<div>DendogramChartPage</div>);
+ return (<><SimpleHeader title=" Dendogram Chart" /></>);
 };

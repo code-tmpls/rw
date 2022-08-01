@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const LineChartPage = () =>{
- return (<div>LineChartPage</div>);
+ return (<><SimpleHeader title="Line Chart" /></>);
 };

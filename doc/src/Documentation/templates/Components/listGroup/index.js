@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const ListGroupPage = () =>{
- return (<div>ListGroupPage</div>);
+ return (<><SimpleHeader title="List Group" /></>);
 };

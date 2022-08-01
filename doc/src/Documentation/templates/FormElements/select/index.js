@@ -1,8 +1,9 @@
 import React from 'react';
-import { Select } from 'react-webpack-lib';
+import { SimpleHeader, Select } from 'react-webpack-lib';
 
 export const SelectPage = () =>{
- return (
+ return (<>
+ <SimpleHeader title="Select" />
  <Select 
     label="Select Theme" 
     options={[{ id:'light', label:'Light Theme', value:'Light' },
@@ -17,5 +18,6 @@ export const SelectPage = () =>{
        document.body.style.backgroundColor = bgColor;
        document.body.style.color = color;
     }}  
-  />);
+  />
+  </>);
 };

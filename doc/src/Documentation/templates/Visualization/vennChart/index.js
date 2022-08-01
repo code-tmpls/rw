@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const VennChartPage = () =>{
- return (<div>VennChartPage</div>);
+ return (<><SimpleHeader title="VennChart" /></>);
 };

@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const ReadyMadeDropdownsPage = () =>{
- return (<div>ReadyMadeDropdownsPage</div>);
+ return (<><SimpleHeader title="ReadyMadeDropdowns" /></>);
 };

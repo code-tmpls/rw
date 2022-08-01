@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const AvatarPage = () =>{
- return (<div>AvatarPage</div>);
+ return (<><SimpleHeader title="Avatar" /></>);
 };

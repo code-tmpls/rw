@@ -1,6 +1,9 @@
 import React from 'react';
-import { Accordian } from '@LibComponents/Accordian/index.js';
+import { SimpleHeader, Accordian } from 'react-webpack-lib';
 
 export const AccordianPage = () =>{
- return (<Accordian />);
+ return (<>
+ <SimpleHeader title="Accordian" />
+ <Accordian />
+ </>);
 };

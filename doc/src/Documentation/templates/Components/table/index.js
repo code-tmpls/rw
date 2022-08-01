@@ -1,9 +1,10 @@
 import React from 'react';
-import { Table } from 'react-webpack-lib';
+import { SimpleHeader, Table } from 'react-webpack-lib';
 
 
 export const TablePage = () =>{
- return (<Table data={[{
+ return (<><SimpleHeader title="Table" />
+ <Table data={[{
     "Column Name 01":"Value 01",
     "Column Name 02":"Value 02",
     "Column Name 03":"Value 03",
@@ -12,5 +13,6 @@ export const TablePage = () =>{
     "Column Name 01":"Value 01",
     "Column Name 02":"Value 02",
     "Column Name 03":"Value 03",
-   }]}/>);
+   }]}/>
+   </>);
 };

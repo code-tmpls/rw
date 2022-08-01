@@ -1,6 +1,6 @@
 import React from 'react';
-import { InputGroup } from 'react-webpack-lib';
+import { SimpleHeader, InputGroup } from 'react-webpack-lib';
 
 export const InputGroupPage = () =>{
- return (<InputGroup />);
+ return (<><SimpleHeader title="InputGroup" /><InputGroup /></>);
 };

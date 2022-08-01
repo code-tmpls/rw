@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button, Highlight } from 'react-webpack-lib';
+import { SimpleHeader, Button, Highlight } from 'react-webpack-lib';
 
 const m5p = { paddingTop:'15px' };
 export const ButtonPage = ()=>{
     return (<>
-       <span style={{ padding:'5px' }}><b>Buttons (Political Brief):</b><br/></span>
+       <SimpleHeader title="Buttons" />
        <table className="table table-borderless">
        <tbody>
        <tr>

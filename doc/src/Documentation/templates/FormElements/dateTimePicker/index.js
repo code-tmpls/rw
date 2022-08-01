@@ -1,7 +1,7 @@
 import React from 'react';
-import { DateTimePicker } from 'react-webpack-lib';
+import { SimpleHeader, DateTimePicker } from 'react-webpack-lib';
 
 export const DateTimePickerPage = () =>{
- return (<DateTimePicker />);
+ return (<><SimpleHeader title="DateTimePicker" /><DateTimePicker /></>);
 };
 

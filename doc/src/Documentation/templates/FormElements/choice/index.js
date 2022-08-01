@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Grid, Highlight, Order } from 'react-webpack-lib';
+import { SimpleHeader, Card, Grid, Highlight, Order } from 'react-webpack-lib';
 import CheckBoxBasic from './components/basic-checkbox.js';
 import RadioBasic from './components/basic-radio.js';
 import CheckBoxChecked from './components/checked-checkbox.js';
@@ -48,8 +48,8 @@ const Point2 = () =>{
 
 export const ChoicePage = () =>{
  return (<>
+    <SimpleHeader title="Choice" />
     <Grid data={[
-         [{ sm:12, md:12, lg:12, xl:12, xxl:12, component:<h5><b>Form Element : Choice</b><hr/></h5> }],
         [{ sm:12, md:12, lg:12, xl:12, xxl:12, component:<Order type="number" data={[<Point1 />,<Point2 />]} /> }]
     ]} />    
  </>);

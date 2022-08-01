@@ -1,5 +1,5 @@
 import React from 'react';
-import { Highlight, AccordianListItems, Colors } from 'react-webpack-lib';
+import { SimpleHeader, Highlight, AccordianListItems, Colors } from 'react-webpack-lib';
 
 const data1 = [{
     id:"FirstLevel",
@@ -207,12 +207,9 @@ export const AccordianListItemsPage = () =>{
 </div>);
  };
 
- return (<div className="container-fluid"  style={{ margin:'10px' }}>
-    <div className="row">
-      <div className="col-md-12">
-        <h5><b>AccordianListItems</b></h5><hr/>
-      </div>
-    </div>
+ return (<>
+ <SimpleHeader title="AccordianListItems" />
+ <div className="container-fluid">
     <div className="row">
      <div className="col-md-12">
         <ol>
@@ -227,5 +224,6 @@ export const AccordianListItemsPage = () =>{
         </ol>
      </div>
     </div>
- </div>);
+ </div>
+ </>);
 };

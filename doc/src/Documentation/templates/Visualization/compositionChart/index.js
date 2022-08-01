@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const CompositionChartPage = () =>{
- return (<div>CompositionChartPage</div>);
+ return (<><SimpleHeader title="CompositionChart" /></>);
 };

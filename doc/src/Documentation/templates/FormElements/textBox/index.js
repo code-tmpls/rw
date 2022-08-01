@@ -1,6 +1,6 @@
 import React from 'react';
-import { TextBox } from 'react-webpack-lib';
+import { SimpleHeader, TextBox } from 'react-webpack-lib';
 
 export const TextBoxPage = () =>{
- return (<TextBox />);
+ return (<><SimpleHeader title="TextBox" /><TextBox /></>);
 };

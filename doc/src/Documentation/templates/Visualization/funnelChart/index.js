@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const FunnelChartPage = () =>{
- return (<div>FunnelChartPage</div>);
+ return (<><SimpleHeader title="Funnel Chart" /></>);
 };

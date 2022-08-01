@@ -1,6 +1,6 @@
 import React from 'react';
-import { Range } from 'react-webpack-lib';
+import { SimpleHeader, Range } from 'react-webpack-lib';
 
 export const RangePage = () =>{
- return (<Range />);
+ return (<><SimpleHeader title="Range" /><Range /></>);
 };

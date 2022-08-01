@@ -1,8 +1,8 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 const AlertPage = () =>{
-    console.log('AlertPage');
- return (<div>AlertPage</div>);
+ return (<><SimpleHeader title="Alert" /></>);
 };
 
 export default AlertPage;

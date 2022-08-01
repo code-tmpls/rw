@@ -1,5 +1,7 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
+
 
 export const ToolTipPage = () =>{
- return (<div>ToolTipPage</div>);
+ return (<><SimpleHeader title="Toast" /></>);
 };

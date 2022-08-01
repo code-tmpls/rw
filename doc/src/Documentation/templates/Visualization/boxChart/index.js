@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const BoxChartPage = () =>{
- return (<div>BoxChartPage</div>);
+ return (<><SimpleHeader title="BoxChart" /></>);
 };

@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const CarouselPage = () =>{
- return (<div>CarouselPage</div>);
+ return (<><SimpleHeader title="Carousel" /></>);
 };

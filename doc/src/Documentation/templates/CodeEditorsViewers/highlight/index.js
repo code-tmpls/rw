@@ -23,12 +23,9 @@ const TableData = [
 ];
 
 export const HighlightPage = () =>{
- return (<div className="container-fluid">
-    <div className="row">
-        <div className="col-md-12">
-            <SimpleHeader title="Highlight" />
-        </div>
-    </div>
+ return (<>
+ <SimpleHeader title="Highlight" />
+ <div className="container-fluid">
     <div className="row pageContent">
         <div className="col-md-6">
          <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
@@ -41,5 +38,6 @@ export const HighlightPage = () =>{
           <Table data={TableData}/>
         </div>
     </div>
- </div>);
+ </div>
+ </>);
 };

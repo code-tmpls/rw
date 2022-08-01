@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const ToastPage = () =>{
- return (<div>ToastPage</div>);
+ return (<><SimpleHeader title="Toast" /></>);
 };

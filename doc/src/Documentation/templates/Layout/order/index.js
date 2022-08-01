@@ -1,5 +1,6 @@
 import React from "react";
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const OrderPage = () =>{
- return (<div>OrderPage</div>);
+ return (<div><SimpleHeader title="Order" /></div>);
 };

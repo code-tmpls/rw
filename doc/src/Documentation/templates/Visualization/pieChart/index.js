@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const PieChartPage = () =>{
- return (<div>PieChartPage</div>);
+ return (<><SimpleHeader title="PieChart" /></>);
 };

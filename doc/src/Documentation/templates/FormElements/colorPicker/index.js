@@ -1,6 +1,6 @@
 import React from 'react';
-import { ColorPicker } from 'react-webpack-lib';
+import { SimpleHeader, ColorPicker } from 'react-webpack-lib';
 
 export const ColorPickerPage = () =>{
- return (<ColorPicker />);
+ return (<><SimpleHeader title="ColorPicker" /><ColorPicker /></>);
 };

@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const AreaChartPage = () =>{
- return (<div>AreaChartPage</div>);
+ return (<><SimpleHeader title="AreaChart" /></>);
 };

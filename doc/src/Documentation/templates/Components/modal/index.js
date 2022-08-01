@@ -1,5 +1,6 @@
 import React from 'react';
+import { SimpleHeader } from 'react-webpack-lib';
 
 export const ModalPage = () =>{
- return (<div>ModalPage</div>);
+ return (<><SimpleHeader title="Modal" /></>);
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import { TextArea } from 'react-webpack-lib';
+import { SimpleHeader, TextArea } from 'react-webpack-lib';
 
 export const TextAreaPage = () =>{
- return (<TextArea />);
+ return (<><SimpleHeader title="TextArea" /><TextArea /></>);
 };
