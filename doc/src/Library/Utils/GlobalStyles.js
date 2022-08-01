@@ -6,5 +6,6 @@ export const Colors = {
  warning: '#ffca2c',
  info: '#31d2f2',
  dark: '#1c1f23',
- light: '#f8f9fa'
+ light: '#f8f9fa',
+ grey: '#ededed'
 };

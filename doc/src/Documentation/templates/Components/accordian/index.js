@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight } from 'react-webpack-lib';
+import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'react-webpack-lib';
 import SampleCode, { SampleNote1, SampleNote2 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
 
@@ -8,7 +8,7 @@ console.log(SampleCodeJS.toString());
  const Note1 = () =>{
   return (<>
   <div className="mtop10p mbot10p"><b>Simple Accordian that allows Toggle on Collapse:</b></div>
-  <Card component={<>
+  <Card backgroundColor={Colors.grey} component={<>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['5T9']} />
   <div className="mtop10p mbot10p"><b>Output:</b></div>
@@ -20,7 +20,7 @@ console.log(SampleCodeJS.toString());
  const Note2 = () =>{
   return (<>
   <div className="mtop10p mbot10p"><b>Accordian with default Open:</b></div>
-  <Card component={<>
+  <Card backgroundColor={Colors.grey} component={<>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['15T20']} />
   <div className="mtop10p mbot10p"><b>Output:</b></div>
