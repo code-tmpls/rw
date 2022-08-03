@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'antd/dist/antd.css'; 
 import './index.css';
 import RootProvider, { AppRouting } from 'react-webpack-lib';
 import  { Routes } from '@DocConfig/Routing.js';

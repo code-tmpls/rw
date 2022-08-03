@@ -45,11 +45,14 @@ const Page = ({ content }) =>{
  <SideWrapperNavbar 
             barTheme="outline-primary" 
             title="Documentation" 
-            sideWrapperContent={<AccordianListItems 
+            sideWrapperContent={<>
+            <div style={{ marginLeft:'30px', marginTop:'15px' }}><b>Get Started</b></div>
+            <AccordianListItems 
                 highlightColor={Colors.primary} 
                 data={SideWrapperData} 
                 selectKey="url" 
-                selectValue={UrlParams().basePath} />  }
+                selectValue={UrlParams().basePath} />  
+            </>}
             headerContent={NavMenuHeader} 
             bodyContent={content} 
             />
