@@ -1,4 +1,3 @@
-
 import './default.css';
 
 export { Accordian } from '@LibComponents/Accordian/index.js';
@@ -31,6 +30,7 @@ export { SpeechListener } from '@LibFeatures/SpeechListener/index.js';
 export { Grid } from '@LibLayout/Grid/index.js';
 export { Order } from '@LibLayout/Order/index.js';
 
+export { Autocomplete } from '@LibFormElements/Autocomplete/index.js';
 export { Choice } from '@LibFormElements/Choice/index.js';
 export { ColorPicker } from '@LibFormElements/ColorPicker/index.js';
 export { DateTimePicker } from '@LibFormElements/DateTimePicker/index.js';

@@ -15,9 +15,11 @@ import { AvatarPage } from '@DocComponents/Avatar/index.js';
 import { BadgePage } from '@DocComponents/Badge/index.js';
 import { BreadcrumbPage } from '@DocComponents/Breadcrumb/index.js';
 import { ButtonPage } from '@DocComponents/Button/index.js';
+import { CalendarPage } from '@DocComponents/Calendar/index.js';
 import { CardPage } from '@DocComponents/Card/index.js';
 import { CarouselPage } from '@DocComponents/Carousel/index.js';
 import { CascaderPage } from '@DocComponents/Cascader/index.js';
+import { DrawerPage } from '@DocComponents/Drawer/index.js';
 import { ElementGroupPage } from '@DocComponents/ElementGroup/index.js';
 import { ListGroupPage } from '@DocComponents/ListGroup/index.js';
 import { LoadingPage } from '@DocComponents/Loading/index.js';
@@ -32,6 +34,7 @@ import { ToolTipPage } from '@DocComponents/ToolTip/index.js';
 import { AppRoutingPage } from '@DocFeatures/AppRouting/index.js';
 import { SpeechListenerPage } from '@DocFeatures/SpeechListener/index.js';
 
+import { AutocompletePage } from '@DocFormElements/Autocomplete/index.js';
 import { SelectPage } from '@DocFormElements/Select/index.js';
 import { TextBoxPage } from '@DocFormElements/TextBox/index.js';
 import { TextAreaPage } from '@DocFormElements/TextArea/index.js';
@@ -77,9 +80,11 @@ export const Routes = [
     { path:"Component/Badge", component:<Page content={<BadgePage />} /> },
     { path:"Component/Breadcrumb", component:<Page content={<BreadcrumbPage />} /> },
     { path:"Component/Button", component:<Page content={<ButtonPage />} /> },
+    { path:"Component/Calendar", component:<Page content={<CalendarPage />} /> },
     { path:"Component/Card", component:<Page content={<CardPage />} /> },
     { path:"Component/Carousel", component:<Page content={<CarouselPage />} /> },
     { path:"Component/Cascader", component:<Page content={<CascaderPage />} /> },
+    { path:"Component/Drawer", component:<Page content={<DrawerPage />} /> },
     { path:"Component/ElementGroup", component:<Page content={<ElementGroupPage />} /> },
     { path:"Component/ListGroup", component:<Page content={<ListGroupPage />} /> },
     { path:"Component/Loading", component:<Page content={<LoadingPage />} /> },
@@ -94,6 +99,8 @@ export const Routes = [
     { path:"Feature/AppRouting", component:<Page content={<AppRoutingPage />} /> },
     { path:"Feature/SpeechListener", component:<Page content={<SpeechListenerPage />} /> },
 
+    
+    { path:"FormElement/Autocomplete", component:<Page content={<AutocompletePage />} /> },
     { path:"FormElement/Select", component:<Page content={<SelectPage />} /> },
     { path:"FormElement/TextBox", component:<Page content={<TextBoxPage />} /> },
     { path:"FormElement/TextArea", component:<Page content={<TextAreaPage />} /> },
