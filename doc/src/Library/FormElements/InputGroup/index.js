@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Choice } from "react-webpack-lib";
-// Input Groups - Input, Select, Button
-export const InputGroup = () =>{
+import { Grid, Choice, Select } from "react-webpack-lib";
+
+export const InputGroup = ({ data }) =>{
 
  const ButonElement = ({ type, label })=>(<button type="button" className={"btn btn-"+type}>{label}</button>);
 
@@ -25,21 +25,38 @@ export const InputGroup = () =>{
 
  const SpanLabelElement = ({ label }) =>{ return (<span className="input-group-text">{label}</span>); }
 
- const TextBoxLabel = ({ id, name, placeholder, value })=>{
+ const TextBoxElement = ({ id, name, placeholder, value })=>{
   return (<input type="type" id={id} name={name} className="form-control" value={value} placeholder={placeholder} aria-label={placeholder} />);
  };
- const DatePickerLabel = ({ id, name, value })=>{
-    return (<input type="date" id={id} name={name} className="form-control" value={value} placeholder="dd-mm-yyyy" aria-label="dd-mm-yyyy" />);
-   };
+ const DatePickerElement = ({ id, name, value })=>{
+  return (<input type="date" id={id} name={name} className="form-control" value={value} placeholder="dd-mm-yyyy" aria-label="dd-mm-yyyy" />);
+ };
+
+ const SelectElement = ({ label, options, className, width, fontSize, onChange }) =>{
+    return (<Select label={label} options={options} className={className} width={width} fontSize={fontSize} onChange={onChange} />);
+ }
 
  return (<div className="input-group mb-3">
- <ButonElement type="primary" label="Primary Button" />
- <CheckBoxRadioElement type="radio" id="element1" name="element3" value="hello1"  />
- <CheckBoxRadioElement type="checkbox" id="element2" name="element4" value="hello1"  />
- <SwitchElement type="checkbox" id="element2" name="element4" value="hello1"  />
- <SpanLabelElement label="@" />
- <DatePickerLabel id="lastName" name="lastName" />
- <TextBoxLabel id="firstName" name="firstName" placeholder="Enter your FirstName" />
- <TextBoxLabel id="lastName" name="lastName" placeholder="Enter your LastName" />
+ {data.map((d)=>{
+    const eType = d.elementType.toLowerCase().trim();
+    if(eType==='button'){
+        return (<ButonElement type={d.type} label={d.label} />);
+    } else if(eType==='checkbox') {
+        return (<CheckBoxRadioElement type="checkbox" id={d.id} name={d.name} value={d.value}  />);
+    } else if(eType==='radio') {
+        return (<CheckBoxRadioElement type="radio" id={d.id} name={d.name} value={d.value} />);
+    } else if(eType==='switch') {
+        return (<SwitchElement type="checkbox" id={d.id} name={d.name} value={d.value}  />);
+    } else if(eType==='span') {
+        return (<SpanLabelElement label={d.label} />);
+    } else if(eType==='datepicker') {
+        return (<DatePickerElement id={d.id} name={d.name} />);
+    } else if(eType==='textbox') {
+        return (<TextBoxElement id={d.id} name={d.name} placeholder={d.placeholder} />);
+    } else if(eType==='select') {
+        return (<SelectElement label={d.label} options={d.options} className={d.className}
+        width={d.width} fontSize={d.fontSize} onChange={d.onChange} />);
+    }
+ })}
 </div>);
 };
