@@ -51,6 +51,7 @@ import { GridPage } from '@DocLayout/Grid/index.js';
 import { OrderPage } from '@DocLayout/Order/index.js';
 
 import { AuthenticationPage } from '@DocReadyMadeScreen/Authentication/index.js';
+import { ImageGalleryPage } from '@DocReadyMadeScreen/ImageGallery/index.js';
 import { ReadyMadeDropdownsPage } from '@DocReadyMadeScreen/ReadyMadeDropdowns/index.js';
 
 import { AppColorsPage } from '@DocThemes/AppColors/index.js';
@@ -141,5 +142,6 @@ export const Routes = [
     { path:"AdvancedTopics/RxJS", component:<Page content={<RxJSPage />} /> },
 
     { path:"ReadyMadeScreen/Authentication", component:<Page content={<AuthenticationPage />} /> },
+    { path:"ReadyMadeScreen/ImageGallery", component:<Page content={<ImageGalleryPage />} /> },
     { path:"ReadyMadeScreen/ReadyMadeDropdowns", component:<Page content={<ReadyMadeDropdownsPage />} /> }
 ];

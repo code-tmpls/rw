@@ -95,6 +95,7 @@ export const SideWrapperData = [
       url:"#", 
       title:"Ready-Made Screens",
       children:[{ id:"authentication", url:"ReadyMadeScreen/Authentication", title:"Authentication" },
+      { id:"imageGallery", url:"ReadyMadeScreen/ImageGallery", title:"ImageGallery" },
       { id:"readyMadeDropdowns", url:"ReadyMadeScreen/ReadyMadeDropdowns", title:"Ready-Made Dropdowns" }]
     }
 ];
