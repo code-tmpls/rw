@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'react-webpack-lib';
-import SampleCode, { SampleNote1, SampleNote2 } from './components/SampleCode.js';
+import { SampleNote1, SampleNote2 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
 
 const AccordianNotes = ()=>{
