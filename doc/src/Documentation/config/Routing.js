@@ -10,7 +10,7 @@ import { HighlightPage } from '@DocCodeEditorsViewers/Highlight/index.js';
 
 import { AccordianPage } from '@DocComponents/Accordian/index.js';
 import { AccordianListItemsPage } from '@DocComponents/AccordianListItems/index.js';
-const AlertPage = React.lazy( ()=>import('@DocComponents/Alert/index.js') );
+import { AlertPage } from '@DocComponents/Alert/index.js';
 import { AvatarPage } from '@DocComponents/Avatar/index.js';
 import { BadgePage } from '@DocComponents/Badge/index.js';
 import { BreadcrumbPage } from '@DocComponents/Breadcrumb/index.js';

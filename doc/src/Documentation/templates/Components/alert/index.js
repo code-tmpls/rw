@@ -208,7 +208,7 @@ const AlertNotes2 = ()=>{
    
    };
 
-const AlertPage = () =>{
+export const AlertPage = () =>{
  return (<>
   <SimpleHeader title="Alert" />
   <Grid data={[
@@ -219,5 +219,3 @@ const AlertPage = () =>{
   ]} />
  </>);
 };
-
-export default AlertPage;
