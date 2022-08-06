@@ -7,6 +7,7 @@ export { Avatar } from '@LibComponents/Avatar/index.js';
 export { Badge } from '@LibComponents/Badge/index.js';
 export { Breadcrumb } from '@LibComponents/Breadcrumb/index.js';
 export { Button } from '@LibComponents/Button/index.js';
+export { Calendar } from '@LibComponents/Calendar/index.js';
 export { Card } from '@LibComponents/Card/index.js';
 export { Carousel } from '@LibComponents/Carousel/index.js';
 export { Cascader } from '@LibComponents/Cascader/index.js';
