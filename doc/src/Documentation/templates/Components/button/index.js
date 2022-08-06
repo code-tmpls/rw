@@ -1,61 +1,40 @@
 import React from 'react';
-import { SimpleHeader, Button, Highlight } from 'react-webpack-lib';
+import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'react-webpack-lib';
+import { SampleNote1, SampleNote2 } from './components/SampleCode.js';
+import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
 
-const m5p = { paddingTop:'15px' };
-export const ButtonPage = ()=>{
+const ButtonNotes= ()=>{
+ const Note1 = ()=>{
+  return (<>
+    <div className="mtop10p mbot10p"><b>Filled Buttons:</b></div>
+        <Card backgroundColor={Colors.grey} component={<>
+        <div className="mbot10p"><b>Sample Code:</b></div>
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1','2','5T12']} />
+        <div className="mtop10p mbot10p"><b>Output:</b></div>
+        <SampleNote1 />
+        </>} />
+  </>);
+ };
+
+ const Note2 = ()=>{
     return (<>
-       <SimpleHeader title="Buttons" />
-       <table className="table table-borderless">
-       <tbody>
-       <tr>
-           <td><Button type="primary" label="primary" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="primary" label="primary" size={11} />`} /></td>
-           <td><Button type="outline-primary" label="outline-primary" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-primary" label="outline-primary" size={11} />`} /></td>
-       </tr>
-       <tr>
-           <td><Button type="secondary" label="secondary" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="secondary" label="secondary" size={11} />`} /></td>
-           <td><Button type="outline-secondary" label="outline-secondary" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-secondary" label="outline-secondary" size={11} />`} /></td>
-       </tr>
-       <tr>
-           <td><Button type="success" label="success" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="success" label="success" size={11} />`} /></td>
-           <td><Button type="outline-success" label="outline-success" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-success" label="outline-success" size={11} />`} /></td>
-       </tr>
-       <tr>
-           <td><Button type="danger" label="danger" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="danger" label="danger" size={11} />`} /></td>
-           <td><Button type="outline-danger" label="outline-danger" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-danger" label="outline-danger" size={11} />`} /></td>
-       </tr>
-       <tr>
-           <td><Button type="warning" label="warning" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="warning" label="warning" size={11} />`} /></td>
-           <td><Button type="outline-warning" label="outline-warning" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-warning" label="outline-warning" size={11} />`} /></td>
-       </tr>
-       <tr>
-           <td><Button type="info" label="info" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="info" label="info" size={11} />`} /></td>
-           <td><Button type="outline-info" label="outline-info" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-info" label="outline-info" size={11} />`} /></td>
-       </tr>
-       <tr>
-           <td><Button type="dark" label="dark" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="dark" label="dark" size={11} />`} /></td>
-           <td><Button type="outline-dark" label="outline-dark" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-dark" label="outline-dark" size={11} />`} /></td>
-       </tr>
-       <tr>
-           <td><Button type="light" label="light" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="light" label="light" size={11} />`} /></td>
-           <td><Button type="outline-light" label="outline-light" size={11} /></td>
-           <td style={m5p}><Highlight lang="html" content={`<Button type="outline-light" label="outline-light" size={11} />`} /></td>
-    </tr>
-       </tbody>
-       </table>
-       </>);
+        <div className="mtop10p mbot10p"><b>Outlined Buttons:</b></div>
+            <Card backgroundColor={Colors.grey} component={<>
+            <div className="mbot10p"><b>Sample Code:</b></div>
+            <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1','2','18T25']} />
+            <div className="mtop10p mbot10p"><b>Output:</b></div>
+            <SampleNote2 />
+            </>} />
+      </>);
+ }
+ return (<Order data={[<Note1 />,<Note2 />]} />);
+};
+
+export const ButtonPage = () =>{
+ return (<>
+ <SimpleHeader title="Button" />
+ <Grid data={[
+    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<ButtonNotes /> }]
+  ]} />
+ </>);
 };
