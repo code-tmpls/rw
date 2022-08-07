@@ -14,7 +14,6 @@ export const SideWrapperData = [
             { id:"carousel", url:"Component/Carousel", title:"Carousel" },
             { id:"cascader", url:"Component/Cascader", title:"Cascader" },
             { id:"drawer", url:"Component/Drawer", title:"Drawer" },
-            { id:"elementGroup", url:"Component/ElementGroup", title:"ElementGroup" },
             { id:"listGroup", url:"Component/ListGroup", title:"ListGroup" },
             { id:"modal", url:"Component/Modal", title:"Modal" },
             { id:"ruleBuilder", url:"Component/RuleBuilder", title:"RuleBuilder" },

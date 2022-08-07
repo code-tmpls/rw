@@ -20,7 +20,6 @@ import { CardPage } from '@DocComponents/Card/index.js';
 import { CarouselPage } from '@DocComponents/Carousel/index.js';
 import { CascaderPage } from '@DocComponents/Cascader/index.js';
 import { DrawerPage } from '@DocComponents/Drawer/index.js';
-import { ElementGroupPage } from '@DocComponents/ElementGroup/index.js';
 import { ListGroupPage } from '@DocComponents/ListGroup/index.js';
 import { LoadingPage } from '@DocComponents/Loading/index.js';
 import { ModalPage } from '@DocComponents/Modal/index.js';
@@ -86,7 +85,6 @@ export const Routes = [
     { path:"Component/Carousel", component:<Page content={<CarouselPage />} /> },
     { path:"Component/Cascader", component:<Page content={<CascaderPage />} /> },
     { path:"Component/Drawer", component:<Page content={<DrawerPage />} /> },
-    { path:"Component/ElementGroup", component:<Page content={<ElementGroupPage />} /> },
     { path:"Component/ListGroup", component:<Page content={<ListGroupPage />} /> },
     { path:"Component/Loading", component:<Page content={<LoadingPage />} /> },
     { path:"Component/Modal", component:<Page content={<ModalPage />} /> },

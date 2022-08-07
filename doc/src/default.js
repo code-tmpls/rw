@@ -11,7 +11,6 @@ export { Calendar } from '@LibComponents/Calendar/index.js';
 export { Card } from '@LibComponents/Card/index.js';
 export { Carousel } from '@LibComponents/Carousel/index.js';
 export { Cascader } from '@LibComponents/Cascader/index.js';
-export { ElementGroup } from '@LibComponents/ElementGroup/index.js';
 export { FontAwesomeIcon } from '@LibComponents/Icons/index.js';
 export { ListGroup } from '@LibComponents/ListGroup/index.js';
 export { Loading } from '@LibComponents/Loading/index.js';
