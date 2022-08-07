@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Card = ({ component, backgroundColor }) =>{
+export const Card = ({ component, className,  backgroundColor }) =>{
  let bgColor = (backgroundColor===undefined)?'none':backgroundColor;
  return (<div className="card">
- <div className="card-body" style={{ backgroundColor: bgColor }}>{component}</div>
+ <div className={"card-body "+className} style={{ backgroundColor: bgColor }}>{component}</div>
 </div>);
 }
