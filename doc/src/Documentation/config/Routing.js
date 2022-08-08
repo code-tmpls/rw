@@ -61,6 +61,7 @@ import { BoxChartPage } from '@DocVisualization/BoxChart/index.js';
 import { CompositionChartPage } from '@DocVisualization/CompositionChart/index.js';
 import { CorrelationChartPage } from '@DocVisualization/CorrelationChart/index.js';
 import { DendogramChartPage } from '@DocVisualization/DendogramChart/index.js';
+import { FlowChartPage } from '@DocVisualization/FlowChart/index.js';
 import { FunnelChartPage } from '@DocVisualization/FunnelChart/index.js';
 import { LineChartPage } from '@DocVisualization/LineChart/index.js';
 import { PieChartPage } from '@DocVisualization/PieChart/index.js';
@@ -122,6 +123,7 @@ export const Routes = [
     { path:"Visualization/CompositionChart", component:<Page content={<CompositionChartPage />} /> },
     { path:"Visualization/CorrelationChart", component:<Page content={<CorrelationChartPage />} /> },
     { path:"Visualization/DendogramChart", component:<Page content={<DendogramChartPage />} /> },
+    { path:"Visualization/FlowChart", component:<Page content={<FlowChartPage />} /> },
     { path:"Visualization/FunnelChart", component:<Page content={<FunnelChartPage />} /> },
     { path:"Visualization/LineChart", component:<Page content={<LineChartPage />} /> },
     { path:"Visualization/PieChart", component:<Page content={<PieChartPage />} /> },

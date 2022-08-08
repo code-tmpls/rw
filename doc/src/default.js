@@ -48,6 +48,7 @@ export { BoxChart } from '@LibVisualization/BoxChart/index.js';
 export { CompositionChart } from '@LibVisualization/CompositionChart/index.js';
 export { CorrelationChart } from '@LibVisualization/CorrelationChart/index.js';
 export { DendogramChart } from '@LibVisualization/DendogramChart/index.js';
+export { FlowChart } from '@LibVisualization/FlowChart/index.js';
 export { FunnelChart } from '@LibVisualization/FunnelChart/index.js';
 export { LineChart } from '@LibVisualization/LineChart/index.js';
 export { PieChart } from '@LibVisualization/PieChart/index.js';

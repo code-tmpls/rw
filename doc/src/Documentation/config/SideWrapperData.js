@@ -64,6 +64,7 @@ export const SideWrapperData = [
                { id:"compositionChart", url:"Visualization/CompositionChart", title:"CompositionChart" },
                { id:"correlationChart", url:"Visualization/CorrelationChart", title:"CorrelationChart" },
                { id:"dendogramChart", url:"Visualization/DendogramChart", title:"DendogramChart" },
+               { id:"flowChart", url:"Visualization/FlowChart", title:"FlowChart" },
                { id:"funnelChart", url:"Visualization/FunnelChart", title:"FunnelChart" },
                { id:"lineChart", url:"Visualization/LineChart", title:"LineChart" },
                { id:"pieChart", url:"Visualization/PieChart", title:"PieChart" },
