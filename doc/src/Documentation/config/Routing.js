@@ -39,6 +39,7 @@ import { TextBoxPage } from '@DocFormElements/TextBox/index.js';
 import { TextAreaPage } from '@DocFormElements/TextArea/index.js';
 import { ColorPickerPage } from '@DocFormElements/ColorPicker/index.js';
 import { ChoicePage } from '@DocFormElements/Choice/index.js';
+import { DateTimeRangePickerPage } from '@DocFormElements/DateTimeRangePicker/index.js';
 import { DateTimePickerPage } from '@DocFormElements/DateTimePicker/index.js';
 import { RangePage } from '@DocFormElements/Range/index.js';
 import { InputGroupPage } from '@DocFormElements/InputGroup/index.js';
@@ -106,6 +107,7 @@ export const Routes = [
     { path:"FormElement/TextArea", component:<Page content={<TextAreaPage />} /> },
     { path:"FormElement/ColorPicker", component:<Page content={<ColorPickerPage />} /> },
     { path:"FormElement/Choice", component:<Page content={<ChoicePage />} /> },
+    { path:"FormElement/DateTimeRangePicker", component:<Page content={<DateTimeRangePickerPage />} /> },
     { path:"FormElement/DateTimePicker", component:<Page content={<DateTimePickerPage />} /> },
     { path:"FormElement/Range", component:<Page content={<RangePage />} /> },
     { path:"FormElement/InputGroup", component:<Page content={<InputGroupPage />} /> },

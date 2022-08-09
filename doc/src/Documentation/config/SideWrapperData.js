@@ -39,7 +39,8 @@ export const SideWrapperData = [
               { id:"textArea", url:"FormElement/TextArea", title:"TextArea" },
               { id:"colorPicker", url:"FormElement/ColorPicker", title:"Color Picker" },
               { id:"choice", url:"FormElement/Choice", title:"Choice" },
-              { id:"datetimepicker", url:"FormElement/DateTimePicker", title:"DateTimePicker" },
+              { id:"dateTimeRangePicker", url:"FormElement/DateTimeRangePicker", title:"DateTimeRangePicker" },
+              { id:"dateTimePicker", url:"FormElement/DateTimePicker", title:"DateTimePicker" },
               { id:"range", url:"FormElement/Range", title:"Range" },
               { id:"inputGroup", url:"FormElement/InputGroup", title:"InputGroup" }]
     },
