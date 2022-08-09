@@ -47,8 +47,8 @@ export const InputGroup = ({ data }) =>{
     if(eType==='radio') { return (<CheckBoxRadioElement key={i} type="radio" id={d.id} name={d.name} value={d.value} />) }
     if(eType==='switch') { return (<SwitchElement key={i} type="checkbox" id={d.id} name={d.name} value={d.value}  />) }
     if(eType==='span') { return (<SpanLabelElement key={i} label={d.label} />) }
-    if(eType==='datepicker') { return (<DatePickerElement key={i} id={d.id} name={d.name} />) }
-    if(eType==='timepicker') { return (<TimePickerElement key={i} id={d.id} name={d.name} />) }
+    if(eType==='datepicker') { return (<DatePickerElement key={i} id={d.id} name={d.name} value={d.value} />) }
+    if(eType==='timepicker') { return (<TimePickerElement key={i} id={d.id} name={d.name} value={d.value} />) }
     if(eType==='textbox') { return (<TextBoxElement key={i} id={d.id} name={d.name} placeholder={d.placeholder} />) }
     if(eType==='select') { return (<SelectElement key={i} label={d.label} options={d.options} className={d.className}
         width={d.width} fontSize={d.fontSize} onChange={d.onChange} />) }

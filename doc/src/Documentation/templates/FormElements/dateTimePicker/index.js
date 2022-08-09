@@ -10,7 +10,7 @@ const DateTimePickerNotes= ()=>{
      <Card backgroundColor={Colors.grey} component={<>
        <div className="mbot10p"><b>Sample Code:</b></div>
        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-       <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['5']} />
+       <Highlight content={SampleCodeJS.toString()} lang="html" lines={['5','6']} />
        <div className="mtop10p mbot10p"><b>Output:</b></div>
        <SampleNote1 />
       </>} />
@@ -23,7 +23,7 @@ const DateTimePickerNotes= ()=>{
       <Card backgroundColor={Colors.grey} component={<>
           <div className="mbot10p"><b>Sample Code:</b></div>
           <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-          <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['11']} />
+          <Highlight content={SampleCodeJS.toString()} lang="html" lines={['12','13']} />
           <div className="mtop10p mbot10p"><b>Output:</b></div>
           <SampleNote2 />
         </>} />
@@ -36,7 +36,7 @@ const DateTimePickerNotes= ()=>{
         <Card backgroundColor={Colors.grey} component={<>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-            <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['17']} />
+            <Highlight content={SampleCodeJS.toString()} lang="html" lines={['19','20']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote3 />
           </>} />
