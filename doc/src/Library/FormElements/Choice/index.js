@@ -6,6 +6,6 @@ export const Choice = ({ id, name, label, value, type, checked, disabled }) =>{
  let disable = (disabled===undefined)?false:disabled;
  return (<div className="form-check form-switch">
  <input className="form-check-input" type={type} name={name} value={value} id={id} checked={check} disabled={disable}  onChange={()=>setCheck(!check)}/>
- <label className="form-check-label" for={id}>{label}</label>
+ <label className="form-check-label">{label}</label>
 </div>);
 };
