@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import HtmlToReactParser from 'html-to-react';
 import './index.css';
 
 // const data = ["Action","Another Action","Something else here"];
@@ -22,8 +23,10 @@ export const Autocomplete = ({ id, name, label, placeholder, value, autoComplete
  {show && filteredData.length>0 && (
   <ul className="dropdown-menu show" aria-labelledby={id}>
   {filteredData.map((d, i)=>{
+    const htmlToReactParser = new HtmlToReactParser.Parser();
     return (<li key={i} onClick={()=>{DataFilter(d);setShow(false); }}>
-     <a className="dropdown-item" href="#">{d}</a>
+     <a className="dropdown-item" href="#">
+      { htmlToReactParser.parse( d.replace( new RegExp(autoCompleteValue, "gi"), (str)=>{return '<b>'+str+'</b>'} ) ) }</a>
     </li>);
   })}
  </ul>
