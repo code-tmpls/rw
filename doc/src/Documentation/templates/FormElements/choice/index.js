@@ -13,7 +13,7 @@ import { default as RadioCheckedJS }  from '!!raw-loader!./components/checked-ra
 const CheckBoxChoice = ({ component, stringComponent })=>{
  return (<Card component={<Grid data={[
       [{ sm:1, md:1, lg:1, xl:1, xxl:1, component:component },
-       { sm:8, md:8, lg:8, xl:8, xxl:8, component:stringComponent }]
+       { sm:10, md:10, lg:10, xl:10, xxl:10, component:stringComponent }]
      ]} />
     }/>);
 };
@@ -21,7 +21,7 @@ const CheckBoxChoice = ({ component, stringComponent })=>{
 const RadioChoice = ({ component, stringComponent })=>{
     return (<Card component={<Grid data={[
       [{ sm:1, md:1, lg:1, xl:1, xxl:1, component:component },
-      { sm:8, md:8, lg:8, xl:8, xxl:8, component:stringComponent }]
+      { sm:10, md:10, lg:10, xl:10, xxl:10, component:stringComponent }]
       ]} />} 
     />);
 };
