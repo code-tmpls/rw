@@ -5,7 +5,7 @@ export const Breadcrumb = ({ backgroundColor })=>{
  <ol class="breadcrumb" style={{ marginBottom:'0px' }}>
    <li class="breadcrumb-item"><a href="#">Home</a></li>
    <li class="breadcrumb-item"><a href="#">Library</a></li>
-   <li class="breadcrumb-item active" aria-current="page">Data</li>
+   <li class="breadcrumb-item" aria-current="page">Data</li>
  </ol>
 </nav></div>);
 };

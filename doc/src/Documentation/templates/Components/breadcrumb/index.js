@@ -9,7 +9,8 @@ const BreadcrumbNotes= ()=>{
     <div className="mtop10p mbot10p"><b>Simple Breadcrumb:</b></div>
         <Card backgroundColor={Colors.grey} component={<>
         <div className="mbot10p"><b>Sample Code:</b></div>
-        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1','2','5']} />
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['0','1']} />
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['5']} />
         <div className="mtop10p mbot10p"><b>Output:</b></div>
         <SampleNote1 />
         </>} />
