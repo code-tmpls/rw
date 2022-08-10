@@ -6,7 +6,7 @@ import './index.css';
 export const Autocomplete = ({ id, name, label, placeholder, value, autoCompleteData }) =>{
  const [ filteredData, setFilteredData ] = useState([]);
  const [ show, setShow ] = useState(false);
- const [ autoCompleteValue, setAutoCompleteValue ] = useState(value);
+ const [ autoCompleteValue, setAutoCompleteValue ] = useState((value===undefined)?'':value);
 
  const DataFilter = (val) =>{
   setAutoCompleteValue(val);
@@ -14,7 +14,7 @@ export const Autocomplete = ({ id, name, label, placeholder, value, autoComplete
  };
 
  return (<>
- <label class="form-label"><b>{label} :</b></label>
+ <label className="form-label"><b>{label} :</b></label>
  <div className="dropdown">
  <input type="type" name={name} className="form-control  dropdown-toggle" placeholder={placeholder}
  id={id} data-bs-toggle="dropdown" aria-expanded="false" value={autoCompleteValue} 
