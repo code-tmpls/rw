@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Grid, Choice, Select } from "react-webpack-lib";
 
-export const InputGroup = ({ data }) =>{
+export const InputGroup = ({ label, data }) =>{
 
  const ButonElement = ({ index, type, label })=>(<button key={index} type="button" className={"btn btn-"+type}>{label}</button>);
 
@@ -39,7 +39,9 @@ export const InputGroup = ({ data }) =>{
     return (<Select key={index} label={label} options={options} className={className} width={width} fontSize={fontSize} onChange={onChange} />);
  }
 
- return (<div className="input-group mb-3">
+ return (<>
+ <label className="form-label"><b>{label} :</b></label>
+ <div className="input-group mb-3">
  {data?.map((d,i)=>{
     const eType = d.elementType.toLowerCase().trim();
     if(eType==='button') { return (<ButonElement key={i} type={d.type} label={d.label} />) }
@@ -54,5 +56,6 @@ export const InputGroup = ({ data }) =>{
         width={d.width} fontSize={d.fontSize} onChange={d.onChange} />) }
 
  })}
-</div>);
+</div>
+</>);
 };

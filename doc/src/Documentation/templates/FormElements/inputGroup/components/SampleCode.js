@@ -8,7 +8,8 @@ const SampleCode = () =>{
     { elementType:"radio", id:"element2", name:"element4", value:"hello2" }, // For Radio Button
     { elementType:"switch", id:"element5", name:"element6", value:"hello3" }, // For Switch Button
     { elementType:"span", label:"@" }, // For Basic Span
-    { elementType:"datepicker",  id:"lastName", name:"lastName" }, // For DatePicker
+    { elementType:"datepicker",  id:"date", name:"date" }, // For DatePicker
+    { elementType:"timepicker",  id:"time", name:"time" }, // For TimePicker
     { elementType:"textbox", id:"firstName", name:"firstName", placeholder:"Enter your FirstName" }, // For TextBox
     { elementType:"select", label:"Select Theme", options:[{ id:'light', label:'Light Theme', value:'Light' }, 
                                                            { id:'dark', label:'Dark Theme', value:'Dark' }],
@@ -16,7 +17,7 @@ const SampleCode = () =>{
  ];
 
  return (<>
- <InputGroup data={inputGroupData} />
+ <InputGroup label="Input Group" data={inputGroupData} />
  </>);
 
 };

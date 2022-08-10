@@ -9,10 +9,10 @@ const InputGroupNotes = ()=>{
        <div className="mtop10p mbot10p"><b>Basic Input Group:</b></div>
        <Card backgroundColor={Colors.grey} component={<>
   <div className="mbot10p"><b>Sample Code:</b></div>
-  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['4T15']} />
-  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['18']} />
+  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['4T16']} />
+  <Highlight content={SampleCodeJS.toString()} lang="html" lines={['19']} />
   <div className="mtop10p mbot10p"><b>Output:</b></div>
-  <SampleCode />
+  <Card backgroundColor={Colors.light} component={<SampleCode />} />
   </>} />
       </>);
    };
