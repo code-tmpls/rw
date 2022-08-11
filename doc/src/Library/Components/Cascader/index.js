@@ -1,5 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { InputGroup, FontAwesomeIcon, Colors } from "react-webpack-lib";
+
+const data = [{ }];
+const Icon = ()=><FontAwesomeIcon name="fa-search" size="12" color={Colors.light} /> 
+const inputGroupData = [
+    { elementType:"textbox", id:"firstName", name:"firstName", placeholder:"Enter your FirstName" }, // For TextBox
+    { elementType:"button", type:"primary", label:<Icon /> }, // For Button
+];
 
 export const Cascader = ()=>{
- return (<div>Cascader</div>);
-};
+ const [status, setStatus] = useState(false);
+ return (<div tabIndex={1}
+  onBlur={(e) => {
+   if (!e.currentTarget.contains(e.relatedTarget)) { setStatus(false); }
+  }} >
+    <div className="dropdown">
+     <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" 
+     onClick={()=>setStatus(!status)}>Select your Dropdown</button>
+     <ul className={status?"dropdown-menu show":"dropdown-menu"}>
+      <div style={{ padding:'5px' }}>
+      
+        <InputGroup data={inputGroupData} />
+      </div>
+      <li><h5 className="dropdown-header">Dropdown header 1</h5></li>
+      <li><span className="dropdown-item" onClick={()=>console.log('true')}>Link 1</span></li>
+      <li><span className="dropdown-item">Link 2</span></li>
+      <li><span className="dropdown-item">Link 3</span></li>
+      <li><h5 className="dropdown-header">Dropdown header 2</h5></li>
+     </ul>
+  </div>
+  
+      </div>
+    );
+  }

@@ -44,3 +44,5 @@ html { overflow-x:hidden; }
 @media screen  and (min-width: 1401px) { /* xxl */
 
 }
+
+.form-control, .dropdown-item { font-size:12px !important; }

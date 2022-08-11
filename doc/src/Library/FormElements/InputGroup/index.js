@@ -40,8 +40,8 @@ export const InputGroup = ({ label, data }) =>{
  }
 
  return (<>
- <label className="form-label"><b>{label} :</b></label>
- <div className="input-group mb-3">
+ {label && <label className="form-label"><b>{label} :</b></label>}
+ <div className="input-group mb-0">
  {data?.map((d,i)=>{
     const eType = d.elementType.toLowerCase().trim();
     if(eType==='button') { return (<ButonElement key={i} type={d.type} label={d.label} />) }

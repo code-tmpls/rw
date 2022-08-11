@@ -22,12 +22,13 @@ export const Autocomplete = ({ id, name, label, placeholder, value, autoComplete
 
  return (<>
  <label className="form-label"><b>{label} :</b></label>
- <div className="dropdown">
+ <div className="dropdown" onBlur={()=>setShow(false)} >
  <input type="type" name={name} className="form-control dropdown-toggle" 
-  placeholder={placeholder} id={id} data-bs-toggle="dropdown" aria-expanded="false" value={autoCompleteValue} 
+  placeholder={placeholder} id={id} data-bs-toggle="dropdown" aria-expanded="false" 
+  value={autoCompleteValue} 
  onChange={(e)=>{ DataFilter(e.target.value, true); }} />
  {show && filteredData.length>0 && (
-  <ul className="dropdown-menu show" aria-labelledby={id}>
+  <ul className="dropdown-menu autocomplete-dropdown show" aria-labelledby={id}>
   {filteredData.map((d, i)=>{
     const htmlToReactParser = new HtmlToReactParser.Parser();
     return (<li key={i} onClick={()=>{ DataFilter(d, false); }}>
