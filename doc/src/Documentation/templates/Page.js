@@ -2,7 +2,7 @@ import React from 'react';
 import { Select, NavBarTabs, SideWrapperNavbar, AccordianListItems, Colors, UrlParams } from 'react-webpack-lib';
 import { SideWrapperData } from '@DocConfig/SideWrapperData.js';
 
-const Page = ({ content }) =>{
+const Page = ({ content, activeId }) =>{
  
  const ChooseTheme = () =>{
   return (<Select 
@@ -28,8 +28,9 @@ const Page = ({ content }) =>{
                             component:<NavBarTabs 
                                         menulinks={[{ id:'javascript', url:'#', label:'Javascript' },
                                                     { id:'react', url:'#', label:'React' },
-                                                    { id:'reactNative', url:'#', label:'React Native' }]} 
-                                        activeId="react" 
+                                                    { id:'reactNative', url:'#', label:'React Native' },
+                                                    { id:'php', url:'#', label:'PHP' }]} 
+                                        activeId={activeId}
                                       /> 
                         },
                         { 
