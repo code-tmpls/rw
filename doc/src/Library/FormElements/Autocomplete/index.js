@@ -22,7 +22,13 @@ export const Autocomplete = ({ id, name, label, placeholder, value, autoComplete
 
  return (<>
  <label className="form-label"><b>{label} :</b></label>
- <div className="dropdown" onBlur={()=>setShow(false)} >
+ <div className="dropdown"
+ tabIndex={1}
+ onBlur={(e) => {
+   if (!e.currentTarget.contains(e.relatedTarget)) {
+    setShow(false);
+   }
+ }}>
  <input type="type" name={name} className="form-control dropdown-toggle" 
   placeholder={placeholder} id={id} data-bs-toggle="dropdown" aria-expanded="false" 
   value={autoCompleteValue} 
