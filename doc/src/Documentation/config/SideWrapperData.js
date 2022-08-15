@@ -34,7 +34,7 @@ export const SideWrapperData = [
       url:"#", 
       title:"Form Elements",
       children:[{ id:"autocomplete", url:"FormElement/Autocomplete", title:"Autocomplete" },
-              { id:"select", url:"FormElement/Select", title:"Select" },
+              { id:"selectDropdown", url:"FormElement/SelectDropdown", title:"Select" },
               { id:"textBox", url:"FormElement/TextBox", title:"TextBox" },
               { id:"textArea", url:"FormElement/TextArea", title:"TextArea" },
               { id:"colorPicker", url:"FormElement/ColorPicker", title:"Color Picker" },

@@ -8,7 +8,7 @@ export const SelectPage = () => {
    }, []);
 
    return (<>
-      <SimpleHeader title="Select" />
+      <SimpleHeader title="Select / Dropdown" />
       <Select
          label="Select Theme"
          options={[{ id: 'light', label: 'Light Theme', value: 'Light' },

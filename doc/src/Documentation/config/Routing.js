@@ -102,7 +102,7 @@ export const Routes = [
 
     
     { path:"FormElement/Autocomplete", component:<Page content={<AutocompletePage />} activeId="react" /> },
-    { path:"FormElement/Select", component:<Page content={<SelectPage />} activeId="react" /> },
+    { path:"FormElement/SelectDropdown", component:<Page content={<SelectPage />} activeId="react" /> },
     { path:"FormElement/TextBox", component:<Page content={<TextBoxPage />} activeId="react" /> },
     { path:"FormElement/TextArea", component:<Page content={<TextAreaPage />} activeId="react" /> },
     { path:"FormElement/ColorPicker", component:<Page content={<ColorPickerPage />} activeId="react" /> },
