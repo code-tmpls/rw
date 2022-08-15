@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'react-webpack-lib';
 import { SampleNote1, SampleNote2 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
@@ -33,6 +33,11 @@ console.log(SampleCodeJS.toString());
 };
 
 export const AccordianPage = () =>{
+  
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
+
  return (<>
  <SimpleHeader title="Accordian" />
  <Grid data={[
