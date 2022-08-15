@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader, FilledHeader, Alert, Grid, Order, Card, Highlight, Colors } from 'react-webpack-lib';
 import { SampleNote1, SampleNote2, SampleNote3, SampleNote4, SampleNote5, SampleNote6, SampleNote7, SampleNote8,
  SampleNote9, SampleNote10, SampleNote11, SampleNote12, SampleNote13, SampleNote14, SampleNote15, SampleNote16 } from './components/SampleCode.js';
@@ -209,6 +209,11 @@ const AlertNotes2 = ()=>{
    };
 
 export const AlertPage = () =>{
+
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
+
  return (<>
   <SimpleHeader title="Alert" />
   <Grid data={[

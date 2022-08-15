@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader } from 'react-webpack-lib';
 
-export const VennChartPage = () =>{
- return (<><SimpleHeader title="VennChart" /></>);
+export const VennChartPage = () => {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (<><SimpleHeader title="VennChart" /></>);
 };

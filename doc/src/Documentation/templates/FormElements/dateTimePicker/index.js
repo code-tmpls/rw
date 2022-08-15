@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'react-webpack-lib';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
@@ -47,6 +47,11 @@ const DateTimePickerNotes= ()=>{
 };
 
 export const DateTimePickerPage = () =>{
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
  return (<>
  <SimpleHeader title="DateTimePicker" />
  <Grid data={[

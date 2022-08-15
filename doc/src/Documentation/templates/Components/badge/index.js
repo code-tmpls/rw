@@ -33,6 +33,11 @@ const BadgeNotes = ()=>{
 };
 
 export const BadgePage = () =>{
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+   }, []);
+   
   return (<>
    <SimpleHeader title="Badge" />
    <Grid data={[

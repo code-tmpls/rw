@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader, Highlight, AccordianListItems, Colors } from 'react-webpack-lib';
 
 const data1 = [{
@@ -177,6 +177,10 @@ const data2 = [{
 
 export const AccordianListItemsPage = () =>{
  
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
+
  const SingleLevelDisplay = () =>{
   return (<div className="row" style={{ marginTop:'15px' }}>
   <div className="col-md-3">

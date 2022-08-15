@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader } from 'react-webpack-lib';
 
-export const ScatterChartPage = () =>{
- return (<><SimpleHeader title="Scatter Chart" /></>);
+export const ScatterChartPage = () => {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (<><SimpleHeader title="Scatter Chart" /></>);
 };

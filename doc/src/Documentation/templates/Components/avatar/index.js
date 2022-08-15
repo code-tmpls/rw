@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid, SimpleHeader, Avatar, Order, Card, Highlight, Colors } from 'react-webpack-lib';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
@@ -45,6 +45,11 @@ const AvatarNotes = ()=>{
 };
 
 export const AvatarPage = () =>{
+  
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
+
  return (<>
  <SimpleHeader title="Avatar" />
  <Grid data={[

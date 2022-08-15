@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader } from 'react-webpack-lib';
 
-export const ImageGalleryPage = () =>{
- return (<><SimpleHeader title="ImageGallery" /></>);
+export const ImageGalleryPage = () => {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (<><SimpleHeader title="ImageGallery" /></>);
 };

@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleHeader } from 'react-webpack-lib';
 
-export const CorrelationChartPage = () =>{
- return (<><SimpleHeader title=" Correlation Chart" /></>);
+export const CorrelationChartPage = () => {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (<><SimpleHeader title=" Correlation Chart" /></>);
 };
