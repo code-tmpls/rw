@@ -3,75 +3,75 @@ import { Navigate } from 'react-router-dom';
 
 const Page  = React.lazy( ()=>import('@DocCore/Page.js') );
 
-import { ReduxPage } from '@DocAdvancedTopics/Redux/index.js';
-import { RxJSPage } from '@DocAdvancedTopics/Rxjs/index.js';
+import { ReduxPage } from '@DocReactAdvancedTopics/Redux/index.js';
+import { RxJSPage } from '@DocReactAdvancedTopics/Rxjs/index.js';
 
-import { HighlightPage } from '@DocCodeEditorsViewers/Highlight/index.js';
+import { HighlightPage } from '@DocReactCodeEditorsViewers/Highlight/index.js';
 
-import { AccordianPage } from '@DocComponents/Accordian/index.js';
-import { AccordianListItemsPage } from '@DocComponents/AccordianListItems/index.js';
-import { AlertPage } from '@DocComponents/Alert/index.js';
-import { AvatarPage } from '@DocComponents/Avatar/index.js';
-import { BadgePage } from '@DocComponents/Badge/index.js';
-import { BreadcrumbPage } from '@DocComponents/Breadcrumb/index.js';
-import { ButtonPage } from '@DocComponents/Button/index.js';
-import { CalendarPage } from '@DocComponents/Calendar/index.js';
-import { CardPage } from '@DocComponents/Card/index.js';
-import { CarouselPage } from '@DocComponents/Carousel/index.js';
-import { CascaderPage } from '@DocComponents/Cascader/index.js';
-import { DrawerPage } from '@DocComponents/Drawer/index.js';
-import { ListGroupPage } from '@DocComponents/ListGroup/index.js';
-import { LoadingPage } from '@DocComponents/Loading/index.js';
-import { ModalPage } from '@DocComponents/Modal/index.js';
-import { RuleBuilderPage } from '@DocComponents/RuleBuilder/index.js';
-import { TablePage } from '@DocComponents/Table/index.js';
-import { TabsPage } from '@DocComponents/Tabs/index.js';
-import { TagPage } from '@DocComponents/Tag/index.js';
-import { ToastPage } from '@DocComponents/Toast/index.js';
-import { ToolTipPage } from '@DocComponents/ToolTip/index.js';
+import { AccordianPage } from '@DocReactComponents/Accordian/index.js';
+import { AccordianListItemsPage } from '@DocReactComponents/AccordianListItems/index.js';
+import { AlertPage } from '@DocReactComponents/Alert/index.js';
+import { AvatarPage } from '@DocReactComponents/Avatar/index.js';
+import { BadgePage } from '@DocReactComponents/Badge/index.js';
+import { BreadcrumbPage } from '@DocReactComponents/Breadcrumb/index.js';
+import { ButtonPage } from '@DocReactComponents/Button/index.js';
+import { CalendarPage } from '@DocReactComponents/Calendar/index.js';
+import { CardPage } from '@DocReactComponents/Card/index.js';
+import { CarouselPage } from '@DocReactComponents/Carousel/index.js';
+import { CascaderPage } from '@DocReactComponents/Cascader/index.js';
+import { DrawerPage } from '@DocReactComponents/Drawer/index.js';
+import { ListGroupPage } from '@DocReactComponents/ListGroup/index.js';
+import { LoadingPage } from '@DocReactComponents/Loading/index.js';
+import { ModalPage } from '@DocReactComponents/Modal/index.js';
+import { RuleBuilderPage } from '@DocReactComponents/RuleBuilder/index.js';
+import { TablePage } from '@DocReactComponents/Table/index.js';
+import { TabsPage } from '@DocReactComponents/Tabs/index.js';
+import { TagPage } from '@DocReactComponents/Tag/index.js';
+import { ToastPage } from '@DocReactComponents/Toast/index.js';
+import { ToolTipPage } from '@DocReactComponents/ToolTip/index.js';
 
-import { AppRoutingPage } from '@DocFeatures/AppRouting/index.js';
-import { SpeechListenerPage } from '@DocFeatures/SpeechListener/index.js';
+import { AppRoutingPage } from '@DocReactFeatures/AppRouting/index.js';
+import { SpeechListenerPage } from '@DocReactFeatures/SpeechListener/index.js';
 
-import { AutocompletePage } from '@DocFormElements/Autocomplete/index.js';
-import { SelectPage } from '@DocFormElements/Select/index.js';
-import { TextBoxPage } from '@DocFormElements/TextBox/index.js';
-import { TextAreaPage } from '@DocFormElements/TextArea/index.js';
-import { ColorPickerPage } from '@DocFormElements/ColorPicker/index.js';
-import { ChoicePage } from '@DocFormElements/Choice/index.js';
-import { DateTimeRangePickerPage } from '@DocFormElements/DateTimeRangePicker/index.js';
-import { DateTimePickerPage } from '@DocFormElements/DateTimePicker/index.js';
-import { RangePage } from '@DocFormElements/Range/index.js';
-import { InputGroupPage } from '@DocFormElements/InputGroup/index.js';
+import { AutocompletePage } from '@DocReactFormElements/Autocomplete/index.js';
+import { SelectPage } from '@DocReactFormElements/Select/index.js';
+import { TextBoxPage } from '@DocReactFormElements/TextBox/index.js';
+import { TextAreaPage } from '@DocReactFormElements/TextArea/index.js';
+import { ColorPickerPage } from '@DocReactFormElements/ColorPicker/index.js';
+import { ChoicePage } from '@DocReactFormElements/Choice/index.js';
+import { DateTimeRangePickerPage } from '@DocReactFormElements/DateTimeRangePicker/index.js';
+import { DateTimePickerPage } from '@DocReactFormElements/DateTimePicker/index.js';
+import { RangePage } from '@DocReactFormElements/Range/index.js';
+import { InputGroupPage } from '@DocReactFormElements/InputGroup/index.js';
 
-import { HeadingPage } from '@DocHeadersAndFooters/Heading/index.js';
+import { HeadingPage } from '@DocReactHeadersAndFooters/Heading/index.js';
 
-import { FontPage } from '@DocLayout/Fonts/index.js';
-import { GridPage } from '@DocLayout/Grid/index.js';
-import { OrderPage } from '@DocLayout/Order/index.js';
+import { FontPage } from '@DocReactLayout/Fonts/index.js';
+import { GridPage } from '@DocReactLayout/Grid/index.js';
+import { OrderPage } from '@DocReactLayout/Order/index.js';
 
-import { AuthenticationPage } from '@DocReadyMadeScreen/Authentication/index.js';
-import { ImageGalleryPage } from '@DocReadyMadeScreen/ImageGallery/index.js';
-import { ReadyMadeDropdownsPage } from '@DocReadyMadeScreen/ReadyMadeDropdowns/index.js';
+import { AuthenticationPage } from '@DocReactReadyMadeScreen/Authentication/index.js';
+import { ImageGalleryPage } from '@DocReactReadyMadeScreen/ImageGallery/index.js';
+import { ReadyMadeDropdownsPage } from '@DocReactReadyMadeScreen/ReadyMadeDropdowns/index.js';
 
-import { AppColorsPage } from '@DocThemes/AppColors/index.js';
+import { AppColorsPage } from '@DocReactThemes/AppColors/index.js';
 
-import { AreaChartPage } from '@DocVisualization/AreaChart/index.js';
-import { BarChartPage } from '@DocVisualization/BarChart/index.js';
-import { BoxChartPage } from '@DocVisualization/BoxChart/index.js';
-import { CompositionChartPage } from '@DocVisualization/CompositionChart/index.js';
-import { CorrelationChartPage } from '@DocVisualization/CorrelationChart/index.js';
-import { DendogramChartPage } from '@DocVisualization/DendogramChart/index.js';
-import { FlowChartPage } from '@DocVisualization/FlowChart/index.js';
-import { FunnelChartPage } from '@DocVisualization/FunnelChart/index.js';
-import { LineChartPage } from '@DocVisualization/LineChart/index.js';
-import { PieChartPage } from '@DocVisualization/PieChart/index.js';
-import { SankeyChartPage } from '@DocVisualization/SankeyChart/index.js';
-import { ScatterChartPage } from '@DocVisualization/ScatterChart/index.js';
-import { TreeMapChartPage } from '@DocVisualization/TreeMapChart/index.js';
-import { TwoByTwoChartPage } from '@DocVisualization/TwoByTwoChart/index.js';
-import { VennChartPage } from '@DocVisualization/VennChart/index.js';
-import { WaterfallChartPage } from '@DocVisualization/WaterfallChart/index.js';
+import { AreaChartPage } from '@DocReactVisualization/AreaChart/index.js';
+import { BarChartPage } from '@DocReactVisualization/BarChart/index.js';
+import { BoxChartPage } from '@DocReactVisualization/BoxChart/index.js';
+import { CompositionChartPage } from '@DocReactVisualization/CompositionChart/index.js';
+import { CorrelationChartPage } from '@DocReactVisualization/CorrelationChart/index.js';
+import { DendogramChartPage } from '@DocReactVisualization/DendogramChart/index.js';
+import { FlowChartPage } from '@DocReactVisualization/FlowChart/index.js';
+import { FunnelChartPage } from '@DocReactVisualization/FunnelChart/index.js';
+import { LineChartPage } from '@DocReactVisualization/LineChart/index.js';
+import { PieChartPage } from '@DocReactVisualization/PieChart/index.js';
+import { SankeyChartPage } from '@DocReactVisualization/SankeyChart/index.js';
+import { ScatterChartPage } from '@DocReactVisualization/ScatterChart/index.js';
+import { TreeMapChartPage } from '@DocReactVisualization/TreeMapChart/index.js';
+import { TwoByTwoChartPage } from '@DocReactVisualization/TwoByTwoChart/index.js';
+import { VennChartPage } from '@DocReactVisualization/VennChart/index.js';
+import { WaterfallChartPage } from '@DocReactVisualization/WaterfallChart/index.js';
 
 export const Routes = [
     { path:"/", component: <Navigate to="Component/AccordianList" /> },

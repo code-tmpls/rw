@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader } from 'react-webpack-lib';
+import { ListGroup, SimpleHeader } from 'react-webpack-lib';
 
 export const ListGroupPage = () => {
     
@@ -7,5 +7,8 @@ export const ListGroupPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="List Group" /></>);
+    return (<>
+     <SimpleHeader title="List Group" />
+     <ListGroup />
+    </>);
 };
