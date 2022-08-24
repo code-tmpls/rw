@@ -4,7 +4,7 @@ import './index.css';
 export const Grid = ({ data }) =>{
  return (<div className="container-fluid grid-layout">
     {data?.map((row, index1)=>{
-        return (<div key={index1} className="row mbot5p">
+        return (<div key={index1} className="row">
             {row.map((column, index2)=>{
             return <div key={index2} className={(column?.sm!==undefined)?' col-sm-'+column?.sm:'12'+
                                    (column?.md!==undefined)?' col-md-'+column?.md:'12'+

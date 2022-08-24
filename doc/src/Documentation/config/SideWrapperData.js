@@ -84,7 +84,8 @@ export const SideWrapperData = [
     { id:"codeEditorsViewers",
       url:"#", 
       title:"Code Editors / Viewers",
-      children:[{ id:"highlight", url:"CodeEditorsViewers/Highlight", title:"Highlight" }]
+      children:[{ id:"highlight", url:"CodeEditorsViewers/Highlight", title:"Highlight" },
+                { id:"stackblitz", url:"CodeEditorsViewers/Stackblitz", title:"Stackblitz" }]
     },
     { id:"advancedTopics",
       url:"#", 

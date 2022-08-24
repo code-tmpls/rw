@@ -7,6 +7,7 @@ import { ReduxPage } from '@DocReactAdvancedTopics/Redux/index.js';
 import { RxJSPage } from '@DocReactAdvancedTopics/Rxjs/index.js';
 
 import { HighlightPage } from '@DocReactCodeEditorsViewers/Highlight/index.js';
+import { StackblitzPage } from '@DocReactCodeEditorsViewers/Stackblitz/index.js';
 
 import { AccordianPage } from '@DocReactComponents/Accordian/index.js';
 import { AccordianListItemsPage } from '@DocReactComponents/AccordianListItems/index.js';
@@ -139,6 +140,7 @@ export const Routes = [
     { path:"Themes/AppColors", component:<Page content={<AppColorsPage />} activeId="react" /> },
 
     { path:"CodeEditorsViewers/Highlight", component:<Page content={<HighlightPage />} activeId="react" /> },
+    { path:"CodeEditorsViewers/Stackblitz", component:<Page content={<StackblitzPage />} activeId="react" /> },
 
     { path:"AdvancedTopics/Redux", component:<Page content={<ReduxPage />} activeId="react" /> },
     { path:"AdvancedTopics/RxJS", component:<Page content={<RxJSPage />} activeId="react" /> },
