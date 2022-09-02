@@ -1,7 +1,35 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const WebpackObfuscator = require('webpack-obfuscator');
+const fetch = require('node-fetch');
 const Path = require('path');
 const baseUrl = 'http://localhost:8080/';
+
+/* Package Management ::: START */
+async function fetchPackageInfo() {
+    const response = await fetch('https://registry.npmjs.org/e-ui-react');
+    return await response.json();
+}
+
+fetchPackageInfo().then(response => { 
+    let versionSplit = response['dist-tags']?.latest?.split(".");
+    let majorVersion = versionSplit?.[0];
+    let minorVersion = versionSplit?.[1];
+    let patchVersion = parseInt(versionSplit?.[2]); 
+    console.log(majorVersion+" "+minorVersion+" "+patchVersion); 
+    const fs = require('fs');
+    fs.readFile('./package.json', (err, data) => {
+        let packageJsonObj = JSON.parse(data);
+        if (err) throw err;
+        packageJsonObj.version = majorVersion+"."+minorVersion+"."+(patchVersion+1);
+        packageJsonObj = JSON.stringify(packageJsonObj,  null, 1);
+        fs.writeFile('./package.json', packageJsonObj, (err) => {
+            if (err) throw err;
+        }); 
+    });
+});
+/* Package Management ::: END */
+
+
 
 module.exports = {
  mode: 'development',
