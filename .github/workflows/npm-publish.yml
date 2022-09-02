@@ -21,7 +21,7 @@ jobs:
           node-version: 16
       - name: package-update
         working-directory: ./doc/build-config
-        run: node package-update.js
+        run: node package-update.cjs
       - name: Setup Documentation
         working-directory: ./doc
         run: npm ci --force
@@ -37,7 +37,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: package-update
         working-directory: ./doc/build-config
-        run: node package-update.js
+        run: node package-update.cjs
       - name: Setup Documentation
         working-directory: ./doc
         run: | 
