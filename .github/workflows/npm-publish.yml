@@ -19,6 +19,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: package-update
+        working-directory: ./build-config
+        run: node package-update.js
       - name: Setup Documentation
         working-directory: ./doc
         run: npm ci --force
@@ -32,6 +35,9 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: package-update
+        working-directory: ./build-config
+        run: node package-update.js
       - name: Setup Documentation
         working-directory: ./doc
         run: | 
