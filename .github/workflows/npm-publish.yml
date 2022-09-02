@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 16
       - name: package-update
-        working-directory: ./build-config
+        working-directory: ./doc/build-config
         run: node package-update.js
       - name: Setup Documentation
         working-directory: ./doc
@@ -36,7 +36,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - name: package-update
-        working-directory: ./build-config
+        working-directory: ./doc/build-config
         run: node package-update.js
       - name: Setup Documentation
         working-directory: ./doc
