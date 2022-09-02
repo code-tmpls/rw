@@ -3,6 +3,8 @@ const WebpackObfuscator = require('webpack-obfuscator');
 const Path = require('path');
 const baseUrl = 'http://localhost:8080/';
 
+require('./build-config/package-update.cjs');
+
 module.exports = {
  mode: 'development',
  performance: {

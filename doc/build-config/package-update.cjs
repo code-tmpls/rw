@@ -1,4 +1,6 @@
 const fetch = require('node-fetch');
+const Path = require('path');
+const fs = require('fs');
 
 /* Package Management ::: START */
 async function fetchPackageInfo() {
@@ -12,8 +14,9 @@ fetchPackageInfo().then(response => {
     let npmMinorVersion = parseInt(npmVersionSplit?.[1]);
     let npmPatchVersion = parseInt(npmVersionSplit?.[2]); 
     console.log(npmMajorVersion+" "+npmMinorVersion+" "+npmPatchVersion); 
-    const fs = require('fs');
-    fs.readFile('./../package.json', (err, data) => {
+    const path = Path.resolve(__dirname,'./../package.json');
+    fs.readFile(path, (err, data) => {
+        console.log(data);
         let packageJsonObj = JSON.parse(data);
         let versionSplit = packageJsonObj.version;
         let majorVersion = parseInt(versionSplit?.[0]);
@@ -25,7 +28,7 @@ fetchPackageInfo().then(response => {
         if (err) throw err;
         packageJsonObj.version = majorVersion+"."+minorVersion+"."+patchVersion;
         packageJsonObj = JSON.stringify(packageJsonObj,  null, 1);
-        fs.writeFile('./../package.json', packageJsonObj, (err) => {
+        fs.writeFile(path, packageJsonObj, (err) => {
             if (err) throw err;
         }); 
     });
