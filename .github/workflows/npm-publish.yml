@@ -17,7 +17,7 @@ jobs:
           node-version: 16
       - name: Setup Documentation
         working-directory: ./doc
-        run: npm ci
+        run: npm ci --force
 
   publish-npm:
     needs: build
@@ -31,7 +31,7 @@ jobs:
       - name: Setup Documentation
         working-directory: ./doc
         run: | 
-          npm ci
+          npm ci --force
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
