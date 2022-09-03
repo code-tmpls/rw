@@ -19,11 +19,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Setup Documentation
-        working-directory: ./doc
+      - name: Setup Library
+        working-directory: ./e-ui-r
         run: npm ci --force
       - name: package-update
-        working-directory: ./doc/build-config
+        working-directory: ./e-ui-r/build-config
         run: node package-update.cjs
 
   publish-npm:
@@ -35,14 +35,14 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: Setup Documentation
-        working-directory: ./doc
+      - name: Setup Library
+        working-directory: ./e-ui-r
         run: npm ci --force
       - name: package-update
-        working-directory: ./doc/build-config
+        working-directory: ./e-ui-r/build-config
         run: node package-update.cjs
-      - name: Setup Documentation
-        working-directory: ./doc
+      - name: Setup Library
+        working-directory: ./e-ui-r
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
