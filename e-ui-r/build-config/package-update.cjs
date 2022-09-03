@@ -13,10 +13,8 @@ fetchPackageInfo().then(response => {
     let npmMajorVersion = parseInt(npmVersionSplit?.[0]);
     let npmMinorVersion = parseInt(npmVersionSplit?.[1]);
     let npmPatchVersion = parseInt(npmVersionSplit?.[2]); 
-    console.log(npmMajorVersion+" "+npmMinorVersion+" "+npmPatchVersion); 
     const path = Path.resolve(__dirname,'./../package.json');
     fs.readFile(path, (err, data) => {
-        console.log(data);
         let packageJsonObj = JSON.parse(data);
         let versionSplit = packageJsonObj.version;
         let majorVersion = parseInt(versionSplit?.[0]);

@@ -1,6 +1,7 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const WebpackObfuscator = require('webpack-obfuscator');
 const Path = require('path');
+const baseUrl = 'http://localhost:8080/';
 
 require('./build-config/package-update.cjs');
 
@@ -11,11 +12,22 @@ module.exports = {
    // maxEntrypointSize: 512000,
     maxAssetSize: 512000
 },
- entry: {
-    index: {     
-        import: Path.resolve(__dirname, "src","index.js")
+entry: {
+    index: {
+        dependOn: 'default',
+        import: Path.resolve(__dirname, "src","index.js"),
+    },
+    default: {     
+        import: Path.resolve(__dirname, "src","default.js")
     }
  },
+ output: {
+    path: Path.resolve(__dirname, 'dist/'),
+    publicPath: baseUrl, 
+    /* When we have URL Routes (react-router-dom), the  build is loading the scripts in Relative path -
+     * To resolve it we used publicPath
+     */ 
+},
  module:{
     rules:[
         {
@@ -64,8 +76,20 @@ module.exports = {
  resolve: {
     symlinks: false,
     alias: {
-        'e-ui-react': Path.resolve(__dirname, 'src/index.js'),
+        'e-ui-react': Path.resolve(__dirname, 'src/default.js'),
         '@Assets': Path.resolve(__dirname, 'public/assets'),
+        '@DocConfig': Path.resolve(__dirname, 'src/Documentation/config'),
+        '@DocCore': Path.resolve(__dirname, 'src/Documentation/templates'),
+        '@DocReactAdvancedTopics': Path.resolve(__dirname, 'src/Documentation/templates/react/AdvancedTopics'),
+        '@DocReactCodeEditorsViewers': Path.resolve(__dirname, 'src/Documentation/templates/react/CodeEditorsViewers'),
+        '@DocReactComponents': Path.resolve(__dirname, 'src/Documentation/templates/react/Components'),
+        '@DocReactFeatures': Path.resolve(__dirname, 'src/Documentation/templates/react/Features'),
+        '@DocReactFormElements': Path.resolve(__dirname, 'src/Documentation/templates/react/FormElements'),
+        '@DocReactHeadersAndFooters': Path.resolve(__dirname, 'src/Documentation/templates/react/HeadersAndFooters'),
+        '@DocReactLayout': Path.resolve(__dirname, 'src/Documentation/templates/react/Layout'),
+        '@DocReactReadyMadeScreen': Path.resolve(__dirname, 'src/Documentation/templates/react/ReadyMadeScreen'),
+        '@DocReactThemes': Path.resolve(__dirname, 'src/Documentation/templates/react/Themes'),
+        '@DocReactVisualization': Path.resolve(__dirname, 'src/Documentation/templates/react/Visualization'),
         '@LibAdvancedTopics': Path.resolve(__dirname, 'src/Library/AdvancedTopics'),
         '@LibCodeEditorsViewers': Path.resolve(__dirname, 'src/Library/CodeEditorsViewers'),
         '@LibComponents': Path.resolve(__dirname, 'src/Library/Components'),
