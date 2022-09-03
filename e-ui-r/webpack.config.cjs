@@ -12,8 +12,8 @@ module.exports = {
     maxAssetSize: 512000
 },
  entry: {
-    default: {     
-        import: Path.resolve(__dirname, "src","default.js")
+    index: {     
+        import: Path.resolve(__dirname, "src","index.js")
     }
  },
  module:{
@@ -64,7 +64,7 @@ module.exports = {
  resolve: {
     symlinks: false,
     alias: {
-        'e-ui-react': Path.resolve(__dirname, 'src/default.js'),
+        'e-ui-react': Path.resolve(__dirname, 'src/index.js'),
         '@Assets': Path.resolve(__dirname, 'public/assets'),
         '@LibAdvancedTopics': Path.resolve(__dirname, 'src/Library/AdvancedTopics'),
         '@LibCodeEditorsViewers': Path.resolve(__dirname, 'src/Library/CodeEditorsViewers'),
