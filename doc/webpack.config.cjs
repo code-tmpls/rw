@@ -3,8 +3,6 @@ const WebpackObfuscator = require('webpack-obfuscator');
 const Path = require('path');
 const baseUrl = 'http://localhost:8080/';
 
-require('./build-config/package-update.cjs');
-
 module.exports = {
  mode: 'development',
  performance: {
@@ -14,11 +12,7 @@ module.exports = {
 },
  entry: {
     index: {
-        dependOn: 'default',
-        import: Path.resolve(__dirname, "src","index.js"),
-    },
-    default: {     
-        import: Path.resolve(__dirname, "src","default.js")
+      import: Path.resolve(__dirname, "src","index.js"),
     }
  },
  output: {
@@ -76,31 +70,20 @@ module.exports = {
  resolve: {
     symlinks: false,
     alias: {
-        'react-webpack-lib': Path.resolve(__dirname, 'src/default.js'),
+        'e-ui-react': Path.resolve(__dirname, 'src/default.js'),
         '@Assets': Path.resolve(__dirname, 'public/assets'),
-        '@LibAdvancedTopics': Path.resolve(__dirname, 'src/Library/AdvancedTopics'),
-        '@LibCodeEditorsViewers': Path.resolve(__dirname, 'src/Library/CodeEditorsViewers'),
-        '@LibComponents': Path.resolve(__dirname, 'src/Library/Components'),
-        '@LibFeatures': Path.resolve(__dirname, 'src/Library/Features'),
-        '@LibFormElements': Path.resolve(__dirname, 'src/Library/FormElements'),
-        '@LibHeadersAndFooters': Path.resolve(__dirname, 'src/Library/HeadersAndFooters'),
-        '@LibLayout': Path.resolve(__dirname, 'src/Library/Layout'),
-        '@LibReadyMadeScreens': Path.resolve(__dirname, 'src/Library/ReadyMadeScreens'),
-        '@LibThemes': Path.resolve(__dirname, 'src/Library/Themes'),
-        '@LibUtils': Path.resolve(__dirname, 'src/Library/Utils'),
-        '@LibVisualization': Path.resolve(__dirname, 'src/Library/Visualization'),
-        '@DocConfig': Path.resolve(__dirname, 'src/Documentation/config'),
-        '@DocCore': Path.resolve(__dirname, 'src/Documentation/templates'),
-        '@DocReactAdvancedTopics': Path.resolve(__dirname, 'src/Documentation/templates/react/AdvancedTopics'),
-        '@DocReactCodeEditorsViewers': Path.resolve(__dirname, 'src/Documentation/templates/react/CodeEditorsViewers'),
-        '@DocReactComponents': Path.resolve(__dirname, 'src/Documentation/templates/react/Components'),
-        '@DocReactFeatures': Path.resolve(__dirname, 'src/Documentation/templates/react/Features'),
-        '@DocReactFormElements': Path.resolve(__dirname, 'src/Documentation/templates/react/FormElements'),
-        '@DocReactHeadersAndFooters': Path.resolve(__dirname, 'src/Documentation/templates/react/HeadersAndFooters'),
-        '@DocReactLayout': Path.resolve(__dirname, 'src/Documentation/templates/react/Layout'),
-        '@DocReactReadyMadeScreen': Path.resolve(__dirname, 'src/Documentation/templates/react/ReadyMadeScreen'),
-        '@DocReactThemes': Path.resolve(__dirname, 'src/Documentation/templates/react/Themes'),
-        '@DocReactVisualization': Path.resolve(__dirname, 'src/Documentation/templates/react/Visualization'),
+        '@DocConfig': Path.resolve(__dirname, 'src/config'),
+        '@DocCore': Path.resolve(__dirname, 'src/templates'),
+        '@DocReactAdvancedTopics': Path.resolve(__dirname, 'src/templates/react/AdvancedTopics'),
+        '@DocReactCodeEditorsViewers': Path.resolve(__dirname, 'src/templates/react/CodeEditorsViewers'),
+        '@DocReactComponents': Path.resolve(__dirname, 'src/templates/react/Components'),
+        '@DocReactFeatures': Path.resolve(__dirname, 'src/templates/react/Features'),
+        '@DocReactFormElements': Path.resolve(__dirname, 'src/templates/react/FormElements'),
+        '@DocReactHeadersAndFooters': Path.resolve(__dirname, 'src/templates/react/HeadersAndFooters'),
+        '@DocReactLayout': Path.resolve(__dirname, 'src/templates/react/Layout'),
+        '@DocReactReadyMadeScreen': Path.resolve(__dirname, 'src/templates/react/ReadyMadeScreen'),
+        '@DocReactThemes': Path.resolve(__dirname, 'src/templates/react/Themes'),
+        '@DocReactVisualization': Path.resolve(__dirname, 'src/templates/react/Visualization'),
         // Needed when library is linked via `npm link` to app
         /** This is implemented when the React Hooks are not working under the library */
         react: Path.resolve("./node_modules/react"),
