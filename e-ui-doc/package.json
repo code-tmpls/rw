@@ -3,7 +3,6 @@
  "type": "module",
  "version": "1.0.6",
  "description": "",
- "main": "src/index.js",
  "scripts": {
   "dev": "webpack --mode development",
   "start": "webpack serve --open",
