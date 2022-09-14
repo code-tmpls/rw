@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
 
 const Page  = React.lazy( ()=>import('@DocCore/Page.js') );
 
@@ -75,7 +74,7 @@ import { VennChartPage } from '@DocReactVisualization/VennChart/index.js';
 import { WaterfallChartPage } from '@DocReactVisualization/WaterfallChart/index.js';
 
 export const Routes = [
-    { path:"/", component: <Navigate to="Component/AccordianList" /> },
+   // { path:"/", component: <Navigate to="Component/AccordianList" /> },
     { path:"Component/AccordianList", component:<Page content={<AccordianPage />} activeId="react" /> },
     { path:"Component/AccordianListItems", component:<Page content={<AccordianListItemsPage  />} activeId="react" /> },
     { path:"Component/Alert", component:<Page content={<AlertPage />} activeId="react" /> },

@@ -1,10 +1,7 @@
 # Ignore node_modules folder
-doc/node_modules
-doc/dist
-
-e-ui-e/node_modules
 
 e-ui-r/node_modules
 e-ui-r/dist
 
-e-ui-rn/node_modules
+e-ui-doc/node_modules
+e-ui-doc/dist
