@@ -18,7 +18,7 @@ import { ButtonPage } from '@DocReactComponents/Button/index.js';
 import { CalendarPage } from '@DocReactComponents/Calendar/index.js';
 import { CardPage } from '@DocReactComponents/Card/index.js';
 import { CarouselPage } from '@DocReactComponents/Carousel/index.js';
-import { CascaderPage } from '@DocReactComponents/Cascader/index.js';
+import { DropdownPage } from '@DocReactComponents/Dropdown/index.js';
 import { DrawerPage } from '@DocReactComponents/Drawer/index.js';
 import { ListGroupPage } from '@DocReactComponents/ListGroup/index.js';
 import { LoadingPage } from '@DocReactComponents/Loading/index.js';
@@ -85,8 +85,8 @@ export const Routes = [
     { path:"Component/Calendar", component:<Page content={<CalendarPage />} activeId="react" /> },
     { path:"Component/Card", component:<Page content={<CardPage />} activeId="react" /> },
     { path:"Component/Carousel", component:<Page content={<CarouselPage />} activeId="react" /> },
-    { path:"Component/Cascader", component:<Page content={<CascaderPage />} activeId="react" /> },
     { path:"Component/Drawer", component:<Page content={<DrawerPage />} activeId="react" /> },
+    { path:"Component/Dropdown", component:<Page content={<DropdownPage />} activeId="react" /> },
     { path:"Component/ListGroup", component:<Page content={<ListGroupPage />} activeId="react" /> },
     { path:"Component/Loading", component:<Page content={<LoadingPage />} activeId="react" /> },
     { path:"Component/Modal", component:<Page content={<ModalPage />} activeId="react" /> },

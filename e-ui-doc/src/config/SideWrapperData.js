@@ -12,7 +12,7 @@ export const SideWrapperData = [
             { id:"calendar", url:"Component/Calendar", title:"Calendar" },
             { id:"card", url:"Component/Card", title:"Card" },
             { id:"carousel", url:"Component/Carousel", title:"Carousel" },
-            { id:"cascader", url:"Component/Cascader", title:"Cascader" },
+            { id:"dropdown", url:"Component/Dropdown", title:"Dropdown" },
             { id:"drawer", url:"Component/Drawer", title:"Drawer" },
             { id:"listGroup", url:"Component/ListGroup", title:"ListGroup" },
             { id:"modal", url:"Component/Modal", title:"Modal" },

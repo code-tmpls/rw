@@ -8,7 +8,7 @@ const inputGroupData = [
     { elementType:"button", type:"secondary", label:<Icon /> }, // For Button
 ];
 
-export const Cascader = ()=>{
+export const Dropdown = ()=>{
  const [status, setStatus] = useState(false);
  return (<div tabIndex={1}
   onBlur={(e) => {
