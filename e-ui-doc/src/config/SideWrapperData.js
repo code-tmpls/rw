@@ -1,10 +1,4 @@
 export const SideWrapperData = [
-  { id:"introduction",
-    url:"#", 
-    title:"Introduction",
-    children:[{ id:"get-started", url:"/", title:"Get Started" }]
-  },
-
     { id:"components",
       url:"#", 
       title:"Components",

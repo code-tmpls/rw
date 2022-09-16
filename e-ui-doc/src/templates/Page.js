@@ -13,7 +13,6 @@ const Page = ({ content, activeId }) =>{
             barTheme="outline-primary" 
             title="Documentation" 
             sideWrapperContent={<>
-            <div style={{ marginLeft:'30px', marginTop:'15px' }}><b>Get Started</b></div>
             <AccordianListItems 
                 highlightColor={Colors.primary} 
                 data={SideWrapperData} 

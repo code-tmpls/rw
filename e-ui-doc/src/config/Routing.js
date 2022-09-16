@@ -75,7 +75,6 @@ import { WaterfallChartPage } from '@DocReactVisualization/WaterfallChart/index.
 
 export const Routes = [
     { path:"/", component:<GetStarted /> },
-   // { path:"/", component: <Navigate to="Component/AccordianList" /> },
     { path:"Component/AccordianList", component:<Page content={<AccordianPage />} activeId="react" /> },
     { path:"Component/AccordianListItems", component:<Page content={<AccordianListItemsPage  />} activeId="react" /> },
     { path:"Component/Alert", component:<Page content={<AlertPage />} activeId="react" /> },

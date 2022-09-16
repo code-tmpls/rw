@@ -32,11 +32,9 @@ export const Accordian = ({ id, data, defaultOpen })=>{
     let collapseDivClass = (showAccordian.includes(d.id))?"accordion-collapse collapse show":"accordion-collapse collapse ";
     let collapseTitleClass = (showAccordian.includes(d.id))?"accordion-button":"accordion-button collapsed";
     return (<div key={i} className="accordion-item">
-    <h2 className="accordion-header" id={"heading-"+d.id} onClick={()=>toggleAccordian(d.id)}>
-      <button className={collapseTitleClass} type="button" data-bs-toggle="collapse" data-bs-target={"#"+d.id} aria-expanded="true" aria-controls={d.id}>
+      <button  id={"heading-"+d.id} onClick={()=>toggleAccordian(d.id)} className={"accordion-header "+collapseTitleClass} type="button" data-bs-toggle="collapse" data-bs-target={"#"+d.id} aria-expanded="true" aria-controls={d.id}>
        {d.title}
       </button>
-    </h2>
     <div id={d.id} className={collapseDivClass} aria-labelledby={"heading-"+d.id} data-bs-parent={"#"+id}>
       <div className="accordion-body">{d.component}</div>
     </div>
