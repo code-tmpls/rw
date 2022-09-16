@@ -25,8 +25,11 @@ export const InputGroup = ({ label, data }) =>{
 
  const SpanLabelElement = ({ index, label }) =>{ return (<span key={index} className="input-group-text">{label}</span>); }
 
- const TextBoxElement = ({ index, id, name, placeholder, value })=>{
-  return (<input key={index} type="type" id={id} name={name} className="form-control" value={value} placeholder={placeholder} aria-label={placeholder} />);
+ const TextBoxElement = ({ index, id, name, placeholder, value, onChange })=>{
+  return (<input key={index} type="type" id={id} name={name} 
+  className="form-control" value={value} placeholder={placeholder} 
+  onChange={onChange}
+  aria-label={placeholder} />);
  };
  const DatePickerElement = ({ index, id, name, value })=>{
   return (<input key={index} type="date" id={id} name={name} className="form-control" value={value} placeholder="dd-mm-yyyy" aria-label="dd-mm-yyyy" />);
@@ -51,7 +54,7 @@ export const InputGroup = ({ label, data }) =>{
     if(eType==='span') { return (<SpanLabelElement key={i} label={d.label} />) }
     if(eType==='datepicker') { return (<DatePickerElement key={i} id={d.id} name={d.name} value={d.value} />) }
     if(eType==='timepicker') { return (<TimePickerElement key={i} id={d.id} name={d.name} value={d.value} />) }
-    if(eType==='textbox') { return (<TextBoxElement key={i} id={d.id} name={d.name} placeholder={d.placeholder} />) }
+    if(eType==='textbox') { return (<TextBoxElement key={i} id={d.id} name={d.name} placeholder={d.placeholder} onChange={d?.onChange} />) }
     if(eType==='select') { return (<SelectElement key={i} label={d.label} options={d.options} className={d.className}
         width={d.width} fontSize={d.fontSize} onChange={d.onChange} />) }
 

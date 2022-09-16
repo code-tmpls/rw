@@ -1,0 +1,4 @@
+.dropdown-menu { padding-bottom: 0px; }
+ul.dropdown-menu > div { padding: 5px; }
+.dropdown-divider { margin-top: 8px;margin-bottom: 0px; }
+.dropdown-scroll { max-height: 100px;overflow-y: auto; }

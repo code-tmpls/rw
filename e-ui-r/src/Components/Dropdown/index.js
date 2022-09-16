@@ -1,38 +1,50 @@
 import React, { useState } from "react";
-import { InputGroup, FontAwesomeIcon, Colors } from "e-ui-react";
+import { FontAwesomeIcon, Colors } from "e-ui-react";
+import './index.css';
 
-const data = [{ }];
-const Icon = ()=><FontAwesomeIcon name="fa-search" size="12" color={Colors.light} /> 
-const inputGroupData = [
-    { elementType:"textbox", id:"firstName", name:"firstName", placeholder:"Enter your FirstName" }, // For TextBox
-    { elementType:"button", type:"secondary", label:<Icon /> }, // For Button
-];
+export const Dropdown = ({ id, placeholder, searchLabel, menu }) => {
 
-export const Dropdown = ()=>{
- const [status, setStatus] = useState(false);
- return (<div tabIndex={1}
-  onBlur={(e) => {
-   if (!e.currentTarget.contains(e.relatedTarget)) { setStatus(false); }
-  }} >
+  const Icon = () => <FontAwesomeIcon name="fa-search" size="12" color={Colors.light} />
+
+  const SearchData = (filterData) => {
+    return menu.filter((m) =>
+    (m?.options?.filter((o) => o?.label.toLowerCase().includes(filterData.toLowerCase())).length > 0 ||
+      m?.header.toLowerCase().includes(filterData.toLowerCase())));
+  };
+
+  const buildMenuOptions = (menu, lvl) => {
+    return (menu.map((m) => {
+      ++lvl;
+      return (<div key={lvl}>
+        <li>
+          {m?.header && <h5 className="dropdown-header">{m.header}</h5>}
+          {m?.label && <span className="dropdown-item" onClick={m?.onClick}>{m.label}</span>}
+        </li>
+        {m?.options && buildMenuOptions(m.options, lvl)}
+      </div>)
+    }));
+  };
+
+  const [menuOptions, setMenuOptions] = useState(buildMenuOptions(menu, 0));
+  const [status, setStatus] = useState(false);
+
+  return (<div tabIndex={1}
+    onBlur={(e) => {
+      if (!e.currentTarget.contains(e.relatedTarget)) { setStatus(false); }
+    }} >
     <div className="dropdown">
-     <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" 
-     onClick={()=>setStatus(!status)}>Select your Dropdown</button>
-     <ul className={status?"dropdown-menu show":"dropdown-menu"} style={{ paddingBottom:'0px' }}>
-      <div style={{ padding:'5px' }}>
-      
-        <InputGroup data={inputGroupData} />
-      </div>
-      <li><hr className="dropdown-divider" style={{ marginTop:'8px', marginBottom:'0px' }} /></li>
-      <div className="scroll" style={{ maxHeight:'300px', overflowY:'scroll' }}>
-      <li><h5 className="dropdown-header">Dropdown header 1</h5></li>
-      <li><span className="dropdown-item" onClick={()=>console.log('true')}>Link 1</span></li>
-      <li><span className="dropdown-item">Link 2</span></li>
-      <li><span className="dropdown-item">Link 3</span></li>
-      <li><h5 className="dropdown-header">Dropdown header 2</h5></li>
-      </div>
-     </ul>
-  </div>
-  
-      </div>
-    );
-  }
+      <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+        onClick={() => setStatus(!status)}>{placeholder}</button>
+      <ul className={status ? "dropdown-menu show" : "dropdown-menu"}>
+        <div className="input-group mb-0">
+          <input className="form-control" placeholder={searchLabel} onChange={(event) => setMenuOptions(buildMenuOptions(SearchData(event.target.value), 0))} />
+          <button type="button" className={"btn btn-secondary"}><Icon /></button>
+        </div>
+        <li><hr className="dropdown-divider" /></li>
+        <div className="dropdown-scroll scroll">
+          {menuOptions}
+        </div>
+      </ul>
+    </div>
+  </div>);
+}
