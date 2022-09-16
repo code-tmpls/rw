@@ -92,8 +92,7 @@ export const AccordianListItems = ({ data, highlightColor, defaultColor, selectK
     document.getElementById(id).classList.toggle("show");
   }
   let hierarachy = hierarachyPath(data, selectKey, selectValue);
-  console.log(hierarachy);
   return (<div>
-    {display_sidewrapper_children(data, hierarachy)}
+    {hierarachy && display_sidewrapper_children(data, hierarachy)}
   </div>);
 };

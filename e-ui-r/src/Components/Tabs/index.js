@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink   } from 'react-router-dom';
 import { Colors } from '@LibUtils/GlobalStyles.js';
 
 export const NavBarTabs = ({ menulinks, activeColor, defaultColor, activeId}) =>{
@@ -7,11 +8,11 @@ export const NavBarTabs = ({ menulinks, activeColor, defaultColor, activeId}) =>
  const [currentActiveId, setCurrentActiveId ] = useState(activeId);
  return (<ul className="navbar-nav" style={{ paddingTop:'5px',flexDirection: 'row' }}>
   {menulinks.map((data, index)=>{
-    let activeStyle = { padding:'10px', color: activeShowColor, textDecoration:'none', borderBottom: '2px solid '+activeShowColor, fontWeight:'bold'  };
-    let defaultStyle = { padding:'10px', textDecoration:'none', color:defaultShowColor, fontWeight:'bold'  };
+    let activeStyle = { padding:'10px', color: activeShowColor, background:'none', textDecoration:'none', borderBottom: '2px solid '+activeShowColor, fontWeight:'bold'  };
+    let defaultStyle = { padding:'10px', textDecoration:'none', background:'none', color:defaultShowColor, fontWeight:'bold'  };
     return (<li key={index}>
-     <a style={((currentActiveId===undefined && index===0) || (currentActiveId===data.id))?activeStyle:defaultStyle} 
-        aria-current={data.id} href={data.url} onClick={()=>setCurrentActiveId(data.id)}>{data.label}</a>
+     <NavLink style={((currentActiveId===undefined && index===0) || (currentActiveId===data.id))?activeStyle:defaultStyle} 
+        aria-current={data.id} to={data.url} onClick={()=>setCurrentActiveId(data.id)}>{data.label}</NavLink>
       </li>);
   })}
     </ul>);

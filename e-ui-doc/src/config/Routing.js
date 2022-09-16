@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Page  = React.lazy( ()=>import('@DocCore/Page.js') );
-
+import { GetStarted } from '@DocCore/get-started.js';
 import { ReduxPage } from '@DocReactAdvancedTopics/Redux/index.js';
 import { RxJSPage } from '@DocReactAdvancedTopics/Rxjs/index.js';
 
@@ -74,6 +74,7 @@ import { VennChartPage } from '@DocReactVisualization/VennChart/index.js';
 import { WaterfallChartPage } from '@DocReactVisualization/WaterfallChart/index.js';
 
 export const Routes = [
+    { path:"/", component:<GetStarted /> },
    // { path:"/", component: <Navigate to="Component/AccordianList" /> },
     { path:"Component/AccordianList", component:<Page content={<AccordianPage />} activeId="react" /> },
     { path:"Component/AccordianListItems", component:<Page content={<AccordianListItemsPage  />} activeId="react" /> },
