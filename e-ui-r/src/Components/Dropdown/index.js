@@ -3,7 +3,7 @@ import HtmlToReactParser from 'html-to-react';
 import { FontAwesomeIcon, Colors } from "e-ui-react";
 import './index.css';
 
-export const Dropdown = ({ placeholder, searchLabel, menu }) => {
+export const Dropdown = ({ placeholder, searchLabel, menu, layout }) => {
 
   const Icon = () => <FontAwesomeIcon name="fa-search" size="12" color={Colors.light} />
 
@@ -49,7 +49,8 @@ export const Dropdown = ({ placeholder, searchLabel, menu }) => {
     <div className="dropdown">
       <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
         onClick={() => setStatus(!status)}>{placeholder}</button>
-      <ul className={status ? "dropdown-menu show" : "dropdown-menu"}>
+      <ul className={(status ? "dropdown-menu show" : "dropdown-menu")+
+        (layout==="top"?" dropup-menu":"")} data-popper-placement="top-start">
         <div className="input-group mb-0">
           <input className="form-control" placeholder={searchLabel} onChange={(event) =>{
             setSearchValue(event.target.value);

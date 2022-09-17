@@ -1,4 +1,10 @@
 .dropdown-menu { padding-bottom: 0px; }
 ul.dropdown-menu > div { padding: 5px; }
 .dropdown-divider { margin-top: 8px;margin-bottom: 0px; }
-.dropdown-scroll { max-height: 100px;overflow-y: auto; }
+ .dropdown-scroll { max-height: 100px;overflow-y: auto; }
+.dropup-menu {
+    position: absolute;
+    inset: auto auto 0px 0px;
+    margin: 0px;
+    transform: translate(0px, -40px);
+}

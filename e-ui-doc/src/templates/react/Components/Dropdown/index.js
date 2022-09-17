@@ -20,7 +20,7 @@ console.log(SampleCodeJS.toString());
 
  const Note2 = () =>{
   return (<>
-  <div className="mtop10p mbot10p"><b>Simple Dropdown:</b></div>
+  <div className="mtop10p mbot10p"><b>Simple Dropdown ( with layout = <code><b>top</b></code> ):</b></div>
   <Card backgroundColor={Colors.grey} component={<>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['166T262']} />

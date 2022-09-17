@@ -263,7 +263,7 @@ export const SampleNote2 = () =>{
                       { label:"Siliguri", value:"Siliguri" }]; 
 
   return (<>
-    <Dropdown placeholder="Select your Dropdown" searchLabel="Search a Location" menu={menuOptions} />
+    <Dropdown placeholder="Select your Dropdown" searchLabel="Search a Location" menu={menuOptions} layout="top" />
    </>);
 };
 
