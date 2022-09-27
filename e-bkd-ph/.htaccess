@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteRule app/secure/token controllers/controller.module.cookie.php?action=APP_COOKIE_SETTINGS [QSA]
+RewriteRule app/data/view/([^/]+)$ controllers/module.app.static.php?action=APP_VIEW_STATDATA&type=$1 [QSA]
+RewriteRule app/data/add controllers/module.app.static.php?action=APP_ADDUPDATE_STATDATA [QSA]
+RewriteRule app/data/delete/([^/]+)$ controllers/module.app.static.php?action=APP_DELETE_STATDATA_TYPE&type=$1 [QSA]
+RewriteRule app/data/delete/([^/]+)/([^/]+)$ controllers/module.app.static.php?action=APP_DELETE_STATDATA_TYPEPARAM&type=$1&param=$2 [QSA]
+
+RewriteRule platform/add/new controllers/module.admin.php?action=PLATFORM_ADD_NEW [QSA]
+RewriteRule platform/view controllers/module.admin.php?action=PLATFORM_VIEW [NC,L]
+RewriteRule question/add/new controllers/module.admin.php?action=QUESTION_ADD_NEW [QSA]
+RewriteRule question/view/([^/]+)/([^/]+)/([^/]+)$ controllers/module.admin.php?action=QUESTION_VIEW&platformName=$1&limitStart=$2&limitEnd=$3 [QSA]
+RewriteRule question/update controllers/module.admin.php?action=QUESTION_UPDATE [QSA]
+RewriteRule question/autocomplete controllers/module.admin.php?action=QUESTION_AUTOCOMPLETE [QSA]
