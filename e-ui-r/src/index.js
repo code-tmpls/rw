@@ -69,6 +69,8 @@ export { Highlight } from '@LibCodeEditorsViewers/Highlight/index.js';
 export { Stackblitz } from '@LibCodeEditorsViewers/Stackblitz/index.js';
 
 import { RootProvider } from '@LibAdvancedTopics/Redux/index.js';
+export { ReduxDispatcher, toReduxStore, fromReduxStore } from '@LibAdvancedTopics/Redux/index.js';
+// export { dispatch, getFromStore, setInStore  } from '@LibAdvancedTopics/Redux/index.js';
 // export { RxJS } from '@LibAdvancedTopics/rxjs/index.js';
 
 export { Authentication } from '@LibReadyMadeScreens/Authentication/index.js';
