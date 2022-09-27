@@ -7,5 +7,8 @@ import  { Routes } from '@DocConfig/Routing.js';
 
 import("react-dom/client").then((ReactDOM)=>{
  ReactDOM.createRoot(document.getElementById("root"))
-  .render(<RootProvider component={<AppRouting data={Routes} loading={<></>} />} />);
+  .render(<RootProvider 
+    component={<AppRouting data={Routes} loading={<></>} />} 
+    variables={{}}
+  />);
 });
