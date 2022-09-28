@@ -3,7 +3,7 @@ import HtmlToReactParser from 'html-to-react';
 import { FontAwesomeIcon, Colors } from "e-ui-react";
 import './index.css';
 
-export const Dropdown = ({ placeholder, searchLabel, menu, layout }) => {
+export const Dropdown = ({ placeholder, searchLabel, menu, layout, value }) => {
 
   const Icon = () => <FontAwesomeIcon name="fa-search" size="12" color={Colors.light} />
 
@@ -26,7 +26,7 @@ export const Dropdown = ({ placeholder, searchLabel, menu, layout }) => {
           {m?.header && <h5 className="dropdown-header">
             { htmlToReactParser.parse(m.header.replace( new RegExp(searchValue, "gi"), (str)=>{return '<b>'+str+'</b>'} ) ) }
           </h5>}
-          {m?.label && <span className="dropdown-item curpoint" onClick={()=>{ setDropdownValue(m?.label);setStatus(false); }}>
+          {m?.label && <span className="dropdown-item curpoint" onClick={()=>{ setDropdownValue(m?.label);value(m?.label);setStatus(false); }}>
             { htmlToReactParser.parse(m.label.replace( new RegExp(searchValue, "gi"), (str)=>{return '<b>'+str+'</b>'} ) ) }
           </span>}
         </li>

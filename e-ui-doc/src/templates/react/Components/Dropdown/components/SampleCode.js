@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dropdown } from 'e-ui-react';
 
 export const SampleNote1 = () =>{
-
+ const [ dropdownValue, setDropdownValue ] = useState("");
  const menuOptions = [{ header :"Andhra Pradesh", 
                         options:[{ label:"Amaravathi", value:"Amaravathi" },
                                 { label:"Vishakapatnam", value:"Vishakapatnam" }] 
@@ -159,11 +159,13 @@ export const SampleNote1 = () =>{
 ]; 
 
  return (<>
-  <Dropdown placeholder="Select your Dropdown" searchLabel="Search a Location" menu={menuOptions} />
+  <Dropdown placeholder="Select your Dropdown" searchLabel="Search a Location" menu={menuOptions} value={setDropdownValue} />
+  <div className="mtop10p mbot10p"><b>Selected Value:</b> {dropdownValue}</div>
   </>);
 };
 
 export const SampleNote2 = () =>{
+  const [ dropdownValue, setDropdownValue ] = useState("");
   const menuOptions =[{ label:"Amaravathi", value:"Amaravathi" },
                       { label:"Vishakapatnam", value:"Vishakapatnam" },
                       { label:"Itanagar", value:"Itanagar" },
@@ -263,7 +265,8 @@ export const SampleNote2 = () =>{
                       { label:"Siliguri", value:"Siliguri" }]; 
 
   return (<>
-    <Dropdown placeholder="Select your Dropdown" searchLabel="Search a Location" menu={menuOptions} layout="top" />
+    <Dropdown placeholder="Select your Dropdown" searchLabel="Search a Location" menu={menuOptions} layout="top" value={setDropdownValue} />
+    <div className="mtop10p mbot10p"><b>Selected Value:</b> {dropdownValue}</div>
    </>);
 };
 
