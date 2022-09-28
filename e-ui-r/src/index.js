@@ -14,7 +14,6 @@ export { Drawer } from '@LibComponents/Drawer/index.js';
 export { Dropdown } from '@LibComponents/Dropdown/index.js';
 
 export { FontAwesomeIcon } from '@LibComponents/Icons/index.js';
-export { ListGroup } from '@LibComponents/ListGroup/index.js';
 export { Loading } from '@LibComponents/Loading/index.js';
 export { Modal } from '@LibComponents/Modal/index.js';
 // Navbar

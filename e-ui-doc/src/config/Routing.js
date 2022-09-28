@@ -21,7 +21,6 @@ import { CardPage } from '@DocReactComponents/Card/index.js';
 import { CarouselPage } from '@DocReactComponents/Carousel/index.js';
 import { DropdownPage } from '@DocReactComponents/Dropdown/index.js';
 import { DrawerPage } from '@DocReactComponents/Drawer/index.js';
-import { ListGroupPage } from '@DocReactComponents/ListGroup/index.js';
 import { LoadingPage } from '@DocReactComponents/Loading/index.js';
 import { ModalPage } from '@DocReactComponents/Modal/index.js';
 import { RuleBuilderPage } from '@DocReactComponents/RuleBuilder/index.js';
@@ -88,7 +87,6 @@ export const Routes = [
     { path:"Component/Carousel", component:<Page content={<CarouselPage />} activeId="react" /> },
     { path:"Component/Drawer", component:<Page content={<DrawerPage />} activeId="react" /> },
     { path:"Component/Dropdown", component:<Page content={<DropdownPage />} activeId="react" /> },
-    { path:"Component/ListGroup", component:<Page content={<ListGroupPage />} activeId="react" /> },
     { path:"Component/Loading", component:<Page content={<LoadingPage />} activeId="react" /> },
     { path:"Component/Modal", component:<Page content={<ModalPage />} activeId="react" /> },
     { path:"Component/RuleBuilder", component:<Page content={<RuleBuilderPage />} activeId="react" /> },
