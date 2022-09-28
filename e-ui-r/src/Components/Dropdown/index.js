@@ -15,6 +15,7 @@ export const Dropdown = ({ placeholder, searchLabel, menu, layout }) => {
       m?.label?.toLowerCase().includes(filterData?.toLowerCase())));
   };
 
+  const [dropDownValue, setDropdownValue] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const buildMenuOptions = (menu, lvl) => {
     const htmlToReactParser = new HtmlToReactParser.Parser();
@@ -25,7 +26,7 @@ export const Dropdown = ({ placeholder, searchLabel, menu, layout }) => {
           {m?.header && <h5 className="dropdown-header">
             { htmlToReactParser.parse(m.header.replace( new RegExp(searchValue, "gi"), (str)=>{return '<b>'+str+'</b>'} ) ) }
           </h5>}
-          {m?.label && <span className="dropdown-item" onClick={m?.onClick}>
+          {m?.label && <span className="dropdown-item curpoint" onClick={()=>{ setDropdownValue(m?.label);setStatus(false); }}>
             { htmlToReactParser.parse(m.label.replace( new RegExp(searchValue, "gi"), (str)=>{return '<b>'+str+'</b>'} ) ) }
           </span>}
         </li>
@@ -48,7 +49,7 @@ export const Dropdown = ({ placeholder, searchLabel, menu, layout }) => {
     }} >
     <div className="dropdown">
       <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
-        onClick={() => setStatus(!status)}>{placeholder}</button>
+        onClick={() => setStatus(!status)}>{(dropDownValue?.length>0)?dropDownValue:placeholder}</button>
       <ul className={(status ? "dropdown-menu show" : "dropdown-menu")+
         (layout==="top"?" dropup-menu":"")} data-popper-placement="top-start">
         <div className="input-group mb-0">

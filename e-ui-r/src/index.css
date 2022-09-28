@@ -50,3 +50,4 @@ html { overflow-x:hidden; }
 }
 
 .form-control, .dropdown-item { font-size:12px !important; }
+.curpoint { cursor:pointer; }
