@@ -19,7 +19,6 @@ export { Modal } from '@LibComponents/Modal/index.js';
 // Navbar
 export { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 export { Header } from '@LibComponents/Navbar/components/sidewrapper/index.js';
-export { RuleBuilder } from '@LibComponents/RuleBuilder/index.js';
 export { Table } from '@LibComponents/Table/index.js';
 export { NavBarTabs } from '@LibComponents/Tabs/index.js';
 export { Tag } from '@LibComponents/Tags/index.js';

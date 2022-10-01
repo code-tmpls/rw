@@ -15,7 +15,6 @@ export const SideWrapperData = [
             { id:"dropdown", url:"Component/Dropdown", title:"Dropdown" },
             { id:"drawer", url:"Component/Drawer", title:"Drawer" },
             { id:"modal", url:"Component/Modal", title:"Modal" },
-            { id:"ruleBuilder", url:"Component/RuleBuilder", title:"RuleBuilder" },
             { id:"table", url:"Component/Table", title:"Table" },
             { id:"tabs", url:"Component/Tabs", title:"Tabs" },
             { id:"tag", url:"Component/Tag", title:"Tag" },
