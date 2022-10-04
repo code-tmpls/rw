@@ -2,3 +2,4 @@
 .table { border: 1px solid #ccc; }
 .table-search-label { padding-top: 8%; }
 .table-search-textBox { padding-left:0%;padding-right: 2%; }
+.table-responsive > .table > thead { cursor:pointer; }
