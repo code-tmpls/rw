@@ -9,16 +9,11 @@ export const TablePage = () => {
    }, []);
 
    return (<><SimpleHeader title="Table" />
-      <Table data={[{
-         "Column Name 01": "Value 01",
-         "Column Name 02": "Value 02",
-         "Column Name 03": "Value 03",
-      },
-      {
-         "Column Name 01": "Value 01",
-         "Column Name 02": "Value 02",
-         "Column Name 03": "Value 03",
-      }]} />
+      <Table data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
+                  {  "City": "Tokyo", "Country": "Japan", "Continent":"Asia"  },
+                  {  "City": "Sydney", "Country": "Australia", "Continent":"Australia"  },
+                  {  "City": "New York", "Country": "USA", "Continent":"North America"  }
+      ]} />
    </>);
    
 };
