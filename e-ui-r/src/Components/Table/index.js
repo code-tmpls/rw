@@ -5,7 +5,7 @@ import './index.css';
 export const Table = ({ data }) => {
   const [tableData, setTableData] = useState(data.map((d, i) => ({ "#": (i + 1), ...d })));
   const ColumnDetails = Object.keys(tableData[0]);
-  const [sortColumns, setSortColumns] = useState({ columnName: '', sortBy: '' });
+  const [sortColumns, setSortColumns] = useState({ columnName: '#', sortBy: 'asc' });
 
   useEffect(() => {
     setTableData([...tableData].sort(sortColumnData(sortColumns.columnName, sortColumns.sortBy)));
@@ -28,8 +28,7 @@ export const Table = ({ data }) => {
     let columnJson = {};
     columnJson.columnName = columnName;
     if (sortColumns.columnName === columnName) {
-      if (sortColumns.sortBy === '') { columnJson.sortBy = 'asc'; }
-      else if (sortColumns.sortBy === 'asc') { columnJson.sortBy = 'desc'; }
+      if (sortColumns.sortBy === 'asc') { columnJson.sortBy = 'desc'; }
       else if (sortColumns.sortBy === 'desc') { columnJson.sortBy = 'asc'; }
     } else {
       columnJson.sortBy = 'asc';
