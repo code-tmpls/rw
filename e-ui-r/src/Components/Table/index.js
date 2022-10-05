@@ -10,7 +10,7 @@ import './index.css';
 export const Table = ({ title, data, dataSettings }) => {
   const tData = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || dataSettings?.dataSequence) )?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
   const [tableData, setTableData] = useState(tData);
-  const ColumnDetails = Object.keys(tableData[0]);
+  const ColumnDetails = Object.keys(tData[0]);
   const [sortColumns, setSortColumns] = useState({ columnName: ColumnDetails[0], sortBy: 'asc' });
 
   useEffect(() => {
@@ -42,6 +42,23 @@ export const Table = ({ title, data, dataSettings }) => {
     setSortColumns(columnJson);
   };
 
+  const SearchData = ( search )=>{
+    console.log(tData);
+    return tData.filter(el =>{
+     let colData = ColumnDetails.filter((col)=>el[col]?.toString().toLowerCase().includes(search?.toLowerCase()) );
+     if(colData.length>0){
+       return el;
+     }
+    });
+  }; 
+
+  const [ tableDataSearch, setTableDataSearch ] = useState(""); 
+
+  /*
+  useEffect(()=>{
+    
+  },[tableDataSearch]);
+*/
   return (<>
     <div className="row">
       <div className="col-md-8">
@@ -51,13 +68,19 @@ export const Table = ({ title, data, dataSettings }) => {
         <label className="table-search-label"><b>Search:</b></label>
       </div>
       <div className="col-md-3 table-search-textBox">
-        <input type="text" className="form-control" placeholder="Enter your Search" />
+        <input type="text" className="form-control" placeholder="Enter your Search" value={tableDataSearch}
+        onChange={(e)=>{
+          setTableDataSearch(e.target.value);
+          let searchedData = SearchData(e.target.value);
+          console.log('searchedData', searchedData);
+          setTableData(searchedData);
+        }} />
       </div>
     </div>
     <div className="row">
       <div className="col-md-12">
         <div className="table-responsive">
-          <table className="table table-striped table-hover">
+          <table className="table table-striped table-hover" style={{ marginBottom:'0px' }}>
             <thead>
               <tr align="center">
                 {ColumnDetails.map((colName, index) => {
@@ -82,6 +105,10 @@ export const Table = ({ title, data, dataSettings }) => {
               })}
             </tbody>
           </table>
+          {tableData.length===0 && 
+          (<div align="center" style={{ border:'1px solid #ccc', padding:'8px', backgroundColor:'#f2f2f2' }}>
+            No Data found
+          </div>)}
         </div>
       </div>
     </div>
