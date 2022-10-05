@@ -9,11 +9,29 @@ export const TablePage = () => {
    }, []);
 
    return (<><SimpleHeader title="Table" />
-      <Table data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
+      <Table title="1. DataSettings not defined" data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
                   {  "City": "Tokyo", "Country": "Japan", "Continent":"Asia"  },
                   {  "City": "Sydney", "Country": "Australia", "Continent":"Australia"  },
                   {  "City": "New York", "Country": "USA", "Continent":"North America"  }
       ]} />
+
+<Table title="2. DataSettings defined and Empty" data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
+                  {  "City": "Tokyo", "Country": "Japan", "Continent":"Asia"  },
+                  {  "City": "Sydney", "Country": "Australia", "Continent":"Australia"  },
+                  {  "City": "New York", "Country": "USA", "Continent":"North America"  }
+      ]} dataSettings={{ }}/>
+
+   <Table title="3. DataSettings defined and it is true" data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
+                  {  "City": "Tokyo", "Country": "Japan", "Continent":"Asia"  },
+                  {  "City": "Sydney", "Country": "Australia", "Continent":"Australia"  },
+                  {  "City": "New York", "Country": "USA", "Continent":"North America"  }
+      ]} dataSettings={{ dataSequence: true }}/>
+
+<Table title="4. DataSettings defined and it is false" data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
+                  {  "City": "Tokyo", "Country": "Japan", "Continent":"Asia"  },
+                  {  "City": "Sydney", "Country": "Australia", "Continent":"Australia"  },
+                  {  "City": "New York", "Country": "USA", "Continent":"North America"  }
+      ]} dataSettings={{ dataSequence: false }}/>
    </>);
    
 };

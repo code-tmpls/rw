@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from 'e-ui-react';
 import './index.css';
+/**
+ dataSettings={
+  dataSequence: true/false (default: true) // if true, sequence column is visible or else it is hidden
+ }
+ */
 
-export const Table = ({ data }) => {
-  const [tableData, setTableData] = useState(data.map((d, i) => ({ "#": (i + 1), ...d })));
+export const Table = ({ title, data, dataSettings }) => {
+  const tData = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || dataSettings?.dataSequence) )?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
+  const [tableData, setTableData] = useState(tData);
   const ColumnDetails = Object.keys(tableData[0]);
-  const [sortColumns, setSortColumns] = useState({ columnName: '#', sortBy: 'asc' });
+  const [sortColumns, setSortColumns] = useState({ columnName: ColumnDetails[0], sortBy: 'asc' });
 
   useEffect(() => {
     setTableData([...tableData].sort(sortColumnData(sortColumns.columnName, sortColumns.sortBy)));
@@ -39,7 +45,7 @@ export const Table = ({ data }) => {
   return (<>
     <div className="row">
       <div className="col-md-8">
-        <label style={{ paddingTop: '1%', paddingLeft: '1.65%', fontSize: '14px', fontWeight: '400' }}>Table Title</label>
+        <label style={{ paddingTop: '1%', paddingLeft: '1.65%', fontSize: '14px', fontWeight: '400' }}>{title}</label>
       </div>
       <div align="right" className="col-md-1">
         <label className="table-search-label"><b>Search:</b></label>
