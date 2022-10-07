@@ -12,7 +12,7 @@ export const TablePage = () => {
       <Table title="1. DataSettings not defined" data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
                   {  "City": "Tokyo", "Country": "Japan", "Continent":"Asia"  },
                   {  "City": "Sydney", "Country": "Australia", "Continent":"Australia"  },
-                  {  "City": <div>New York</div>, "Country": "USA", "Continent":"North America"  }
+                  {  "City": <div style={{ backgroundColor:'yellow' }}>New York</div>, "Country": "USA", "Continent":"North America"  }
       ]} />
 
 <Table title="2. DataSettings defined and Empty" data={[{  "City": "Hyderabad", "Country": "India", "Continent":"Asia" },
