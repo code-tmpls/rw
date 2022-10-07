@@ -16,7 +16,7 @@ const SplitConfiguration = ( content, lines ) =>{
             returnData.push(contents[l]);
         });
     } else {
-        returnData.push(contents[line]);
+        returnData.push(contents[line].trim());
     }
   });
   return returnData;
@@ -48,7 +48,6 @@ export const Highlight = (props) => {
     hljs.configure({ 'languages': ['html','javascript'], 'ignoreUnescapedHTML': true });
     hljs.highlightAll();    
  },[]);
-
 
   return (<pre><code className={"lang-"+props.lang} {...props}>
     {HtmlStringToReactJSXConverter(props.content, props.lang, props.lines)}

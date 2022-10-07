@@ -85,7 +85,7 @@ export const Table = ({ title, data, dataSettings }) => {
     <div className="row">
       <div className="col-md-12">
         <div className="table-responsive">
-          <table className="table table-striped table-hover" style={{ marginBottom:'0px' }}>
+          <table className="table table-striped table-hover" style={{ marginBottom:'0px', backgroundColor:'#fff' }}>
             <thead>
               <tr align="center">
                 {ColumnDetails.map((colName, index) => {
