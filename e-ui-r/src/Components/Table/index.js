@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from 'e-ui-react';
+import { FontAwesomeIcon, ReactJSXToOutputViewer } from 'e-ui-react';
 import './index.css';
 /**
  dataSettings={
@@ -45,7 +45,12 @@ export const Table = ({ title, data, dataSettings }) => {
   const SearchData = ( search )=>{
     console.log(tData);
     return tData.filter(el =>{
-     let colData = ColumnDetails.filter((col)=>el[col]?.toString().toLowerCase().includes(search?.toLowerCase()) );
+     let colData = ColumnDetails.filter((col)=>{
+      let columnData = ReactJSXToOutputViewer(el[col]);
+      console.log( 'columnData: ', columnData );
+      console.log( 'searchData: ', search );
+      return columnData?.toString().toLowerCase().includes(search?.toLowerCase()) 
+     });
      if(colData.length>0){
        return el;
      }

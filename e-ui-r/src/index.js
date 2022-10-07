@@ -63,7 +63,7 @@ export { WaterfallChart } from '@LibVisualization/WaterfallChart/index.js';
 
 export { AppColors } from '@LibThemes/AppColors/index.js';
 
-export { Highlight } from '@LibCodeEditorsViewers/Highlight/index.js';
+export { Highlight, HtmlStringToReactJSXConverter, ReactJSXToHtmlStringConverter, ReactJSXToOutputViewer } from '@LibCodeEditorsViewers/Highlight/index.js';
 export { Stackblitz } from '@LibCodeEditorsViewers/Stackblitz/index.js';
 
 import { RootProvider } from '@LibAdvancedTopics/Redux/index.js';
