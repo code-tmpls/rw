@@ -17,3 +17,7 @@ export const NavBarTabs = ({ menulinks, activeColor, defaultColor, activeId}) =>
   })}
     </ul>);
    };
+
+export const Nav = ()=>{
+ return (<></>);
+};

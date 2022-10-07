@@ -16,7 +16,7 @@ export const SideWrapperData = [
             { id:"drawer", url:"Component/Drawer", title:"Drawer" },
             { id:"modal", url:"Component/Modal", title:"Modal" },
             { id:"table", url:"Component/Table", title:"Table" },
-            { id:"tabs", url:"Component/Tabs", title:"Tabs" },
+            { id:"nav", url:"Component/Nav", title:"Nav" },
             { id:"tag", url:"Component/Tag", title:"Tag" },
             { id:"toast", url:"Component/Toast", title:"Toast" },
             { id:"toolTip", url:"Component/ToolTip", title:"ToolTip" },

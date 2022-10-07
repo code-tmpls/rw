@@ -20,7 +20,7 @@ export { Modal } from '@LibComponents/Modal/index.js';
 export { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 export { Header } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 export { Table } from '@LibComponents/Table/index.js';
-export { NavBarTabs } from '@LibComponents/Tabs/index.js';
+export { NavBarTabs, Nav } from '@LibComponents/Nav/index.js';
 export { Tag } from '@LibComponents/Tags/index.js';
 export { Toast } from '@LibComponents/Toast/index.js';
 export { ToolTip } from '@LibComponents/ToolTip/index.js';
@@ -80,6 +80,7 @@ export { ReadyMadeDropdowns } from '@LibReadyMadeScreens/ReadyMadeDropdowns/inde
 export { UrlParams, UUID } from '@LibUtils/AppConfig.js';
 export { DeviceRecognizer } from '@LibUtils/DeviceRecognizer.js';
 export { Colors } from '@LibUtils/GlobalStyles.js';
+export { GetCurrentTimeStamp } from '@LibUtils/DateTime.js';
 
 
 export default RootProvider;
