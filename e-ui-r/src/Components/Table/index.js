@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon, ReactJSXToOutputViewer } from 'e-ui-react';
+import { FontAwesomeIcon, ReactJSXToOutputViewer, SortJSONArray } from 'e-ui-react';
 import './index.css';
 /**
  dataSettings={
@@ -14,21 +14,8 @@ export const Table = ({ title, data, dataSettings }) => {
   const [sortColumns, setSortColumns] = useState({ columnName: ColumnDetails[0], sortBy: 'asc' });
 
   useEffect(() => {
-    setTableData([...tableData].sort(sortColumnData(sortColumns.columnName, sortColumns.sortBy)));
+    setTableData( SortJSONArray(tableData, sortColumns.columnName, sortColumns.sortBy) );
   }, [sortColumns]);
-
-  const sortColumnData = (prop, type) => {
-    return (a, b) => {
-      if (a[prop] > b[prop]) {
-        if (type === 'asc') { return 1; }
-        else if (type === 'desc') { return -1; }
-      } else if (a[prop] < b[prop]) {
-        if (type === 'asc') { return -1; }
-        else if (type === 'desc') { return 1; }
-      }
-      return 0;
-    };
-  };
 
   const updateColumnSorting = (columnName) => {
     let columnJson = {};

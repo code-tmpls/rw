@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {  SortJSONArray } from "e-ui-react";
 
 export const Toast = ({ data })=>{
+  const [toastData, setToastData ] = useState();
+  useEffect(()=>{
+    setToastData(SortJSONArray(data, 'timestamp', 'asc'));
+  },[data]);
 
  const ToastContent = ({ data, index })=>{
+
   return (<div id={"toast-"+index} className="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
   <div className="toast-header">
     <strong className="me-auto">{data.title}</strong>
@@ -22,7 +28,7 @@ export const Toast = ({ data })=>{
  return (<>
  <div className="position-fixed bottom-0 end-0 p-3" style={{zIndex: 11}}>
  <div className="toast-container">
-   {data.map((d,i)=><ToastContent key={i} index={i} data={d} />)}
+   {toastData?.map((d,i)=><ToastContent key={i} index={i} data={d} />)}
  </div>
  </div>
  </>);
