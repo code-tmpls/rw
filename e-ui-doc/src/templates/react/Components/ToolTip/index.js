@@ -8,5 +8,5 @@ export const ToolTipPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="Toast" /></>);
+    return (<><SimpleHeader title="ToolTip" /></>);
 };
