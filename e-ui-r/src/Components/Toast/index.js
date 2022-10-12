@@ -3,6 +3,7 @@ import {  SortJSONArray } from "e-ui-react";
 
 export const Toast = ({ data })=>{
   const [toastData, setToastData ] = useState();
+  
   useEffect(()=>{
     setToastData(SortJSONArray(data, 'timestamp', 'asc'));
   },[data]);

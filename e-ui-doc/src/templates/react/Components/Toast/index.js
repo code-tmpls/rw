@@ -1,25 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { SimpleHeader, Toast, GetCurrentTimeStamp } from 'e-ui-react';
+import React, { useEffect } from 'react';
+import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SampleNote1 } from './components/SampleCode.js';
+import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
 
-export const ToastPage = () => {
- const [ viewToast, setViewToast ] = useState(true); 
+const ToastNotes = ()=>{
 
- const [ toastList, setToastList ] = useState([]);
- const toastData = { title:'Bootstrap', message:'Hello, world! This is a toast message.', timestamp: GetCurrentTimeStamp() };
+ const Note1 = () =>{
+  return (<>
+  <div className="mtop10p mbot10p"><b>Toast with static Message Notification Push (Dynamically):</b></div>
+  <Card backgroundColor={Colors.grey} component={<>
+  <div className="mbot10p"><b>Sample Code:</b></div>
+  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['0','1']} />
+  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['5T16']} />
+  <div className="mtop10p mbot10p"><b>Output:</b></div>
+  <SampleNote1 />
+  </>} />
+  </>);
+ };
 
+ return (<Order data={[<Note1 />]} />);
+};
+
+export const ToastPage = () =>{
+  
  useEffect(() => {
   window.scrollTo(0, 0);
  }, []);
 
- useEffect(()=>{
-  console.log( toastList );
- },[toastList]);
-
- return (<><SimpleHeader title="Toast" />
-    <button type="button" className="btn btn-primary" id="liveToastBtn" 
- onClick={()=>{
-    setToastList([...toastList, toastData])
- }}>View Toast</button>
-    { viewToast && <Toast data={toastList} />}
-    </>);
+ return (<>
+ <SimpleHeader title="Toast" />
+ <Grid data={[
+    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<ToastNotes /> }]
+  ]} />
+ 
+ </>);
 };

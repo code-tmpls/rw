@@ -1,26 +1,24 @@
-import React from "react";
-import { Accordian } from 'e-ui-react';
+import React, { useState } from "react";
+import { Toast, GetCurrentTimeStamp } from 'e-ui-react';
 
 export const SampleNote1 = () =>{
- return (<>
-  <Accordian id="AccordianExample" 
-    data={[{ id:"Item#1", title: <h5>Accordion Item #1</h5>, component:"This is the first item's accordion body"  },
-        { id:"Item#2", title: "Accordion Item #2", component:"This is the Second item's accordion body"  },
-        { id:"Item#3", title: "Accordion Item #3", component:"This is the Third item's accordion body"  }]} 
-  />
+
+ const ToastExample = ()=>{
+
+  const [ toastList, setToastList ] = useState([]);
+  
+  const toastData = { title:'Bootstrap', message:'Hello, world! This is a toast message.', timestamp: GetCurrentTimeStamp() };
+
+  return (<>
+   <button type="button" className="btn btn-primary" id="liveToastBtn" onClick={()=>setToastList([...toastList, toastData])}>View Toast</button>
+   <Toast data={toastList} />
   </>);
+  
+ };
+
+ return (<ToastExample />);
 };
 
-export const SampleNote2 = () =>{
-  return (<>
-   <Accordian id="AccordianExample" 
-     data={[{ id:"Item#1", title: "Accordion Item #1", component:"This is the first item's accordion body"  },
-         { id:"Item#2", title: "Accordion Item #2", component:"This is the Second item's accordion body"  },
-         { id:"Item#3", title: "Accordion Item #3", component:"This is the Third item's accordion body"  }]} 
-     defaultOpen="Item#2"
-   />
-   </>);
-};
 
 const SampleCode = () =>{
   return (<></>);

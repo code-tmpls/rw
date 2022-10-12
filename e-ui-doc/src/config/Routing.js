@@ -27,7 +27,7 @@ import { TablePage } from '@DocReactComponents/Table/index.js';
 import { NavPage } from '@DocReactComponents/Nav/index.js';
 import { TagPage } from '@DocReactComponents/Tag/index.js';
 import { ToastPage } from '@DocReactComponents/Toast/index.js';
-import { ToolTipPage } from '@DocReactComponents/ToolTip/index.js';
+import { HoverPage } from '@DocReactComponents/Hover/index.js';
 
 import { AppRoutingPage } from '@DocReactFeatures/AppRouting/index.js';
 import { SpeechListenerPage } from '@DocReactFeatures/SpeechListener/index.js';
@@ -92,7 +92,7 @@ export const Routes = [
     { path:"Component/Nav", component:<Page content={<NavPage />} activeId="react" /> },
     { path:"Component/Tag", component:<Page content={<TagPage />} activeId="react" /> },
     { path:"Component/Toast", component:<Page content={<ToastPage />} activeId="react" /> },
-    { path:"Component/ToolTip", component:<Page content={<ToolTipPage />} activeId="react" /> },
+    { path:"Component/Hover", component:<Page content={<HoverPage />} activeId="react" /> },
     
     { path:"Feature/AppRouting", component:<Page content={<AppRoutingPage />} activeId="react" /> },
     { path:"Feature/SpeechListener", component:<Page content={<SpeechListenerPage />} activeId="react" /> },

@@ -19,7 +19,7 @@ export const SideWrapperData = [
             { id:"nav", url:"Component/Nav", title:"Nav" },
             { id:"tag", url:"Component/Tag", title:"Tag" },
             { id:"toast", url:"Component/Toast", title:"Toast" },
-            { id:"toolTip", url:"Component/ToolTip", title:"ToolTip" },
+            { id:"Hover", url:"Component/Hover", title:"Hover" },
             { id:"loading", url:"Component/Loading", title:"Loading" }]
            },
     { id:"features",

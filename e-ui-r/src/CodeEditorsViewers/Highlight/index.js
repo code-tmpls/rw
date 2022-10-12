@@ -9,6 +9,7 @@ const SplitConfiguration = ( content, lines ) =>{
   let returnData = [];
   const range = (min, max) => [...Array(max - min + 1).keys()].map(i => i + min);
   let contents = content.split('\n');
+  console.log( contents );
   lines.forEach((line)=>{
     if(line.includes('T')){
         let lineSplitter =  line.split('T');
@@ -25,7 +26,7 @@ const SplitConfiguration = ( content, lines ) =>{
 export const HtmlStringToReactJSXConverter = ( code, lang, lines )=>{
   const htmlToReactParser = new HtmlToReactParser.Parser();
   if(lines!==undefined){
-   code = SplitConfiguration( code, lines ).join('');
+   code = SplitConfiguration( code, lines ).join('\n');
   }
   if(lang==undefined){ lang='html'; }
   const html = hljs.highlight(code, {language: lang }).value;

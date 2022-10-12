@@ -23,7 +23,7 @@ export { Table } from '@LibComponents/Table/index.js';
 export { NavBarTabs, Nav } from '@LibComponents/Nav/index.js';
 export { Tag } from '@LibComponents/Tags/index.js';
 export { Toast } from '@LibComponents/Toast/index.js';
-export { ToolTip } from '@LibComponents/ToolTip/index.js';
+export { Hover } from '@LibComponents/Hover/index.js';
 
 export { AppRouting } from '@LibFeatures/AppRouting/index.js';
 export { SpeechListener } from '@LibFeatures/SpeechListener/index.js';
