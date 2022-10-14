@@ -24,7 +24,7 @@ import { DrawerPage } from '@DocReactComponents/Drawer/index.js';
 import { LoadingPage } from '@DocReactComponents/Loading/index.js';
 import { ModalPage } from '@DocReactComponents/Modal/index.js';
 import { TablePage } from '@DocReactComponents/Table/index.js';
-import { NavPage } from '@DocReactComponents/Nav/index.js';
+import { MenuPage } from '@DocReactComponents/Menu/index.js';
 import { TagPage } from '@DocReactComponents/Tag/index.js';
 import { ToastPage } from '@DocReactComponents/Toast/index.js';
 import { HoverPage } from '@DocReactComponents/Hover/index.js';
@@ -89,7 +89,7 @@ export const Routes = [
     { path:"Component/Loading", component:<Page content={<LoadingPage />} activeId="react" /> },
     { path:"Component/Modal", component:<Page content={<ModalPage />} activeId="react" /> },
     { path:"Component/Table", component:<Page content={<TablePage />} activeId="react" /> },
-    { path:"Component/Nav", component:<Page content={<NavPage />} activeId="react" /> },
+    { path:"Component/Menu", component:<Page content={<MenuPage />} activeId="react" /> },
     { path:"Component/Tag", component:<Page content={<TagPage />} activeId="react" /> },
     { path:"Component/Toast", component:<Page content={<ToastPage />} activeId="react" /> },
     { path:"Component/Hover", component:<Page content={<HoverPage />} activeId="react" /> },

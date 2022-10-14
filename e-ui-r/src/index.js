@@ -20,7 +20,7 @@ export { Modal } from '@LibComponents/Modal/index.js';
 export { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 export { Header } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 export { Table } from '@LibComponents/Table/index.js';
-export { NavBarTabs, Nav } from '@LibComponents/Nav/index.js';
+export { NavBarTabs, Menu } from '@LibComponents/Menu/index.js';
 export { Tag } from '@LibComponents/Tags/index.js';
 export { Toast } from '@LibComponents/Toast/index.js';
 export { Hover } from '@LibComponents/Hover/index.js';
