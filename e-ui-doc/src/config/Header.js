@@ -20,12 +20,12 @@ const ChooseTheme = () =>{
 };
   
 export const NavMenuHeader = ( activeId ) =>[
- { xs:12, md:6, component:<NavBarTabs menulinks={[{ id:'get-started', url:'/', label:'Get Started' },
+ { xs:12, md:8, component:<NavBarTabs menulinks={[{ id:'get-started', url:'/', label:'Get Started' },
                                                 { id:'javascript', url:'#', label:'Javascript' },
                                                 { id:'react', url:'Component/AccordianList', label:'React' },
                                                 { id:'reactNative', url:'#', label:'React Native' },
                                                 { id:'php', url:'#', label:'PHP' }]} 
                                         activeId={activeId} /> 
  },
- {  xs:12, md:6, component:<ChooseTheme /> }
+ {  xs:12, md:4, component:<ChooseTheme /> }
 ];

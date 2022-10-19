@@ -20,7 +20,7 @@ export const NavBarTabs = ({ menulinks, activeColor, defaultColor, activeId }) =
   </ul>);
 };
 
-export const Menu = ({ type, layout, align, list }) => {
+export const Menu = ({ type, layout, align, list, justify }) => {
 
   const Nav = ({ layout, align, list }) => {
 
@@ -35,13 +35,13 @@ export const Menu = ({ type, layout, align, list }) => {
     };
 
     return (<>
-      {(layout === undefined || layout === 'horizontal') && (<ul className={"nav " + alignment}><NavContent /></ul>)}
+      {(layout === undefined || layout === 'horizontal') && (<ul className={("nav " + alignment).trim()}><NavContent /></ul>)}
       {(layout === 'vertical') && <div align={align}><ul className={"nav flex-column "}><NavContent /></ul></div>}
     </>);
 
   };
 
-  const Tab = ({ list }) => {
+  const Tab = ({ justify, list }) => {
     const [activeTab, setActiveTab] = useState(list[0].id);
     let tabList = [];
     let tabContent = [];
@@ -53,7 +53,7 @@ export const Menu = ({ type, layout, align, list }) => {
       tabContent.push(<div className={l.id === activeTab ? "tab-pane tab-active" : "tab-pane fade"} id={l.id}>{l.component}</div>)
     })
     return (<>
-      <ul className="nav nav-tabs">
+      <ul className={(justify!==undefined && justify)?"nav nav-tabs nav-justified":"nav nav-tabs"}>
         {tabList}
       </ul>
       <div className="tab-content">
@@ -62,7 +62,7 @@ export const Menu = ({ type, layout, align, list }) => {
     </>);
   };
 
-  const Pills = ({ list })=>{
+  const Pills = ({ justify, list })=>{
     const [activePill, setActivePill] = useState(list[0].id);
     let tabList = [];
     let tabContent = [];
@@ -74,7 +74,7 @@ export const Menu = ({ type, layout, align, list }) => {
       tabContent.push(<div className={l.id === activePill ? "tab-pane pill-active" : "tab-pane fade"} id={l.id}>{l.component}</div>)
     })
     return (<>
-      <ul className="nav nav-pills">
+      <ul className={(justify!==undefined && justify)?"nav nav-pills nav-justified":"nav nav-pills"}>
         {tabList}
       </ul>
       <div className="tab-content">
@@ -85,7 +85,7 @@ export const Menu = ({ type, layout, align, list }) => {
 
   return (<>
     {type.toLowerCase() === "nav" && <Nav layout={layout} align={align} list={list} />}
-    {type.toLowerCase() === "tab" && <Tab list={list} />}
-    {type.toLowerCase() === "pill" && <Pills list={list} />}
+    {type.toLowerCase() === "tab" && <Tab justify={justify} list={list} />}
+    {type.toLowerCase() === "pill" && <Pills justify={justify} list={list} />}
   </>);
 };

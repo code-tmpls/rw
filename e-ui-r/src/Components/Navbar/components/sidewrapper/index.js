@@ -49,7 +49,7 @@ export const SideWrapperNavbar = (props) => {
     return (<nav className="navbar navbar-expand-lg bg-light">
     <div className="container-fluid" style={{ display:'block',paddingBottom:'5px' }}>
        <div className="row">
-           <div className="col-xs-12 col-md-3">
+           <div className="col-md-4 col-xs-6 ">
             
            <a className="navbar-brand" to="#" 
              style={{ marginLeft:'15px'}} 
@@ -59,10 +59,10 @@ export const SideWrapperNavbar = (props) => {
                  <span>{props.title}</span>
            </a>
            </div>
-             <div className="col-xs-12 col-md-9">
+             <div className="col-xs-6 col-md-8">
                <div className="row">
                  {props.headerContent.map((data,index)=>{
-                   return (<div key={index} className={"col-xs-"+data.xs+" col-md-"+data.md}>{data.component}</div>);
+                   return (<div key={index} align="center" className={"col-xs-"+data.xs+" col-md-"+data.md}>{data.component}</div>);
                  })}
                </div>
              </div>
