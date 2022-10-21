@@ -1,6 +1,4 @@
 import React from "react";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import RootProvider, { AppRouting } from 'e-ui-react';
 import  { Routes } from '@DocConfig/Routing.js';

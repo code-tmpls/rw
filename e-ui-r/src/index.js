@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 export { Accordian } from '@LibComponents/Accordian/index.js';
