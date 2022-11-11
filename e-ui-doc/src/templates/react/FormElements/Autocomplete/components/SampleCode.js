@@ -6,7 +6,7 @@ export const SampleNote1 = () =>{
  const data = ["Nellutla", "Nethula", "Nemalikanti"];
 
  return (<>
- <Autocomplete id="surname" name="surname" label="Surname" placeholder="Enter your Surname" autoCompleteData={data} />
+ <Autocomplete name="surname" label="Surname" placeholder="Enter your Surname" autoCompleteData={data} />
  </>);
 };
 
@@ -27,7 +27,7 @@ export const SampleNote2 = () =>{
 
    
  return (<>
-  <Autocomplete id="surname" name="surname" label="Surname" placeholder="Enter your Surname" autoCompleteData={data} />
+  <Autocomplete name="surname" label="Surname" placeholder="Enter your Surname" autoCompleteData={data} />
  </>);
 
 };

@@ -4,20 +4,21 @@ import './index.css';
 
 // const data = ["Action","Another Action","Something else here"];
 
-export const Autocomplete = ({ id, name, label, placeholder, value, autoCompleteData }) =>{
+export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData, formContext }) =>{
  const [ filteredData, setFilteredData ] = useState([]);
  const [ show, setShow ] = useState(false);
  const [ autoCompleteValue, setAutoCompleteValue ] = useState((value===undefined)?'':value);
 
  const DataFilter = (val, status) =>{
-  console.log(val);
   setAutoCompleteValue(val);
   setFilteredData(autoCompleteData.filter(n => val.length>0 && n?.toLowerCase().includes(val?.toLowerCase())));
   setShow(status);
  };
 
  useEffect(()=>{
-  console.log(autoCompleteValue);
+  let formName = formContext?.name;
+  let form = formContext?.form;
+  formContext?.setForm(Object.assign(form, { [formName] : { [name]: autoCompleteValue } }));
  },[autoCompleteValue]);
 
  return (<>
@@ -30,11 +31,11 @@ export const Autocomplete = ({ id, name, label, placeholder, value, autoComplete
    }
  }}>
  <input type="type" name={name} className="form-control dropdown-toggle" 
-  placeholder={placeholder} id={id} data-bs-toggle="dropdown" aria-expanded="false" 
+  placeholder={placeholder} data-bs-toggle="dropdown" aria-expanded="false" 
   value={autoCompleteValue} 
  onChange={(e)=>{ DataFilter(e.target.value, true); }} />
  {show && filteredData.length>0 && (
-  <ul className="dropdown-menu autocomplete-dropdown show" aria-labelledby={id}>
+  <ul className="dropdown-menu autocomplete-dropdown show" aria-labelledby={name}>
   {filteredData.map((d, i)=>{
     const htmlToReactParser = new HtmlToReactParser.Parser();
     return (<li key={i} onClick={()=>{ DataFilter(d, false); }}>

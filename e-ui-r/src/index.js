@@ -42,6 +42,7 @@ export { Range } from '@LibFormElements/Range/index.js';
 export { Select } from '@LibFormElements/Select/index.js';
 export { TextArea } from '@LibFormElements/TextArea/index.js';
 export { TextBox } from '@LibFormElements/TextBox/index.js';
+export { Form, getForm } from '@LibFormElements/Form/index.js';
 
 export { SimpleHeader, FilledHeader } from '@LibHeadersAndFooters/Heading/index.js';
 

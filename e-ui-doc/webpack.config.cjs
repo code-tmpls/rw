@@ -5,7 +5,7 @@ const webpackUtil = require( './config/webpack.utils.cjs' );
 const webpackConfigAlias = webpackUtil.webpackLibraryAliasConfiguration(['e-ui-react']);
 const Path = require('path');
 // const baseUrl = 'http://localhost:8080/';
-const baseUrl = 'http://192.168.1.4:8080/';
+const baseUrl = 'http://localhost:8080/';
 
 module.exports = {
  mode: 'development',
