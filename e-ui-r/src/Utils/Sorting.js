@@ -14,3 +14,7 @@ export const SortJSONArray = (jsonArray, objectKey, sortBy)=>{
 };
  return [...jsonArray].sort( sorter(objectKey, sortBy) );
 };
+
+export const FilterArray = (arry, searchkeyword)=>{
+ return (arry.filter(n => searchkeyword.length>0 && n?.toLowerCase().includes(searchkeyword?.toLowerCase())));
+};

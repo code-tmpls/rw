@@ -1,24 +1,35 @@
 import React, { useState, useEffect } from "react";
 import HtmlToReactParser from 'html-to-react';
+import { FilterArray } from "e-ui-react";
 import './index.css';
 
 // const data = ["Action","Another Action","Something else here"];
 
-export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData, formContext }) =>{
+export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData, formContext, validation }) =>{
+
  const [ filteredData, setFilteredData ] = useState([]);
+
  const [ show, setShow ] = useState(false);
  const [ autoCompleteValue, setAutoCompleteValue ] = useState((value===undefined)?'':value);
 
  const DataFilter = (val, status) =>{
   setAutoCompleteValue(val);
-  setFilteredData(autoCompleteData.filter(n => val.length>0 && n?.toLowerCase().includes(val?.toLowerCase())));
+  setFilteredData(FilterArray(autoCompleteData, val));
   setShow(status);
  };
 
  useEffect(()=>{
   let formName = formContext?.name;
   let form = formContext?.form;
-  formContext?.setForm(Object.assign(form, { [formName] : { [name]: autoCompleteValue } }));
+  formContext?.setForm(Object.assign(form, { 
+    [formName] : { 
+      [name]: autoCompleteValue,
+      "validationSteps": validationSteps,
+      "validationStatus":{
+
+      } }
+    }));
+  // validationSteps
  },[autoCompleteValue]);
 
  return (<>
@@ -33,7 +44,10 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
  <input type="type" name={name} className="form-control dropdown-toggle" 
   placeholder={placeholder} data-bs-toggle="dropdown" aria-expanded="false" 
   value={autoCompleteValue} 
- onChange={(e)=>{ DataFilter(e.target.value, true); }} />
+ onChange={(e)=>{ DataFilter(e.target.value, true); }} 
+ required={validation?.required?.value}
+ />
+ <div align="right" className="invalid-feedback">{validation?.required?.value}</div>
  {show && filteredData.length>0 && (
   <ul className="dropdown-menu autocomplete-dropdown show" aria-labelledby={name}>
   {filteredData.map((d, i)=>{

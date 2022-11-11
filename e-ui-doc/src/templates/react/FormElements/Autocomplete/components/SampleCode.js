@@ -27,7 +27,7 @@ export const SampleNote2 = () =>{
 
    
  return (<>
-  <Autocomplete name="surname" label="Surname" placeholder="Enter your Surname" autoCompleteData={data} />
+  <Autocomplete name="surname" label="Surname" placeholder="Enter your Surname" autoCompleteData={data} value="Clementine Bauch" />
  </>);
 
 };
