@@ -6,6 +6,7 @@ import './index.css';
 // const data = ["Action","Another Action","Something else here"];
 
 export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData, formContext, validation }) => {
+  
   const formName = formContext?.name;
   const form = formContext?.form;
   const [filteredData, setFilteredData] = useState([]);
@@ -13,6 +14,10 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   const [show, setShow] = useState(false);
   const [autoCompleteValue, setAutoCompleteValue] = useState((value === undefined) ? '' : value);
   const [validationStatus, setValidationStatus] = useState({});
+
+  useEffect(()=>{
+    setAutoCompleteValue('');
+  }, [form?.[formName]?.reset]);
 
   const DataFilter = (val, status) => {
     setAutoCompleteValue(val);
@@ -23,7 +28,7 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   useEffect(() => {
     // validation
     let result = {};
-    if (validation !== undefined) {
+    if (autoCompleteValue.length>0 && validation !== undefined) {
       result = FormInputValidate(validation, autoCompleteValue);
       console.log(result);
       setValidationStatus(result);

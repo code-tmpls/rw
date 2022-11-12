@@ -11,22 +11,22 @@ export const Form = ({ name, children }) =>{
   };
   const onSubmitForm = ()=>{
     setForm(Object.assign(form, {
-      [name]: {
-       submitted: true
+      [name]:{
+        submitted: true
       }
     }));
   };
   const onResetForm = ()=>{
     setForm(Object.assign(form, {
       [name]: {
-       submitted: false
+        reset: true
       }
     }));
   };
 
 
   useEffect(()=>{
-    console.log( form );
+    console.log( JSON.stringify(form) );
   },[form]);
   return (
     <FormContext.Provider value={{ form, setForm }}>
