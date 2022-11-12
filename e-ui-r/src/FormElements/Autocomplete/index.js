@@ -61,14 +61,6 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
         onChange={(e) => { DataFilter(e.target.value, true); }}
         onKeyPress={(e) => KeyPressValidate(e, validation?.pattern?.value)}
       />
-
-      {((form?.[formName]?.submitted || autoCompleteValue.length > 0) && 
-      validationStatus?.errorMessage?.length > 0) &&
-        <div align="right" className="form-feedback-validation-invalid">
-          {validationStatus?.errorMessage}</div>
-      }
-
-
       {show && filteredData.length > 0 && (
         <ul className="dropdown-menu autocomplete-dropdown show" aria-labelledby={name}>
           {filteredData.map((d, i) => {
@@ -81,6 +73,12 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
           })}
         </ul>
       )}
+      
+      {((form?.[formName]?.submitted || autoCompleteValue.length > 0) &&
+        validationStatus?.errorMessage?.length > 0) &&
+        <div align="right" className="form-feedback-validation-invalid">
+          {validationStatus?.errorMessage}</div>
+      }
 
     </div>
   </>);

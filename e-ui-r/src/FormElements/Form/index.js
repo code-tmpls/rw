@@ -16,6 +16,15 @@ export const Form = ({ name, children }) =>{
       }
     }));
   };
+  const onResetForm = ()=>{
+    setForm(Object.assign(form, {
+      [name]: {
+       submitted: false
+      }
+    }));
+  };
+
+
   useEffect(()=>{
     console.log( form );
   },[form]);
@@ -26,6 +35,7 @@ export const Form = ({ name, children }) =>{
             return React.cloneElement(child, { formContext:{ name, form, setForm } })
       })}
       <input type="button" value="Form Submit" onClick={()=>onSubmitForm()}/>
+      <input type="button" value="Form Reset" onClick={()=>onResetForm()}/>
       </form>
     </FormContext.Provider>
   );
