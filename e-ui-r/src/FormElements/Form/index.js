@@ -10,7 +10,11 @@ export const Form = ({ name, children }) =>{
     updateForm({ ...form, ...data } );
   };
   const onSubmitForm = ()=>{
-    document.getElementById(name).className = "was-validated";
+    setForm(Object.assign(form, {
+      [name]: {
+       submitted: true
+      }
+    }));
   };
   useEffect(()=>{
     console.log( form );

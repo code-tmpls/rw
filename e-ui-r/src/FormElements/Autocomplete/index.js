@@ -6,7 +6,8 @@ import './index.css';
 // const data = ["Action","Another Action","Something else here"];
 
 export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData, formContext, validation }) => {
-
+  const formName = formContext?.name;
+  const form = formContext?.form;
   const [filteredData, setFilteredData] = useState([]);
 
   const [show, setShow] = useState(false);
@@ -28,8 +29,6 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
       setValidationStatus(result);
     }
     // form Data
-    let formName = formContext?.name;
-    let form = formContext?.form;
     formContext?.setForm(Object.assign(form, {
       [formName]: {
         [name]: {
@@ -41,7 +40,7 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   }, [autoCompleteValue]);
 
   return (<>
-    <label className={(autoCompleteValue.length > 0 ?
+    <label className={((form?.[formName]?.submitted || autoCompleteValue.length > 0) ?
       ((validationStatus?.errorMessage?.length > 0) ? "form-label form-label-validation-invalid" :
         "form-label form-label-validation-valid")
       : "form-label")}><b>{label} :</b></label>
@@ -53,7 +52,7 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
         }
       }}>
       <input type="type" name={name}
-        className={(autoCompleteValue.length > 0 ?
+        className={((form?.[formName]?.submitted || autoCompleteValue.length > 0) ?
           ((validationStatus?.errorMessage?.length > 0) ? "form-control dropdown-toggle form-control-validation-invalid" :
             "form-control dropdown-toggle form-control-validation-valid")
           : "form-control dropdown-toggle")}
@@ -63,7 +62,8 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
         onKeyPress={(e) => KeyPressValidate(e, validation?.pattern?.value)}
       />
 
-      {(autoCompleteValue.length > 0 && validationStatus?.errorMessage?.length > 0) &&
+      {((form?.[formName]?.submitted || autoCompleteValue.length > 0) && 
+      validationStatus?.errorMessage?.length > 0) &&
         <div align="right" className="form-feedback-validation-invalid">
           {validationStatus?.errorMessage}</div>
       }
