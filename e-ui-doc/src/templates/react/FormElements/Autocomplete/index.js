@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
-import { SampleNote1, SampleNote2 } from './components/SampleCode.js';
+import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 
 
@@ -35,7 +35,22 @@ const AutocompleteNotes = () => {
     </>);
   };
 
-  return (<Order data={[<Note1 />, <Note2 />]} />);
+  const Note3 = () => {
+    return (<>
+      <div className="mtop10p mbot10p"><b>Autocomplete with Form:</b></div>
+      <Card backgroundColor={Colors.grey} component={<>
+        <div className="mbot10p"><b>Sample Code:</b></div>
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['0', '1']} />
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['13']} />
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['15T26']} />
+        <Highlight content={SampleCodeJS.toString()} lang="html" lines={['29']} />
+        <div className="mtop10p mbot10p"><b>Output:</b></div>
+        <Card backgroundColor={Colors.light} component={<SampleNote3 />} />
+      </>} />
+    </>);
+  };
+
+  return (<Order data={[<Note1 />, <Note2 />, <Note3 />]} />);
 };
 
 export const AutocompletePage = () => {
