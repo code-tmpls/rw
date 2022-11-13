@@ -16,8 +16,10 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   const [validationStatus, setValidationStatus] = useState({});
 
   useEffect(()=>{
-    setAutoCompleteValue('');
-  }, [form?.[formName]?.reset]);
+    if(form?.[formName]?.reset===true){
+      setAutoCompleteValue('');
+    }
+  }, [form]);
 
   const DataFilter = (val, status) => {
     setAutoCompleteValue(val);
@@ -26,6 +28,7 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   };
 
   useEffect(() => {
+    console.log( autoCompleteValue );
     // validation
     let result = {};
     if (validation !== undefined) {
