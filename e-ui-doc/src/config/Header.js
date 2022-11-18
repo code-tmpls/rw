@@ -24,7 +24,11 @@ export const NavMenuHeader = ( activeId ) =>[
                                                 { id:'javascript', url:'#', label:'Javascript' },
                                                 { id:'react', url:'Component/AccordianList', label:'React' },
                                                 { id:'reactNative', url:'#', label:'React Native' },
-                                                { id:'php', url:'#', label:'PHP' }]} 
+                                                { id:'php', url:'#', label:'PHP' },
+                                                { id:'knowledge', url:'#', label:'Knowledge' },
+						/*{ id:'dsalgo', url:'#', label:'Data Structure & Algorithms' },
+                                                { id:'databases', url:'#', label:'Databases' }*/
+                                        ]} 
                                         activeId={activeId} /> 
  },
  {  xs:12, md:4, component:<ChooseTheme /> }

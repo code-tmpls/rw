@@ -8,7 +8,7 @@ export const SampleNote1 = () =>{
 
  return (<>
  <Autocomplete name="surname" label="Surname" placeholder="Enter your Surname" autoCompleteData={data} />
- </>);
+ </>); 
 };
 
 export const SampleNote2 = () =>{

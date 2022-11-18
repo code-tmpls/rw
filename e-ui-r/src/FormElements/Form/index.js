@@ -1,14 +1,18 @@
 import React, { useState, useEffect, createContext as createFormContext, useContext as useForm } from "react";
+import { Button } from "e-ui-react";
 
 const FormContext = createFormContext();
 
 export const getForm = ()=> useForm(FormContext);
 
-export const Form = ({ name, children }) =>{
+export const Form = ({ name, children, onSubmit }) =>{
+
   const [ form, updateForm ] = useState({});
+  
   const setForm = (data) => {
     updateForm({ ...form, ...data } );
   };
+
   const onSubmitForm = ()=>{
     setForm(Object.assign(form, {
       [name]:{
@@ -16,6 +20,7 @@ export const Form = ({ name, children }) =>{
       }
     }));
   };
+
   const onResetForm = ()=>{
     setForm(Object.assign(form, {
       [name]: {
@@ -24,18 +29,24 @@ export const Form = ({ name, children }) =>{
     }));
   };
 
+  const onSubmission = (event)=>{
+    event.preventDefault();
+  };
 
   useEffect(()=>{
     console.log( JSON.stringify(form) );
   },[form]);
+
   return (
     <FormContext.Provider value={{ form, setForm }}>
-      <form id={name}>
+      <form id={name} onSubmit={(event)=>onSubmission(event)}>
      {React.Children.map(children, child => {
             return React.cloneElement(child, { formContext:{ name, form, setForm } })
       })}
-      <input type="button" value="Form Submit" onClick={()=>onSubmitForm()}/>
-      <input type="button" value="Form Reset" onClick={()=>onResetForm()}/>
+      <div align="right" style={{ paddingTop:'5px' }}>
+        <Button type="success" label="Submit" size={11} onClick={()=>onSubmitForm()} />
+        <Button type="danger" label="Reset" size={11} onClick={()=>onResetForm()} />
+      </div>
       </form>
     </FormContext.Provider>
   );
