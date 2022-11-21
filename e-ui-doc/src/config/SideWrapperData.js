@@ -33,6 +33,8 @@ export const SideWrapperData = [
       title:"Form Elements",
       children:[{ id:"autocomplete", url:"FormElement/Autocomplete", title:"Autocomplete" },
               { id:"selectDropdown", url:"FormElement/SelectDropdown", title:"Select" },
+              { id:"Email", url:"FormElement/Email", title:"Email" },
+              { id:"Password", url:"FormElement/Password", title:"Password" },
               { id:"textBox", url:"FormElement/TextBox", title:"TextBox" },
               { id:"textArea", url:"FormElement/TextArea", title:"TextArea" },
               { id:"colorPicker", url:"FormElement/ColorPicker", title:"Color Picker" },

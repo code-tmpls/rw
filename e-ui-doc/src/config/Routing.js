@@ -34,6 +34,8 @@ import { SpeechListenerPage } from '@DocReactFeatures/SpeechListener/index.js';
 
 import { AutocompletePage } from '@DocReactFormElements/Autocomplete/index.js';
 import { SelectPage } from '@DocReactFormElements/Select/index.js';
+import { EmailPage } from '@DocReactFormElements/Email/index.js';
+import { PasswordPage } from '@DocReactFormElements/Password/index.js';
 import { TextBoxPage } from '@DocReactFormElements/TextBox/index.js';
 import { TextAreaPage } from '@DocReactFormElements/TextArea/index.js';
 import { ColorPickerPage } from '@DocReactFormElements/ColorPicker/index.js';
@@ -100,6 +102,8 @@ export const Routes = [
     
     { path:"FormElement/Autocomplete", component:<Page content={<AutocompletePage />} activeId="react" /> },
     { path:"FormElement/SelectDropdown", component:<Page content={<SelectPage />} activeId="react" /> },
+    { path:"FormElement/Email", component:<Page content={<EmailPage />} activeId="react" /> },
+    { path:"FormElement/Password", component:<Page content={<PasswordPage />} activeId="react" /> },
     { path:"FormElement/TextBox", component:<Page content={<TextBoxPage />} activeId="react" /> },
     { path:"FormElement/TextArea", component:<Page content={<TextAreaPage />} activeId="react" /> },
     { path:"FormElement/ColorPicker", component:<Page content={<ColorPickerPage />} activeId="react" /> },

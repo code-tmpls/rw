@@ -1,4 +1,5 @@
 export const FormInputValidate = (validation, value) => {
+    console.log(validation, value);
     const validationSteps = Object.keys(validation);
     console.log("validationSteps",validationSteps);
     const validationSuccess = [];
@@ -13,8 +14,24 @@ export const FormInputValidate = (validation, value) => {
         }
         result = { validationSuccess, value, errorMessage };
       } 
-       else if(step === 'deps') {
+      else if(step === 'deps') {
 
+      }
+      else if(step === 'email') {
+        let errorMessage='';
+        if(validation[step]?.formatCheck){
+          let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+          if (value.match(validRegex)) {
+              console.log('Matched Email');
+          } else {
+              // Not Matched
+              errorMessage = "Please Enter a Valid Email Address";
+          }
+        }
+        if(validation[step]?.isEmailExist){
+    
+        }
+        result = { validationSuccess, value, errorMessage };
       }
       else {
         if (
