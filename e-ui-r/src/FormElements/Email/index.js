@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FormInputValidate } from "e-ui-react";
 
-export const Email =({ type, value, formContext, validation })=>{
+export const Email =({ name, type, value, formContext, validation })=>{
  const formName = formContext?.name;
  const form = formContext?.form;
  const [emailValue, setEmailValue] = useState((value === undefined) ? '' : value);
@@ -9,11 +9,21 @@ export const Email =({ type, value, formContext, validation })=>{
 
  // Validations
  const emailValidations = (email)=>{
+  let result;
     if (validation !== undefined) {
-        let result = FormInputValidate(validation, email);
+        result = FormInputValidate(validation, email);
         console.log(result);
         setValidationStatus(result);
     }
+    // form Data
+    formContext?.setForm(Object.assign(form, {
+      [formName]: {
+        [name]: {
+          value: value,
+          result: result
+        }
+      }
+    }));
  };
 
  const onEmailUpdate=(event)=>{
@@ -29,7 +39,7 @@ export const Email =({ type, value, formContext, validation })=>{
  <input type="text" placeholder="Enter Email Address" 
  className={((form?.[formName]?.submitted || emailValue.length > 0) ?
     ((validationStatus?.errorMessage?.length > 0) ? "form-control form-control-validation-invalid" :
-      "form-control form-control-validation-valid")
+      "form-control form-control-validationb-valid")
     : "form-control")}
  onChange={onEmailUpdate} />
  {((form?.[formName]?.submitted || emailValue.length > 0) &&

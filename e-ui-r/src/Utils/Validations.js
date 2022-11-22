@@ -1,3 +1,8 @@
+export const UrlAsyncFetch = async(url)=>{
+  const response = await fetch(url, { Method: 'GET' });
+  return await response.text();       //api for the get request
+};
+
 export const FormInputValidate = (validation, value) => {
     console.log(validation, value);
     const validationSteps = Object.keys(validation);
@@ -22,16 +27,24 @@ export const FormInputValidate = (validation, value) => {
         if(validation[step]?.formatCheck){
           let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
           if (value.match(validRegex)) {
-              console.log('Matched Email');
+            let isEmailExist = validation[step]?.isEmailExist;
+            let url = isEmailExist?.url;
+            let method = isEmailExist?.method;
+            let response = isEmailExist?.value;
+            if(url!==undefined && method!==undefined && response!==undefined && errorMessage!==undefined){
+                const data =  UrlAsyncFetch(url);
+                if(data!==response){
+                  errorMessage =  isEmailExist?.errorMessage;
+                  result = { validationSuccess, value, errorMessage };
+                  console.log(result);
+                }
+            }
           } else {
               // Not Matched
               errorMessage = "Please Enter a Valid Email Address";
+              result = { validationSuccess, value, errorMessage };
           }
         }
-        if(validation[step]?.isEmailExist){
-    
-        }
-        result = { validationSuccess, value, errorMessage };
       }
       else {
         if (
