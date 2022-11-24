@@ -14,7 +14,7 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   const [show, setShow] = useState(false);
   const [autoCompleteValue, setAutoCompleteValue] = useState((value === undefined) ? '' : value);
   const [validationStatus, setValidationStatus] = useState({});
-
+  console.log( form, formName );
   useEffect(()=>{
     if(form?.[formName]?.reset===true){
       setAutoCompleteValue('');
@@ -37,14 +37,14 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
       setValidationStatus(result);
     }
     // form Data
-    formContext?.setForm(Object.assign(form, {
-      [formName]: {
-        [name]: {
-          value: autoCompleteValue,
-          result: result
-        }
-      }
-    }));
+    if(formName!==undefined && form?.[formName]!==undefined){
+      let updatedContext = {};
+      updatedContext[formName] = Object.assign(form?.[formName],{
+        [name]: result
+      });
+      formContext?.setForm(updatedContext);
+    }
+    
   }, [autoCompleteValue]);
 
   return (<>
