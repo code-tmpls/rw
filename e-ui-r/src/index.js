@@ -86,6 +86,6 @@ export { DeviceRecognizer } from '@LibUtils/DeviceRecognizer.js';
 export { Colors } from '@LibUtils/GlobalStyles.js';
 export { GetCurrentTimeStamp } from '@LibUtils/DateTime.js';
 export { SortJSONArray, FilterArray } from '@LibUtils/Sorting.js';
-export { FormInputValidate, KeyPressValidate } from '@LibUtils/Validations.js';
+export { FormInputValidate, FormPasswordValidation, KeyPressValidate } from '@LibUtils/Validations.js';
 
 export default RootProvider;

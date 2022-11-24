@@ -3,6 +3,59 @@ export const UrlAsyncFetch = async(url)=>{
   return await response.text();       //api for the get request
 };
 
+export const FormPasswordValidation = (validation, value) =>{
+  console.log(validation, value);
+    const validationSteps = Object.keys(validation);
+    console.log("validationSteps",validationSteps);
+    const validationSuccess = [];
+    let result;
+    let errorMessage =  [];
+    for (let validateStep in validationSteps) {
+      let pwdStatus = true;
+      const step = validationSteps[validateStep];
+      if(step === 'minLength') {
+        if(value.trim().length < validation[step]?.value){
+          errorMessage.push("MINLENGTH_FAILED"); 
+        } else {
+          validationSuccess.push(step);
+        }
+      }
+      if(step === 'maxLength'){
+        if(value.trim().length > validation[step]?.value) {
+          errorMessage.push("MAXLENGTH_FAILED"); 
+        } else {
+          validationSuccess.push(step);
+        }
+      }
+
+      if(step === 'passwordContains'){
+        const passwordContains = validation[step];
+        if(passwordContains.includes("Lowercase") && !/(?=.*[a-z])/.test(value)){ // lowerCaseValidation
+            errorMessage.push("LOWERCASE_FAILED");  
+            pwdStatus = false;
+        }
+        if(passwordContains.includes("Uppercase") && !/(?=.*[A-Z])/.test(value)){ // UpperCaseValidation
+            errorMessage.push("UPPERCASE_FAILED");  
+            pwdStatus = false;
+        }
+        if(passwordContains.includes("Number") && !/(?=.*\d)/.test(value)){ // NumberValidation
+            errorMessage.push("NUMBER_FAILED");  
+            pwdStatus = false;
+        }
+        if(passwordContains.includes("Symbol") && !/(?=.*\W)/.test(value)){ // SymbolValidation
+            errorMessage.push("SYMBOL_FAILED"); 
+            pwdStatus = false; 
+        }
+        if(pwdStatus) {
+          validationSuccess.push(step);
+        }
+        result = { validationSuccess, value, errorMessage };
+      }
+    }
+    console.log('result', result);
+    return result;
+};
+
 export const FormInputValidate = (validation, value) => {
     console.log(validation, value);
     const validationSteps = Object.keys(validation);
@@ -46,7 +99,7 @@ export const FormInputValidate = (validation, value) => {
           }
         }
       }
-      else {
+      else { 
         if (
           (step === 'required' && value.trim().length === 0) ||
           (step === 'minLength' && value.trim().length < validation[step]?.value) ||

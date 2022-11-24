@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon, FormInputValidate } from "e-ui-react";
+import { FontAwesomeIcon, FormPasswordValidation } from "e-ui-react";
 
 export const Password =({ name, type, label, value, formContext, validation })=>{
  // type="password"
@@ -8,16 +8,18 @@ export const Password =({ name, type, label, value, formContext, validation })=>
  const form = formContext?.form;
  const [passwordValue, setPasswordValue] = useState((value === undefined) ? '' : value);
  const [validationStatus, setValidationStatus] = useState({});
- const charValidated = validationStatus?.validationSuccess?.includes("minLength") && validationStatus?.validationSuccess?.includes("maxLength");
- const lowerCaseValidation=/(?=.*[a-z])/.test(passwordValue);
- const upperCaseValidation=/(?=.*[A-Z])/.test(passwordValue);
- const numberValidation=/(?=.*\d)/.test(passwordValue);
- const symbolValidation=/(?=.*\W)/.test(passwordValue);
+ const errorMessage = validationStatus?.errorMessage;
+ const charValidated = Array.isArray(errorMessage) && (!errorMessage.includes('MINLENGTH_FAILED') && !errorMessage.includes('MAXLENGTH_FAILED') );
+ const lowerCaseValidation=Array.isArray(errorMessage) && !errorMessage.includes('LOWERCASE_FAILED');
+ const upperCaseValidation=Array.isArray(errorMessage) && !errorMessage.includes('UPPERCASE_FAILED');
+ const numberValidation=Array.isArray(errorMessage) && !errorMessage.includes('NUMBER_FAILED');
+ const symbolValidation=Array.isArray(errorMessage) && !errorMessage.includes('SYMBOL_FAILED');
+ console.log(errorMessage, "lowerCaseValidation", lowerCaseValidation);
 
  const passwordValidations = (email)=>{
     let result;
       if (validation !== undefined) {
-          result = FormInputValidate(validation, email);
+          result = FormPasswordValidation(validation, email);
           console.log(result);
           setValidationStatus(result);
       }
@@ -49,11 +51,8 @@ export const Password =({ name, type, label, value, formContext, validation })=>
     : "form-control")}
     placeholder="Enter your Password" 
     onChange={onPasswordUpdate} />
-     
-     {((form?.[formName]?.submitted || passwordValue.length > 0) &&
-        validationStatus?.errorMessage?.length > 0 && (!charValidated || 
-            !lowerCaseValidation || !upperCaseValidation || !numberValidation || !symbolValidation
-        )) && (<div style={{ fontSize:'12px', fontWeight:'bold', padding:'10px' }}>
+     {(form?.[formName]?.submitted || passwordValue.length > 0) && 
+        (<div style={{ fontSize:'12px', fontWeight:'bold', padding:'10px' }}>
         <div style={{ padding:'3px', color:(charValidated?'green':'red') }}>
             <FontAwesomeIcon name={charValidated?"fa-check-circle":"fa-times-circle"} size="14" />
             <span style={{ paddingLeft:'8px' }}>It should be in between 8-12 Characters</span>
