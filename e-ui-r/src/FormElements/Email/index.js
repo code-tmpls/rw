@@ -16,14 +16,13 @@ export const Email =({ name, type, value, formContext, validation })=>{
         setValidationStatus(result);
     }
     // form Data
-    formContext?.setForm(Object.assign(form, {
-      [formName]: {
-        [name]: {
-          value: value,
-          result: result
-        }
-      }
-    }));
+    if(formName!==undefined && form?.[formName]!==undefined){
+      let updatedContext = {};
+      updatedContext[formName] = Object.assign(form?.[formName],{
+        [name]: result
+      });
+      formContext?.setForm(updatedContext);
+    }
  };
 
  const onEmailUpdate=(event)=>{
