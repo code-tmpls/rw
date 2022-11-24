@@ -7,7 +7,7 @@ export const getForm = ()=> useForm(FormContext);
 
 export const Form = ({ name, children, onSubmit }) =>{
 
-  const [ form, updateForm ] = useState({});
+  const [ form, updateForm ] = useState({[name]:{}});
   
   const setForm = (data) => {
     updateForm({ ...form, ...data } );

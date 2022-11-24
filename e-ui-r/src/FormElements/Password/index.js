@@ -6,6 +6,7 @@ export const Password =({ name, type, label, value, formContext, validation })=>
  // type="confirmPassword" ref="name"(This looks using formContext)
  const formName = formContext?.name;
  const form = formContext?.form;
+ console.log(formContext);
  const [passwordValue, setPasswordValue] = useState((value === undefined) ? '' : value);
  const [validationStatus, setValidationStatus] = useState({});
  const errorMessage = validationStatus?.errorMessage;
@@ -24,14 +25,23 @@ export const Password =({ name, type, label, value, formContext, validation })=>
           setValidationStatus(result);
       }
       // form Data
-      formContext?.setForm(Object.assign(form, {
+      let updatedContext = {};
+      updatedContext[formName] = Object.assign(form?.[formName],{
+        [name]: {
+          value: value,
+          result: result
+        }
+      });
+      formContext?.setForm(updatedContext);
+      /*formContext?.setForm(Object.assign(form, {
         [formName]: {
           [name]: {
             value: value,
             result: result
           }
         }
-      }));
+      })); */
+      console.log("form", form);
    };
 
  const onPasswordUpdate = (event)=>{

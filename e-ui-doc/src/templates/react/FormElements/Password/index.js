@@ -9,7 +9,22 @@ export const PasswordPage = () => {
 
     return (<><SimpleHeader title="Password" />
     <Form name="testForm">
-    <Password label="Account Password" name="pwd" value="" validation={{
+    <Password type="password" label="Account Password" name="pwd" value="" validation={{
+            required:{
+                value: true,
+                errorMessage:"This is a Mandatory Field"
+            },
+            minLength:{
+                value: 8,
+                errorMessage:"Password should be greator than 8"
+            },
+            maxLength:{
+                value: 16,
+                errorMessage:"Message should be lessthan 16"
+            },
+            passwordContains:["Lowercase","Uppercase","Number", "Symbol"]
+    }} />
+    <Password type="confirmPassword" reference="pwd" label="Confirm Account Password" name="confirmPwd" value="" validation={{
             required:{
                 value: true,
                 errorMessage:"This is a Mandatory Field"
