@@ -23,6 +23,7 @@ import { DropdownPage } from '@DocReactComponents/Dropdown/index.js';
 import { DrawerPage } from '@DocReactComponents/Drawer/index.js';
 import { LoadingPage } from '@DocReactComponents/Loading/index.js';
 import { ModalPage } from '@DocReactComponents/Modal/index.js';
+import { RowPage } from '@DocReactComponents/Row/index.js';
 import { TablePage } from '@DocReactComponents/Table/index.js';
 import { MenuPage } from '@DocReactComponents/Menu/index.js';
 import { TagPage } from '@DocReactComponents/Tag/index.js';
@@ -90,6 +91,7 @@ export const Routes = [
     { path:"Component/Dropdown", component:<Page content={<DropdownPage />} activeId="react" /> },
     { path:"Component/Loading", component:<Page content={<LoadingPage />} activeId="react" /> },
     { path:"Component/Modal", component:<Page content={<ModalPage />} activeId="react" /> },
+    { path:"Component/Row", component:<Page content={<RowPage />} activeId="react" /> },
     { path:"Component/Table", component:<Page content={<TablePage />} activeId="react" /> },
     { path:"Component/Menu", component:<Page content={<MenuPage />} activeId="react" /> },
     { path:"Component/Tag", component:<Page content={<TagPage />} activeId="react" /> },
