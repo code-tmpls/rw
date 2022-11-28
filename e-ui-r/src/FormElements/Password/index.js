@@ -61,7 +61,7 @@ export const Password =({ name, type, label, value, reference, formContext, vali
       : "form-label")}><b>{label}</b></label>
  <input type="password" className={((form?.[formName]?.submitted || passwordValue.length > 0) ?
     ((validationStatus?.errorMessage?.length > 0) ? "form-control form-control-validation-invalid" :
-      "form-control form-control-validationb-valid")
+      "form-control form-control-validation-valid")
     : "form-control")}
     placeholder="Enter your Password" 
     onChange={onPasswordUpdate} />

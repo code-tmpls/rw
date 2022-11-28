@@ -38,7 +38,7 @@ export const Email =({ name, type, value, formContext, validation })=>{
  <input type="text" placeholder="Enter Email Address" 
  className={((form?.[formName]?.submitted || emailValue.length > 0) ?
     ((validationStatus?.errorMessage?.length > 0) ? "form-control form-control-validation-invalid" :
-      "form-control form-control-validationb-valid")
+      "form-control form-control-validation-valid")
     : "form-control")}
  onChange={onEmailUpdate} />
  {((form?.[formName]?.submitted || emailValue.length > 0) &&

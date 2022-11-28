@@ -7,5 +7,9 @@ export const TextBoxPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="TextBox" /><TextBox /></>);
+    return (<>
+        <SimpleHeader title="TextBox" />
+        <TextBox name="Sample" label="Sample" placeholder="Enter your Sample"
+        validation={{}} />
+    </>);
 };
