@@ -34,14 +34,14 @@ console.log(SampleCodeJS.toString());
  return (<Order data={[<Note1 />, <Note2 />]} />);
 };
 
-export const RowPage = () =>{
+export const GridSystemPage = () =>{
   
  useEffect(() => {
   window.scrollTo(0, 0);
  }, []);
 
  return (<>
- <SimpleHeader title="Row" />
+ <SimpleHeader title="GridSystem" />
  <Grid data={[
     [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<RowNotes /> }]
   ]} />

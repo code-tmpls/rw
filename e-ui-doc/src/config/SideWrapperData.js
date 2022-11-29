@@ -55,6 +55,7 @@ export const SideWrapperData = [
       title:"Layouts",
       children:[{ id:"fonts", url:"Layout/Fonts", title:"Fonts" },
       { id:"grid", url:"Layout/Grid", title:"Grid" },
+      { id:"gridSystem", url:"Layout/GridSystem", title:"GridSystem" },
       { id:"order", url:"Layout/Order", title:"Order" }]
     },
     { id:"Visualization",

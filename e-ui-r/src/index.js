@@ -17,7 +17,7 @@ export { Dropdown } from '@LibComponents/Dropdown/index.js';
 export { FontAwesomeIcon } from '@LibComponents/Icons/index.js';
 export { Loading } from '@LibComponents/Loading/index.js';
 export { Modal } from '@LibComponents/Modal/index.js';
-export { Container, ContainerFluid, Row, Col } from '@LibComponents/Row/index.js';
+
 // Navbar
 export { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
 export { Header } from '@LibComponents/Navbar/components/sidewrapper/index.js';
@@ -31,6 +31,7 @@ export { AppRouting } from '@LibFeatures/AppRouting/index.js';
 export { SpeechListener } from '@LibFeatures/SpeechListener/index.js';
 
 export { Grid } from '@LibLayout/Grid/index.js';
+export { Container, ContainerFluid, Row, Col } from '@LibLayout/GridSystem/index.js';
 export { Order } from '@LibLayout/Order/index.js';
 
 export { Autocomplete } from '@LibFormElements/Autocomplete/index.js';
