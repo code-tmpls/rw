@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 import { default as SampleCodeCSS } from '!!raw-loader!./components/SampleCode.css';
@@ -33,8 +33,10 @@ export const CarouselPage = () => {
 
   return (<>
     <SimpleHeader title="Carousel" />
-    <Grid data={[
-      [{ sm: 12, md: '', lg: '', xl: '', xxl: '', component: <CarouselNotes /> }]
-    ]} />
+    <ContainerFluid>
+      <Row>
+        <Col><CarouselNotes /></Col>
+      </Row>
+    </ContainerFluid>
   </>);
 };

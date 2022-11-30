@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3, SampleNote4, SampleNote5 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 
@@ -23,10 +23,12 @@ const BarChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Simple Bar Chart:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+      <ContainerFluid>
+        <Row>
+          <Col sm={5}><NoteChart /></Col>
+          <Col sm={7}><NoteCode /></Col>
+        </Row>
+      </ContainerFluid>
       </>} />
 
     </>);
@@ -51,10 +53,12 @@ const BarChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Stacked Bar Chart:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+        <ContainerFluid>
+        <Row>
+          <Col sm={5}><NoteChart /></Col>
+          <Col sm={7}><NoteCode /></Col>
+        </Row>
+      </ContainerFluid>
       </>} />
 
     </>);
@@ -80,10 +84,12 @@ const BarChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Mixed Bar Chart (Combination of Simple and Stacked):</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+        <ContainerFluid>
+          <Row>
+            <Col sm={5}><NoteChart /></Col>
+            <Col sm={7}><NoteCode /></Col>
+          </Row>
+        </ContainerFluid>
       </>} />
 
     </>);
@@ -108,10 +114,12 @@ const BarChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Positive and Negative Bar Chart:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+        <ContainerFluid>
+          <Row>
+            <Col sm={5}><NoteChart /></Col>
+            <Col sm={7}><NoteCode /></Col>
+          </Row>
+        </ContainerFluid>
       </>} />
 
     </>);
@@ -136,10 +144,12 @@ const BarChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Brush Bar Chart:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+        <ContainerFluid>
+          <Row>
+            <Col sm={5}><NoteChart /></Col>
+            <Col sm={7}><NoteCode /></Col>
+          </Row>
+        </ContainerFluid>
       </>} />
 
     </>);
@@ -156,9 +166,11 @@ export const BarChartPage = () => {
 
   return (<>
     <SimpleHeader title="BarChart" />
-    <Grid data={[
-      [{ sm: 12, md: '', lg: '', xl: '', xxl: '', component: <BarChartNotes /> }]
-    ]} />
+    <ContainerFluid>
+      <Row>
+        <Col><BarChartNotes /></Col>
+      </Row>
+    </ContainerFluid>
   </>);
   
 };

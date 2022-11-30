@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Card, Grid, Highlight, Order } from 'e-ui-react';
+import { SimpleHeader, Card, ContainerFluid, Row, Col, Highlight, Order } from 'e-ui-react';
 import CheckBoxBasic from './components/basic-checkbox.js';
 import RadioBasic from './components/basic-radio.js';
 import CheckBoxChecked from './components/checked-checkbox.js';
@@ -11,19 +11,23 @@ import { default as RadioCheckedJS } from '!!raw-loader!./components/checked-rad
 
 
 const CheckBoxChoice = ({ component, stringComponent }) => {
-  return (<Card component={<Grid data={[
-    [{ sm: 1, md: 1, lg: 1, xl: 1, xxl: 1, component: component },
-    { sm: 10, md: 10, lg: 10, xl: 10, xxl: 10, component: stringComponent }]
-  ]} />
+  return (<Card component={
+    <ContainerFluid>
+      <Row>
+        <Col sm={1} md={1} lg={1} xl={1} xxl={1}>{component}</Col>
+        <Col sm={10} md={10} lg={10} xl={10} xxl={10}>{stringComponent}</Col>
+      </Row>
+    </ContainerFluid>
   } />);
 };
 
 const RadioChoice = ({ component, stringComponent }) => {
-  return (<Card component={<Grid data={[
-    [{ sm: 1, md: 1, lg: 1, xl: 1, xxl: 1, component: component },
-    { sm: 10, md: 10, lg: 10, xl: 10, xxl: 10, component: stringComponent }]
-  ]} />}
-  />);
+  return (<Card component={
+  <ContainerFluid>
+    <Col sm={1} md={1} lg={1} xl={1} xxl={1}>{component}</Col>
+    <Col sm={10} md={10} lg={10} xl={10} xxl={10}>{stringComponent}</Col>
+  </ContainerFluid>
+   } />);
 };
 
 const Point1 = () => {
@@ -54,8 +58,10 @@ export const ChoicePage = () => {
 
   return (<>
     <SimpleHeader title="Choice" />
-    <Grid data={[
-      [{ sm: 12, md: 12, lg: 12, xl: 12, xxl: 12, component: <Order type="number" data={[<Point1 />, <Point2 />]} /> }]
-    ]} />
+    <ContainerFluid>
+      <Row>
+        <Col><Order type="number" data={[<Point1 />, <Point2 />]} /></Col>
+      </Row>
+    </ContainerFluid>
   </>);
 };

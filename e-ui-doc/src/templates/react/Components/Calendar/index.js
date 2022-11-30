@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 
@@ -22,10 +22,12 @@ const CalendarNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Simple Calendar:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteOutput /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+        <ContainerFluid>
+          <Row>
+            <Col xl={5}><NoteOutput /></Col>
+            <Col xl={7}><NoteCode /></Col>
+          </Row>
+        </ContainerFluid>
       </>} />
 
     </>);
@@ -41,8 +43,10 @@ export const CalendarPage = () => {
 
   return (<>
     <SimpleHeader title="Calendar" />
-    <Grid data={[
-      [{ sm: 12, md: '', lg: '', xl: '', xxl: '', component: <CalendarNotes /> }]
-    ]} />
+    <ContainerFluid>
+      <Row>
+        <Col><CalendarNotes /></Col>
+      </Row>
+    </ContainerFluid>
   </>);
 };

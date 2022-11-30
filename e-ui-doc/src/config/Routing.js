@@ -19,8 +19,8 @@ import { ButtonPage } from '@DocReactComponents/Button/index.js';
 import { CalendarPage } from '@DocReactComponents/Calendar/index.js';
 import { CardPage } from '@DocReactComponents/Card/index.js';
 import { CarouselPage } from '@DocReactComponents/Carousel/index.js';
-import { DropdownPage } from '@DocReactComponents/Dropdown/index.js';
 import { DrawerPage } from '@DocReactComponents/Drawer/index.js';
+import { DropdownPage } from '@DocReactComponents/Dropdown/index.js';
 import { LoadingPage } from '@DocReactComponents/Loading/index.js';
 import { ModalPage } from '@DocReactComponents/Modal/index.js';
 import { TablePage } from '@DocReactComponents/Table/index.js';
@@ -48,7 +48,6 @@ import { InputGroupPage } from '@DocReactFormElements/InputGroup/index.js';
 import { HeadingPage } from '@DocReactHeadersAndFooters/Heading/index.js';
 
 import { FontPage } from '@DocReactLayout/Fonts/index.js';
-import { GridPage } from '@DocReactLayout/Grid/index.js';
 import { GridSystemPage } from '@DocReactLayout/GridSystem/index.js';
 import { OrderPage } from '@DocReactLayout/Order/index.js';
 
@@ -117,7 +116,6 @@ export const Routes = [
     { path:"HeadersAndFooters/Headings", component:<Page content={<HeadingPage />} activeId="react" /> },
     
     { path:"Layout/Fonts", component:<Page content={<FontPage />} activeId="react" /> },
-    { path:"Layout/Grid", component:<Page content={<GridPage />} activeId="react" /> },
     { path:"Layout/GridSystem", component:<Page content={<GridSystemPage />} activeId="react" /> },
     { path:"Layout/Order", component:<Page content={<OrderPage />} activeId="react" /> },
 

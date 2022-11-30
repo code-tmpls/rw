@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import {
         SampleNote1, SampleNote2, SampleNote3, SampleNote4, SampleNote5, SampleNote6, SampleNote7,
         SampleNote8, SampleNote9, SampleNote10
@@ -140,9 +140,10 @@ export const MenuPage = () => {
 
         return (<>
                 <SimpleHeader title="Menu" />
-                <Grid data={[
-                        [{ sm: 12, md: '', lg: '', xl: '', xxl: '', component: <MenuNotes /> }]
-                ]} />
-
+                <ContainerFluid>
+                 <Row>
+                  <Col><MenuNotes /></Col>
+                 </Row>
+                </ContainerFluid>
         </>);
 };

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, Order, Card, Highlight, Colors, ContainerFluid, Row, Col } from 'e-ui-react';
 import { SampleNote1, SampleNote2 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
 
@@ -40,9 +40,10 @@ export const AccordianPage = () =>{
 
  return (<>
  <SimpleHeader title="Accordian" />
- <Grid data={[
-    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<AccordianNotes /> }]
-  ]} />
- 
+ <ContainerFluid>
+  <Row>
+    <Col><AccordianNotes /></Col>
+  </Row>
+ </ContainerFluid>
  </>);
 };

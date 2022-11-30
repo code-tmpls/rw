@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Grid, SimpleHeader, Avatar, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, Avatar, Order, Card, Highlight, Colors, ContainerFluid, Row, Col } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
 
@@ -52,8 +52,10 @@ export const AvatarPage = () =>{
 
  return (<>
  <SimpleHeader title="Avatar" />
- <Grid data={[
-    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<AvatarNotes /> }]
-  ]} />
+ <ContainerFluid>
+  <Row>
+    <Col><AvatarNotes /></Col>
+  </Row>
+ </ContainerFluid>
  </>);
 };

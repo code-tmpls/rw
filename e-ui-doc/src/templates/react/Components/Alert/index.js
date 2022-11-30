@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, FilledHeader, Alert, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, FilledHeader, Alert, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3, SampleNote4, SampleNote5, SampleNote6, SampleNote7, SampleNote8,
  SampleNote9, SampleNote10, SampleNote11, SampleNote12, SampleNote13, SampleNote14, SampleNote15, SampleNote16 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
@@ -216,11 +216,19 @@ export const AlertPage = () =>{
 
  return (<>
   <SimpleHeader title="Alert" />
-  <Grid data={[
-    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<FilledHeader title="Alerts with Heading and Body" backgroundColor={Colors.primary} color={Colors.light} /> }],
-    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<AlertNotes1 /> }],
-    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<FilledHeader title="Simple Alerts without Heading" backgroundColor={Colors.primary} color={Colors.light} /> }],
-    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<AlertNotes2 /> }]
-  ]} />
+  <ContainerFluid>
+    <Row>
+        <Col><FilledHeader title="Alerts with Heading and Body" backgroundColor={Colors.primary} color={Colors.light} /></Col>
+    </Row>
+    <Row>
+        <Col><AlertNotes1 /></Col>
+    </Row>
+    <Row>
+        <Col><FilledHeader title="Simple Alerts without Heading" backgroundColor={Colors.primary} color={Colors.light} /></Col>
+    </Row>
+    <Row>
+        <Col><AlertNotes2 /></Col>
+    </Row>
+  </ContainerFluid>
  </>);
 };

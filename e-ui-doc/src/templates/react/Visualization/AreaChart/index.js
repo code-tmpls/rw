@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 
@@ -23,10 +23,12 @@ const AreaChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Simple Area Chart:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+      <ContainerFluid>
+        <Row>
+          <Col sm={5}><NoteChart /></Col>
+          <Col sm={7}><NoteCode /></Col>
+        </Row>
+      </ContainerFluid>
       </>} />
 
     </>);
@@ -51,10 +53,12 @@ const AreaChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Percentage Area Chart:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+        <ContainerFluid>
+        <Row>
+          <Col sm={5}><NoteChart /></Col>
+          <Col sm={7}><NoteCode /></Col>
+        </Row>
+      </ContainerFluid>
       </>} />
 
     </>);
@@ -79,10 +83,12 @@ const AreaChartNotes = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>FillByValue Area Chart:</b></div>
       <Card backgroundColor={Colors.grey} component={<>
-        <Grid data={[
-          [{ sm: 5, md: '', lg: '', xl: '', xxl: '', component: <NoteChart /> },
-          { sm: 7, md: '', lg: '', xl: '', xxl: '', component: <NoteCode /> }]
-        ]} />
+        <ContainerFluid>
+          <Row>
+            <Col sm={5}><NoteChart /></Col>
+            <Col sm={7}><NoteCode /></Col>
+          </Row>
+        </ContainerFluid>
       </>} />
 
     </>);
@@ -99,8 +105,10 @@ export const AreaChartPage = () => {
 
   return (<>
     <SimpleHeader title="AreaChart" />
-    <Grid data={[
-      [{ sm: 12, md: '', lg: '', xl: '', xxl: '', component: <AreaChartNotes /> }]
-    ]} />
+    <ContainerFluid>
+        <Row>
+          <Col><AreaChartNotes /></Col>
+        </Row>
+      </ContainerFluid>
   </>);
 };

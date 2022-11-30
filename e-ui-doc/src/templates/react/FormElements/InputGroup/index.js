@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SimpleHeader, Grid, Order, Card, Highlight, Colors, InputGroup } from 'e-ui-react';
+import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors, InputGroup } from 'e-ui-react';
 import SampleCode from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 
@@ -27,8 +27,10 @@ export const InputGroupPage = () => {
    }, []);
 
    return (<><SimpleHeader title="InputGroup" />
-      <Grid data={[
-         [{ sm: 12, md: '', lg: '', xl: '', xxl: '', component: <InputGroupNotes /> }]
-      ]} />
+   <ContainerFluid>
+      <Row>
+         <Col><InputGroupNotes /></Col>
+      </Row>
+   </ContainerFluid>
    </>);
 };
