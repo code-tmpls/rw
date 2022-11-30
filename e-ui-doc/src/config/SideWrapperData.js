@@ -1,4 +1,17 @@
 export const SideWrapperData = [
+    { id:"advancedTopics",
+      url:"#", 
+      title:"Advanced Topics",
+      children:[{ id:"reactContext", url:"AdvancedTopics/ReactContext", title:"React Context" },
+          { id:"redux", url:"AdvancedTopics/Redux", title:"Redux" },
+          { id:"rxJs", url:"AdvancedTopics/RxJS", title:"RxJS" }]
+    },
+    { id:"codeEditorsViewers",
+      url:"#", 
+      title:"Code Editors / Viewers",
+      children:[{ id:"highlight", url:"CodeEditorsViewers/Highlight", title:"Highlight" },
+                { id:"stackblitz", url:"CodeEditorsViewers/Stackblitz", title:"Stackblitz" }]
+    },
     { id:"components",
       url:"#", 
       title:"Components",
@@ -14,13 +27,14 @@ export const SideWrapperData = [
             { id:"carousel", url:"Component/Carousel", title:"Carousel" },
             { id:"drawer", url:"Component/Drawer", title:"Drawer" },
             { id:"dropdown", url:"Component/Dropdown", title:"Dropdown" },
+            { id:"hover", url:"Component/Hover", title:"Hover" },
+            { id:"loading", url:"Component/Loading", title:"Loading" },
+            { id:"menu", url:"Component/Menu", title:"Menu" },
             { id:"modal", url:"Component/Modal", title:"Modal" },
             { id:"table", url:"Component/Table", title:"Table" },
-            { id:"menu", url:"Component/Menu", title:"Menu" },
             { id:"tag", url:"Component/Tag", title:"Tag" },
             { id:"toast", url:"Component/Toast", title:"Toast" },
-            { id:"Hover", url:"Component/Hover", title:"Hover" },
-            { id:"loading", url:"Component/Loading", title:"Loading" }]
+            ]
            },
     { id:"features",
       url:"#", 
@@ -32,17 +46,18 @@ export const SideWrapperData = [
       url:"#", 
       title:"Form Elements",
       children:[{ id:"autocomplete", url:"FormElement/Autocomplete", title:"Autocomplete" },
-              { id:"selectDropdown", url:"FormElement/SelectDropdown", title:"Select" },
-              { id:"Email", url:"FormElement/Email", title:"Email" },
-              { id:"Password", url:"FormElement/Password", title:"Password" },
-              { id:"textBox", url:"FormElement/TextBox", title:"TextBox" },
-              { id:"textArea", url:"FormElement/TextArea", title:"TextArea" },
-              { id:"colorPicker", url:"FormElement/ColorPicker", title:"Color Picker" },
               { id:"choice", url:"FormElement/Choice", title:"Choice" },
-              { id:"dateTimeRangePicker", url:"FormElement/DateTimeRangePicker", title:"DateTimeRangePicker" },
+              { id:"colorPicker", url:"FormElement/ColorPicker", title:"Color Picker" },
               { id:"dateTimePicker", url:"FormElement/DateTimePicker", title:"DateTimePicker" },
+              { id:"dateTimeRangePicker", url:"FormElement/DateTimeRangePicker", title:"DateTimeRangePicker" },
+              { id:"Email", url:"FormElement/Email", title:"Email" },
+              { id:"inputGroup", url:"FormElement/InputGroup", title:"InputGroup" },
+              { id:"Password", url:"FormElement/Password", title:"Password" },
               { id:"range", url:"FormElement/Range", title:"Range" },
-              { id:"inputGroup", url:"FormElement/InputGroup", title:"InputGroup" }]
+              { id:"selectDropdown", url:"FormElement/SelectDropdown", title:"Select" },
+              { id:"textArea", url:"FormElement/TextArea", title:"TextArea" },
+              { id:"textBox", url:"FormElement/TextBox", title:"TextBox" }]
+              
     },
     { id:"headersAndFooters",
       url:"#", 
@@ -55,6 +70,18 @@ export const SideWrapperData = [
       children:[{ id:"fonts", url:"Layout/Fonts", title:"Fonts" },
       { id:"gridSystem", url:"Layout/GridSystem", title:"GridSystem" },
       { id:"order", url:"Layout/Order", title:"Order" }]
+    },
+    { id:"readyMadeScreen",
+      url:"#", 
+      title:"Ready-Made Screens",
+      children:[{ id:"authentication", url:"ReadyMadeScreen/Authentication", title:"Authentication" },
+      { id:"imageGallery", url:"ReadyMadeScreen/ImageGallery", title:"ImageGallery" },
+      { id:"readyMadeDropdowns", url:"ReadyMadeScreen/ReadyMadeDropdowns", title:"Ready-Made Dropdowns" }]
+    },
+    { id:"themes",
+      url:"#", 
+      title:"Themes",
+      children:[{ id:"appColors", url:"Themes/AppColors", title:"App Colors" }]
     },
     { id:"Visualization",
       url:"#", 
@@ -75,30 +102,5 @@ export const SideWrapperData = [
                { id:"twoByTwoChart", url:"Visualization/TwoByTwoChart", title:"TwoByTwoChart" },
                { id:"vennChart", url:"Visualization/VennChart", title:"VennChart" },
                { id:"waterfallChart", url:"Visualization/WaterfallChart", title:"WaterfallChart" }]
-    },
-    { id:"themes",
-      url:"#", 
-      title:"Themes",
-      children:[{ id:"appColors", url:"Themes/AppColors", title:"App Colors" }]
-    },
-    { id:"codeEditorsViewers",
-      url:"#", 
-      title:"Code Editors / Viewers",
-      children:[{ id:"highlight", url:"CodeEditorsViewers/Highlight", title:"Highlight" },
-                { id:"stackblitz", url:"CodeEditorsViewers/Stackblitz", title:"Stackblitz" }]
-    },
-    { id:"advancedTopics",
-      url:"#", 
-      title:"Advanced Topics",
-      children:[{ id:"reactContext", url:"AdvancedTopics/ReactContext", title:"React Context" },
-        { id:"redux", url:"AdvancedTopics/Redux", title:"Redux" },
-      { id:"rxJs", url:"AdvancedTopics/RxJS", title:"RxJS" }]
-    },
-    { id:"readyMadeScreen",
-      url:"#", 
-      title:"Ready-Made Screens",
-      children:[{ id:"authentication", url:"ReadyMadeScreen/Authentication", title:"Authentication" },
-      { id:"imageGallery", url:"ReadyMadeScreen/ImageGallery", title:"ImageGallery" },
-      { id:"readyMadeDropdowns", url:"ReadyMadeScreen/ReadyMadeDropdowns", title:"Ready-Made Dropdowns" }]
     }
 ];
