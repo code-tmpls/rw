@@ -21,6 +21,7 @@ const columnDesc = [{
   "id":"continent",
   "width":""
 }];
+
 export const SampleNote1 = () =>{
  return (<>
   <Table title="Simple Table - DataSettings not defined" columnDesc={columnDesc} data={tableData} />

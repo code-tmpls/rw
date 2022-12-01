@@ -8,10 +8,16 @@ import './index.css';
  */
 
 export const Table = ({ title, columnDesc, data, dataSettings }) => {
-  const tData = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || dataSettings?.dataSequence===true) )?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
+  const isDataSequence = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || 
+    dataSettings?.dataSequence===true) );
+  const tData = isDataSequence?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
+  let colDesc = [...columnDesc ];
+   if(isDataSequence) { colDesc?.unshift({ columnName:"#", id:"#", width:"10%", sortBy: "asc" }); }
+  console.log(columnDesc);
   const [tableData, setTableData] = useState(tData);
-  const [sortColumns, setSortColumns] = useState(Object.assign(columnDesc?.[0], { sortBy: 'asc' }));
+  const [sortColumns, setSortColumns] = useState(colDesc?.[0]);
 
+  useEffect(()=>console.log(tableData),[tableData]);
   useEffect(() => {
     setTableData( SortJSONArray(tableData, sortColumns.id, sortColumns.sortBy) );
   }, [sortColumns]);
@@ -28,7 +34,7 @@ export const Table = ({ title, columnDesc, data, dataSettings }) => {
 
   const SearchData = ( search )=>{
     return tData.filter(el =>{
-     let colData = columnDesc.filter((col)=>{
+     let colData = colDesc?.filter((col)=>{
       let columnData = ReactJSXToOutputViewer(el[col.id]);
       return columnData?.toString().toLowerCase().includes(search?.toLowerCase()) 
      });
@@ -71,7 +77,7 @@ export const Table = ({ title, columnDesc, data, dataSettings }) => {
           <table className="table table-striped table-hover" style={{ marginBottom:'0px', backgroundColor:'#fff' }}>
             <thead>
               <tr align="center">
-                {columnDesc.map((col, index) => {
+                {colDesc?.map((col, index) => {
                   return (
                     <th key={index} style={{ width: col.width, border: '1px solid #ccc' }} 
                     onClick={() => updateColumnSorting(col)}>
@@ -87,7 +93,7 @@ export const Table = ({ title, columnDesc, data, dataSettings }) => {
             <tbody>
               {tableData.map((d, i) => {
                 return (<tr align="center" key={i}>
-                  {columnDesc?.map((col, index) => {
+                  {colDesc?.map((col, index) => {
                     return <td key={index}>{d[col.id]}</td>
                   })}
                 </tr>)

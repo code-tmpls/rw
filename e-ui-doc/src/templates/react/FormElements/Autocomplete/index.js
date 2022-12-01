@@ -61,13 +61,17 @@ export const AutocompletePage = () => {
   const [ showModel, setShowModal ] = useState(false);
 
   const ComponentAttributes = ()=>{
-    const tableData = [{  "Attribute Name": "Hyderabad", "Description": "India", "Example":"Asia" },
-                  {  "Attribute Name": "Tokyo", "Description": "Japan", "Example":"Asia"  },
-                  {  "Attribute Name": "Sydney", "Description": "Australia", "Example":"Australia"  },
-                  {  "Attribute Name": "New York", "Description": "USA", "Example":"North America"  }];
+    const tableData = [{  "attributeName": "Hyderabad", "description": "India", "example":"Asia" },
+                  {  "attributeName": "Tokyo", "description": "Japan", "example":"Asia"  },
+                  {  "attributeName": "Sydney", "description": "Australia", "example":"Australia"  },
+                  {  "attributeName": "New York", "description": "USA", "example":"North America"  }];
+
+    const columnDesc = [{ "columnName":"Attribute Name", "id":"attributeName", "width":"" },
+            { "columnName":"Description", "id":"description", "width":"" },
+            { "columnName":"Example", "id":"example", "width":"" }];
 
     return (<div>
-      <Table data={tableData} />
+      <Table columnDesc={columnDesc} data={tableData} />
     </div>);
    };
   return (<>
