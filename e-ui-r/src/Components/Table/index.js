@@ -8,7 +8,8 @@ import './index.css';
  */
 
 export const Table = ({ title, data, dataSettings }) => {
-  const tData = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || dataSettings?.dataSequence) )?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
+  console.log(title+" dataSettings?.dataSequence: ",dataSettings);
+  const tData = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || dataSettings?.dataSequence===true) )?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
   const [tableData, setTableData] = useState(tData);
   const ColumnDetails = Object.keys(tData[0]);
   const [sortColumns, setSortColumns] = useState({ columnName: ColumnDetails[0], sortBy: 'asc' });
@@ -53,21 +54,24 @@ export const Table = ({ title, data, dataSettings }) => {
 */
   return (<>
     <div className="row">
-      <div className="col-md-8">
-        <label style={{ paddingTop: '1%', paddingLeft: '1.65%', fontSize: '14px', fontWeight: '400' }}>{title}</label>
-      </div>
-      <div align="right" className="col-md-1">
-        <label className="table-search-label"><b>Search:</b></label>
-      </div>
-      <div className="col-md-3 table-search-textBox">
-        <input type="text" className="form-control" placeholder="Enter your Search" value={tableDataSearch}
-        onChange={(e)=>{
-          setTableDataSearch(e.target.value);
-          let searchedData = SearchData(e.target.value);
-          console.log('searchedData', searchedData);
-          setTableData(searchedData);
-        }} />
-      </div>
+        <div className="col-md-8">
+        {title && (<label style={{ paddingLeft: '1.65%', fontSize: '14px', fontWeight: '400' }}>{title}</label>)}
+        </div>
+        {(dataSettings?.required?.search===true) && (<>
+          <div align="right" className="col-md-1">
+            <label className="table-search-label"><b>Search:</b></label>
+          </div>
+          <div className="col-md-3 table-search-textBox">
+            <input type="text" className="form-control" placeholder="Enter your Search" value={tableDataSearch}
+              onChange={(e)=>{
+                setTableDataSearch(e.target.value);
+                let searchedData = SearchData(e.target.value);
+                console.log('searchedData', searchedData);
+                setTableData(searchedData);
+            }} />
+        </div>
+        </>
+        )}
     </div>
     <div className="row">
       <div className="col-md-12">

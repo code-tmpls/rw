@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
+import React, { useState, useEffect } from "react";
+import { SimpleHeader, Button, ContainerFluid, Row, Col, Order, Card, Highlight, Colors, Modal, Table  } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 
@@ -58,8 +58,24 @@ export const AutocompletePage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [ showModel, setShowModal ] = useState(false);
+
+  const ComponentAttributes = ()=>{
+    const tableData = [{  "Attribute Name": "Hyderabad", "Description": "India", "Example":"Asia" },
+                  {  "Attribute Name": "Tokyo", "Description": "Japan", "Example":"Asia"  },
+                  {  "Attribute Name": "Sydney", "Description": "Australia", "Example":"Australia"  },
+                  {  "Attribute Name": "New York", "Description": "USA", "Example":"North America"  }];
+
+    return (<div>
+      <Table data={tableData} />
+    </div>);
+   };
   return (<>
-    <SimpleHeader title="Autocomplete" />
+    <Modal type="xl" title="AutoComplete Component Attributes" 
+    show={showModel} 
+    onClose={setShowModal} content={<ComponentAttributes />}  />
+    <SimpleHeader title="Autocomplete" 
+    rightContent={<Button type="primary" label="Component Attributes" size={11} onClick={()=>setShowModal(true)} />} />
     <ContainerFluid>
       <Row>
         <Col><AutocompleteNotes /></Col>

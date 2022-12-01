@@ -1,11 +1,11 @@
 import React from "react";
 
-export const Modal = ({ title, show, onClose, content, fullScreen })=>{
+export const Modal = ({ type, title, show, onClose, content, fullScreen })=>{
 
  const isFullScreen = (fullScreen!==undefined && fullScreen)? true: false;
 
  return (<>
-    <div className="modal" style={{ display: show?'block':'none' }}>
+    <div className={(type!==undefined)?"modal modal-"+type:"modal"} style={{ display: show?'block':'none' }}>
       <div className={isFullScreen?"modal-dialog modal-fullscreen":"modal-dialog"}>
         <div className="modal-content">
           <div className="modal-header">

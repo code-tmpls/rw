@@ -30,6 +30,14 @@ export const SampleNote3 = () =>{
    </>);
  };
 
+ export const SampleNote5 = () =>{
+  return (<>
+   <Table title="Simple Table - DataSettings defined and with Search Required" 
+          data={tableData} 
+          dataSettings={{ required: { search: true } }}/>
+  </>);
+};
+
 const SampleCode = () =>{
   return (<></>);
  };
