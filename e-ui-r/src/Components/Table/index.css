@@ -1,5 +1,12 @@
-.table-responsive { padding: 15px; }
 .table { border: 1px solid #ccc; }
 .table-search-label { padding-top: 8%; }
 .table-search-textBox { padding-left:0%;padding-right: 2%; }
 .table-responsive > .table > thead { cursor:pointer; }
+.table >thead >tr {
+    position: sticky;
+    top: 0%;
+    background-color:#fff;
+}
+.table { border-collapse: separate;border-spacing: 0; }
+.table-responsive>.table>tbody { border: 1px solid rgb(204, 204, 204); }
+.table>thead>tr>th { border: 1px solid rgb(204, 204, 204); }

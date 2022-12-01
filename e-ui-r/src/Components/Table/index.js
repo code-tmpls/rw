@@ -7,7 +7,7 @@ import './index.css';
  }
  */
 
-export const Table = ({ title, columnDesc, data, dataSettings }) => {
+export const Table = ({ title, height, columnDesc, data, dataSettings }) => {
   const isDataSequence = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || 
     dataSettings?.dataSequence===true) );
   const tData = isDataSequence?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
@@ -73,13 +73,13 @@ export const Table = ({ title, columnDesc, data, dataSettings }) => {
     </div>
     <div className="row">
       <div className="col-md-12">
-        <div className="table-responsive">
-          <table className="table table-striped table-hover" style={{ marginBottom:'0px', backgroundColor:'#fff' }}>
+        <div className="table-responsive scroll" style={{ height:height }}>
+          <table className="table table-striped table-hover" style={{ display:'table', marginBottom:'0px', backgroundColor:'#fff' }}>
             <thead>
               <tr align="center">
                 {colDesc?.map((col, index) => {
                   return (
-                    <th key={index} style={{ width: col.width, border: '1px solid #ccc' }} 
+                    <th key={index} align={col?.titleAlign} style={{ width: col.width }} 
                     onClick={() => updateColumnSorting(col)}>
                       {col.columnName}
                       {(sortColumns.id === col.id) &&
@@ -94,7 +94,7 @@ export const Table = ({ title, columnDesc, data, dataSettings }) => {
               {tableData.map((d, i) => {
                 return (<tr align="center" key={i}>
                   {colDesc?.map((col, index) => {
-                    return <td key={index}>{d[col.id]}</td>
+                    return <td key={index} align={col?.dataAlign}>{d[col.id]}</td>
                   })}
                 </tr>)
               })}

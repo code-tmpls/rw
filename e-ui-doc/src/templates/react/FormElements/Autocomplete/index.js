@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { SimpleHeader, Button, ContainerFluid, Row, Col, Order, Card, Highlight, Colors, Modal, Table  } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 
 const AutocompleteNotes = () => {
@@ -58,28 +60,8 @@ export const AutocompletePage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [ showModel, setShowModal ] = useState(false);
-
-  const ComponentAttributes = ()=>{
-    const tableData = [{  "attributeName": "Hyderabad", "description": "India", "example":"Asia" },
-                  {  "attributeName": "Tokyo", "description": "Japan", "example":"Asia"  },
-                  {  "attributeName": "Sydney", "description": "Australia", "example":"Australia"  },
-                  {  "attributeName": "New York", "description": "USA", "example":"North America"  }];
-
-    const columnDesc = [{ "columnName":"Attribute Name", "id":"attributeName", "width":"20%" },
-            { "columnName":"Description", "id":"description", "width":"30%" },
-            { "columnName":"Example", "id":"example", "width":"40%" }];
-
-    return (<div>
-      <Table columnDesc={columnDesc} data={tableData} />
-    </div>);
-   };
   return (<>
-    <Modal type="xl" title="AutoComplete Component Attributes" 
-    show={showModel} 
-    onClose={setShowModal} content={<ComponentAttributes />}  />
-    <SimpleHeader title="Autocomplete" 
-    rightContent={<Button type="primary" label="Component Attributes" size={11} onClick={()=>setShowModal(true)} />} />
+    <DocumentHeader title="Autocomplete" componentAttributesTable={ComponentAttributesTable} />
     <ContainerFluid>
       <Row>
         <Col><AutocompleteNotes /></Col>
