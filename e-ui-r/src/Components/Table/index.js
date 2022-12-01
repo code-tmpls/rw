@@ -7,36 +7,29 @@ import './index.css';
  }
  */
 
-export const Table = ({ title, data, dataSettings }) => {
-  console.log(title+" dataSettings?.dataSequence: ",dataSettings);
+export const Table = ({ title, columnDesc, data, dataSettings }) => {
   const tData = ((dataSettings===undefined || dataSettings?.dataSequence===undefined || dataSettings?.dataSequence===true) )?(data.map((d, i) => ({ "#": (i + 1), ...d }))):data;
   const [tableData, setTableData] = useState(tData);
-  const ColumnDetails = Object.keys(tData[0]);
-  const [sortColumns, setSortColumns] = useState({ columnName: ColumnDetails[0], sortBy: 'asc' });
+  const [sortColumns, setSortColumns] = useState(Object.assign(columnDesc?.[0], { sortBy: 'asc' }));
 
   useEffect(() => {
-    setTableData( SortJSONArray(tableData, sortColumns.columnName, sortColumns.sortBy) );
+    setTableData( SortJSONArray(tableData, sortColumns.id, sortColumns.sortBy) );
   }, [sortColumns]);
 
-  const updateColumnSorting = (columnName) => {
-    let columnJson = {};
-    columnJson.columnName = columnName;
-    if (sortColumns.columnName === columnName) {
-      if (sortColumns.sortBy === 'asc') { columnJson.sortBy = 'desc'; }
-      else if (sortColumns.sortBy === 'desc') { columnJson.sortBy = 'asc'; }
-    } else {
-      columnJson.sortBy = 'asc';
+  const updateColumnSorting = (column) => {
+    let sortBy = 'asc';
+    if (sortColumns.sortBy === 'asc') { column.sortBy = 'desc'; }
+    else if (sortColumns.sortBy === 'desc') { column.sortBy = 'asc'; }
+    else {
+      column.sortBy = 'asc'; 
     }
-    setSortColumns(columnJson);
+    setSortColumns({ ...sortColumns, ...column});
   };
 
   const SearchData = ( search )=>{
-    console.log(tData);
     return tData.filter(el =>{
-     let colData = ColumnDetails.filter((col)=>{
-      let columnData = ReactJSXToOutputViewer(el[col]);
-      console.log( 'columnData: ', columnData );
-      console.log( 'searchData: ', search );
+     let colData = columnDesc.filter((col)=>{
+      let columnData = ReactJSXToOutputViewer(el[col.id]);
       return columnData?.toString().toLowerCase().includes(search?.toLowerCase()) 
      });
      if(colData.length>0){
@@ -66,7 +59,6 @@ export const Table = ({ title, data, dataSettings }) => {
               onChange={(e)=>{
                 setTableDataSearch(e.target.value);
                 let searchedData = SearchData(e.target.value);
-                console.log('searchedData', searchedData);
                 setTableData(searchedData);
             }} />
         </div>
@@ -79,11 +71,11 @@ export const Table = ({ title, data, dataSettings }) => {
           <table className="table table-striped table-hover" style={{ marginBottom:'0px', backgroundColor:'#fff' }}>
             <thead>
               <tr align="center">
-                {ColumnDetails.map((colName, index) => {
+                {columnDesc.map((col, index) => {
                   return (
-                    <th key={index} style={{ border: '1px solid #ccc' }} onClick={() => updateColumnSorting(colName)}>
-                      {colName}
-                      {(sortColumns.columnName === colName) &&
+                    <th key={index} style={{ border: '1px solid #ccc' }} onClick={() => updateColumnSorting(col)}>
+                      {col.columnName}
+                      {(sortColumns.id === col.id) &&
                         (<span className="float-end">
                           <FontAwesomeIcon name={"fa-sort-amount-" + sortColumns.sortBy} />
                         </span>)}
@@ -94,8 +86,8 @@ export const Table = ({ title, data, dataSettings }) => {
             <tbody>
               {tableData.map((d, i) => {
                 return (<tr align="center" key={i}>
-                  {ColumnDetails?.map((colName, index) => {
-                    return <td key={index}>{d[colName]}</td>
+                  {columnDesc?.map((col, index) => {
+                    return <td key={index}>{d[col.id]}</td>
                   })}
                 </tr>)
               })}
