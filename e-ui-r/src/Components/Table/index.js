@@ -73,7 +73,8 @@ export const Table = ({ title, columnDesc, data, dataSettings }) => {
               <tr align="center">
                 {columnDesc.map((col, index) => {
                   return (
-                    <th key={index} style={{ border: '1px solid #ccc' }} onClick={() => updateColumnSorting(col)}>
+                    <th key={index} style={{ width: col.width, border: '1px solid #ccc' }} 
+                    onClick={() => updateColumnSorting(col)}>
                       {col.columnName}
                       {(sortColumns.id === col.id) &&
                         (<span className="float-end">
