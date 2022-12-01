@@ -66,9 +66,9 @@ export const AutocompletePage = () => {
                   {  "attributeName": "Sydney", "description": "Australia", "example":"Australia"  },
                   {  "attributeName": "New York", "description": "USA", "example":"North America"  }];
 
-    const columnDesc = [{ "columnName":"Attribute Name", "id":"attributeName", "width":"" },
-            { "columnName":"Description", "id":"description", "width":"" },
-            { "columnName":"Example", "id":"example", "width":"" }];
+    const columnDesc = [{ "columnName":"Attribute Name", "id":"attributeName", "width":"20%" },
+            { "columnName":"Description", "id":"description", "width":"30%" },
+            { "columnName":"Example", "id":"example", "width":"40%" }];
 
     return (<div>
       <Table columnDesc={columnDesc} data={tableData} />

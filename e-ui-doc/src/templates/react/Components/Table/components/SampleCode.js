@@ -6,21 +6,9 @@ const tableData = [{  "city": "Hyderabad", "country": "India", "continent":"Asia
                   {  "city": "Sydney", "country": "Australia", "continent":"Australia"  },
                   {  "city": <div style={{ backgroundColor:'yellow' }}>New York</div>, "country": "USA", "continent":"North America"  }];
 
-const columnDesc = [{
-  "columnName":"City",
-  "id":"city",
-  "width":""
-},
-{
-  "columnName":"Country",
-  "id":"country",
-  "width":""
-},
-{
-  "columnName":"Continent",
-  "id":"continent",
-  "width":""
-}];
+const columnDesc = [{ "columnName":"City", "id":"city", "width":"30%" },
+    { "columnName":"Country", "id":"country", "width":"30%" },
+    { "columnName":"Continent", "id":"continent", "width":"30%" }];
 
 export const SampleNote1 = () =>{
  return (<>

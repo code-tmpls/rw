@@ -11,8 +11,8 @@ const TableNotes = ()=>{
   <Card backgroundColor={Colors.grey} component={<>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T6']} />
-  <Highlight content={SampleCodeJS.toString()} lang="html" lines={['10']} />
+  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
+  <Highlight content={SampleCodeJS.toString()} lang="html" lines={['14']} />
   <div className="mtop10p mbot10p"><b>Output:</b></div>
   <SampleNote1 />
   </>} />
@@ -25,8 +25,8 @@ const TableNotes = ()=>{
   <Card backgroundColor={Colors.grey} component={<>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T6']} />
-  <Highlight content={SampleCodeJS.toString()} lang="html" lines={['16']} />
+  <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
+  <Highlight content={SampleCodeJS.toString()} lang="html" lines={['20']} />
   <div className="mtop10p mbot10p"><b>Output:</b></div>
   <SampleNote2 />
   </>} />
@@ -39,8 +39,8 @@ const TableNotes = ()=>{
    <Card backgroundColor={Colors.grey} component={<>
    <div className="mbot10p"><b>Sample Code:</b></div>
    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T6']} />
-   <Highlight content={SampleCodeJS.toString()} lang="html" lines={['22']} />
+   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
+   <Highlight content={SampleCodeJS.toString()} lang="html" lines={['26']} />
    <div className="mtop10p mbot10p"><b>Output:</b></div>
    <SampleNote3 />
    </>} />
@@ -53,8 +53,8 @@ const TableNotes = ()=>{
    <Card backgroundColor={Colors.grey} component={<>
    <div className="mbot10p"><b>Sample Code:</b></div>
    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T6']} />
-   <Highlight content={SampleCodeJS.toString()} lang="html" lines={['28']} />
+   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
+   <Highlight content={SampleCodeJS.toString()} lang="html" lines={['32']} />
    <div className="mtop10p mbot10p"><b>Output:</b></div>
    <SampleNote4 />
    </>} />
@@ -67,8 +67,8 @@ const TableNotes = ()=>{
     <Card backgroundColor={Colors.grey} component={<>
     <div className="mbot10p"><b>Sample Code:</b></div>
     <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T6']} />
-    <Highlight content={SampleCodeJS.toString()} lang="html" lines={['34T36']} />
+    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
+    <Highlight content={SampleCodeJS.toString()} lang="html" lines={['38T41']} />
     <div className="mtop10p mbot10p"><b>Output:</b></div>
     <SampleNote5 />
     </>} />
