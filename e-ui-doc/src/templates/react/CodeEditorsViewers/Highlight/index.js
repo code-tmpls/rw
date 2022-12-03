@@ -40,7 +40,7 @@ export const HighlightPage = () => {
                 </div>
                 <div className="col-md-6">
                     <FilledHeader backgroundColor="#0d6efd" color="#fff" title={"<Highlight /> Attributes"} />
-                    <Table data={TableData} />
+                    {/*<Table data={TableData} />*/}
                 </div>
             </div>
         </div>
