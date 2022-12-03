@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader, FlowChart } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const FlowChartPage = () => {
 
@@ -8,7 +10,7 @@ export const FlowChartPage = () => {
     }, []);
 
     return (<>
-        <SimpleHeader title="Flow Chart" />
+        <DocumentHeader title="Flow Chart" componentAttributesTable={ComponentAttributesTable} />
         <FlowChart />
     </>);
 };

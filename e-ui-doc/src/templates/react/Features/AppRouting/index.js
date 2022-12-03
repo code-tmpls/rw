@@ -4,6 +4,8 @@ import { SimpleHeader } from 'e-ui-react';
 import { default as abc }  from '!!raw-loader!../speechListener/data.js';
 import styles  from '!!raw-loader!../speechListener/index.css';
 import HtmlToReactParser from 'html-to-react'; */
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const AppRoutingPage = () => {
 
@@ -11,7 +13,9 @@ export const AppRoutingPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="AppRouting" /></>);
+    return (<>
+    <DocumentHeader title="AppRouting" componentAttributesTable={ComponentAttributesTable} />
+    </>);
     /*   <Greetings />
         <pre><code lang="html">{abc.toString()}</code></pre>
         <pre><code lang="html">{styles.toString()}</code></pre>

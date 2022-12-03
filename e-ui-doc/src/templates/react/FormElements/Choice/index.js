@@ -8,7 +8,8 @@ import { default as CheckBoxBasicJS } from '!!raw-loader!./components/basic-chec
 import { default as RadioBasicJS } from '!!raw-loader!./components/basic-radio.js';
 import { default as CheckBoxCheckedJS } from '!!raw-loader!./components/checked-checkbox.js';
 import { default as RadioCheckedJS } from '!!raw-loader!./components/checked-radio.js';
-
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const CheckBoxChoice = ({ component, stringComponent }) => {
   return (<Card component={
@@ -57,7 +58,7 @@ export const ChoicePage = () => {
   }, []);
 
   return (<>
-    <SimpleHeader title="Choice" />
+    <DocumentHeader title="Choice" componentAttributesTable={ComponentAttributesTable} />
     <ContainerFluid>
       <Row>
         <Col><Order type="number" data={[<Point1 />, <Point2 />]} /></Col>

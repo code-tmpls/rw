@@ -5,6 +5,8 @@ import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.j
 import IndexHtml from '!!raw-loader!./components/code/index.html'; 
 import IndexJS from '!!raw-loader!./components/code/index.js'; 
 import IndexCSS from '!!raw-loader!./components/code/index.css'; 
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const StackblitzNotes = ()=>{
 
@@ -32,16 +34,18 @@ const StackblitzNotes = ()=>{
   <div className="mtop10p mbot10p"><b>Simple Stackblitz Notebook ( Open in New Window ):</b></div>
   <Card backgroundColor={Colors.grey} component={<>
   <div className="mbot10p"><b>Sample Code:</b></div>
-  <Grid data={[
-    [{ sm:4, md:'', lg:'', xl:'', xxl:'', component:<HtmlTemplate /> },
-    { sm:4, md:'', lg:'', xl:'', xxl:'', component:<JSTemplate /> },
-    { sm:4, md:'', lg:'', xl:'', xxl:'', component:<CSSTemplate /> }]
-   ]} />
-   <Grid data={[
-    [{ sm:12, md:'', lg:'', xl:'', xxl:'', component:<Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['2T4']} /> },
-    { sm:12, md:'', lg:'', xl:'', xxl:'', component:<Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['6T25']} /> },
-    { sm:12, md:'', lg:'', xl:'', xxl:'', component:<Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['29']} /> }]
-   ]} />
+  <ContainerFluid>
+    <Row>
+      <Col xl={4}><HtmlTemplate /></Col>
+      <Col xl={4}><JSTemplate /></Col>
+      <Col xl={4}><CSSTemplate /></Col>
+    </Row>
+    <Row>
+      <Col><Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['2T4']} /></Col>
+      <Col><Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['6T25']} /></Col>
+      <Col><Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['29']} /></Col>
+    </Row>
+  </ContainerFluid>
   <div className="mtop10p mbot10p"><b>Output:</b></div>
   <SampleNote1 />
   </>} />
@@ -58,7 +62,7 @@ export const StackblitzPage = () =>{
  }, []);
 
  return (<>
- <SimpleHeader title="Stackblitz" />
+ <DocumentHeader title="Stackblitz" componentAttributesTable={ComponentAttributesTable} />
  <ContainerFluid>
   <Row>
     <Col><StackblitzNotes /></Col>

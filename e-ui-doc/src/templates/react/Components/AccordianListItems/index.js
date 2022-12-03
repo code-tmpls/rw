@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader, Highlight, AccordianListItems, Colors } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const data1 = [{
     id:"FirstLevel",
@@ -212,7 +214,7 @@ export const AccordianListItemsPage = () =>{
  };
 
  return (<>
- <SimpleHeader title="AccordianListItems" />
+ <DocumentHeader title="AccordianListItems" componentAttributesTable={ComponentAttributesTable} />
  <div className="container-fluid">
     <div className="row">
      <div className="col-md-12">

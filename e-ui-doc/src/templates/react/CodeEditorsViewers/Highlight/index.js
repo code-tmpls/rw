@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Highlight, Table, SimpleHeader, FilledHeader } from 'e-ui-react';
 import SampleCode from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
-
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const TableData = [
     {
@@ -29,7 +30,7 @@ export const HighlightPage = () => {
     }, []);
 
     return (<>
-        <SimpleHeader title="Highlight" />
+        <DocumentHeader title="Highlight" componentAttributesTable={ComponentAttributesTable} />
         <div className="container-fluid">
             <div className="row pageContent">
                 <div className="col-md-6">

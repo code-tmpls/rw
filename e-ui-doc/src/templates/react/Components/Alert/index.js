@@ -3,6 +3,8 @@ import { SimpleHeader, FilledHeader, Alert, ContainerFluid, Row, Col, Order, Car
 import { SampleNote1, SampleNote2, SampleNote3, SampleNote4, SampleNote5, SampleNote6, SampleNote7, SampleNote8,
  SampleNote9, SampleNote10, SampleNote11, SampleNote12, SampleNote13, SampleNote14, SampleNote15, SampleNote16 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const AlertNotes1 = ()=>{
 
@@ -215,7 +217,7 @@ export const AlertPage = () =>{
  }, []);
 
  return (<>
-  <SimpleHeader title="Alert" />
+  <DocumentHeader title="Alert" componentAttributesTable={ComponentAttributesTable} />
   <ContainerFluid>
     <Row>
         <Col><FilledHeader title="Alerts with Heading and Body" backgroundColor={Colors.primary} color={Colors.light} /></Col>

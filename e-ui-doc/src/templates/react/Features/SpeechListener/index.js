@@ -3,6 +3,8 @@ import { SimpleHeader, Highlight } from 'e-ui-react';
 import SpeechViewer from './components/SpeechViewer.js';
 import { default as SpeechViewerJs } from '!!raw-loader!./components/SpeechViewer.js';
 import { default as SpeechViewerStyles } from '!!raw-loader!./components/SpeechViewer.css';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const SpeechListenerPage = () => {
   
@@ -11,7 +13,7 @@ export const SpeechListenerPage = () => {
   }, []);
 
   return (<>
-    <SimpleHeader title="Speech Listener" />
+    <DocumentHeader title="Speech Listener" componentAttributesTable={ComponentAttributesTable} />
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-8 pad15p">

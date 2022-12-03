@@ -3,6 +3,8 @@ import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors 
 import { SampleNote1 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 import { default as SampleCodeCSS } from '!!raw-loader!./components/SampleCode.css';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const CarouselNotes = () => {
   const Note1 = () => {
@@ -32,7 +34,7 @@ export const CarouselPage = () => {
   }, []);
 
   return (<>
-    <SimpleHeader title="Carousel" />
+    <DocumentHeader title="Carousel" componentAttributesTable={ComponentAttributesTable} />
     <ContainerFluid>
       <Row>
         <Col><CarouselNotes /></Col>

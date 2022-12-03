@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader, Range } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const RangePage = () => {
     
@@ -7,5 +9,7 @@ export const RangePage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="Range" /><Range /></>);
+    return (<>
+    <DocumentHeader title="Range" componentAttributesTable={ComponentAttributesTable} />
+    <Range /></>);
 };

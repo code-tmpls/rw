@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const ImageGalleryPage = () => {
     
@@ -7,5 +9,7 @@ export const ImageGalleryPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="ImageGallery" /></>);
+    return (<>
+    <DocumentHeader title="ImageGallery" componentAttributesTable={ComponentAttributesTable} />
+    </>);
 };

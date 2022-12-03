@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const LineChartPage = () => {
 
@@ -7,5 +9,7 @@ export const LineChartPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="Line Chart" /></>);
+    return (<>
+    <DocumentHeader title="Line Chart" componentAttributesTable={ComponentAttributesTable} />
+    </>);
 };

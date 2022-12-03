@@ -5,6 +5,8 @@ import {
         SampleNote8, SampleNote9, SampleNote10
 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const MenuNotes = () => {
         console.log(SampleCodeJS.toString());
@@ -139,7 +141,7 @@ export const MenuPage = () => {
         }, []);
 
         return (<>
-                <SimpleHeader title="Menu" />
+                <DocumentHeader title="Menu" componentAttributesTable={ComponentAttributesTable} />
                 <ContainerFluid>
                  <Row>
                   <Col><MenuNotes /></Col>

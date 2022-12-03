@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const ReactContextNotes = ()=>{
 console.log(SampleCodeJS.toString());
@@ -30,7 +32,7 @@ export const ReactContextPage = () =>{
  }, []);
 
  return (<>
- <SimpleHeader title="React Context" />
+ <DocumentHeader title="React Context" componentAttributesTable={ComponentAttributesTable} />
  <ContainerFluid>
   <Row>
     <Col><ReactContextNotes /></Col>

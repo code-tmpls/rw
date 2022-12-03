@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader, Select } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const SelectPage = () => {
 
@@ -8,7 +10,7 @@ export const SelectPage = () => {
    }, []);
 
    return (<>
-      <SimpleHeader title="Select / Dropdown" />
+      <DocumentHeader title="Select / Dropdown" componentAttributesTable={ComponentAttributesTable} />
       <Select
          label="Select Theme"
          options={[{ id: 'light', label: 'Light Theme', value: 'Light' },

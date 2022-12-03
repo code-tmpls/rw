@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader, TextArea } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const TextAreaPage = () => {
     
@@ -7,5 +9,7 @@ export const TextAreaPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="TextArea" /><TextArea /></>);
+    return (<>
+    <DocumentHeader title="TextArea" componentAttributesTable={ComponentAttributesTable} />
+    <TextArea /></>);
 };

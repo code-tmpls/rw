@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader, ColorPicker } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const ColorPickerPage = () => {
     
@@ -7,5 +9,8 @@ export const ColorPickerPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="ColorPicker" /><ColorPicker /></>);
+    return (<>
+     <DocumentHeader title="ColorPicker" componentAttributesTable={ComponentAttributesTable} />
+     <ColorPicker />
+    </>);
 };

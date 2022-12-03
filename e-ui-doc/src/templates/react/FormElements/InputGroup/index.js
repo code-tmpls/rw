@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors, InputGroup } from 'e-ui-react';
 import SampleCode from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const InputGroupNotes = () => {
    const Note1 = () => {
@@ -26,7 +28,8 @@ export const InputGroupPage = () => {
       window.scrollTo(0, 0);
    }, []);
 
-   return (<><SimpleHeader title="InputGroup" />
+   return (<>
+   <DocumentHeader title="InputGroup" componentAttributesTable={ComponentAttributesTable} />
    <ContainerFluid>
       <Row>
          <Col><InputGroupNotes /></Col>

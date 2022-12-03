@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { SimpleHeader, Avatar, Order, Card, Highlight, Colors, ContainerFluid, Row, Col } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const AvatarNotes = ()=>{
  
@@ -51,7 +53,7 @@ export const AvatarPage = () =>{
  }, []);
 
  return (<>
- <SimpleHeader title="Avatar" />
+ <DocumentHeader title="Avatar" componentAttributesTable={ComponentAttributesTable} />
  <ContainerFluid>
   <Row>
     <Col><AvatarNotes /></Col>

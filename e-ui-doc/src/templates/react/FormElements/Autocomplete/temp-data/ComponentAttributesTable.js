@@ -10,22 +10,22 @@ export const ComponentAttributesTable = {
         {
             "attributeName": (<div>name <Badge type="success" label="Mandatory" size="11" /></div>),
             "description": "Name of the Autocomplete Form Field which is used to identify when we have group of Form Fields within a Form",
-            "example": "-"
+            "example": (<div align="center"><b>-</b></div>)
         },
         {
             "attributeName": (<div>label <Badge type="success" label="Mandatory" size="11" /></div>),
             "description": "It is the Title of the Form Field",
-            "example": "-"
+            "example": (<div align="center"><b>-</b></div>)
         },
         {
             "attributeName": (<div>placeholder <Badge type="success" label="Mandatory" size="11" /></div>),
             "description": "It provides the Suggestion to the Customer - What to be entered within the Field",
-            "example": "-"
+            "example": (<div align="center"><b>-</b></div>)
         },
         {
             "attributeName": (<div>autoCompleteData <Badge type="success" label="Mandatory" size="11" /></div>),
             "description": "It is an Array of data that provides the Suggestions to the Customer to Select while entering the data within the Autocomplete FormField",
-            "example": "-"
+            "example": (<div align="center"><b>-</b></div>)
         },
         {
             "attributeName": (<div>validation <Badge type="warning" label="Optional" size="11" /></div>),

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1, SampleNote2 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const BadgeNotes = ()=>{
 
@@ -39,7 +41,7 @@ export const BadgePage = () =>{
    }, []);
    
   return (<>
-   <SimpleHeader title="Badge" />
+   <DocumentHeader title="Badge" componentAttributesTable={ComponentAttributesTable} />
    <ContainerFluid>
     <Row>
       <Col><BadgeNotes /></Col>

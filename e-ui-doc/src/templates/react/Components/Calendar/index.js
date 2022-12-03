@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
 import { SampleNote1 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const CalendarNotes = () => {
   const Note1 = () => {
@@ -42,7 +44,7 @@ export const CalendarPage = () => {
   }, []);
 
   return (<>
-    <SimpleHeader title="Calendar" />
+    <DocumentHeader title="Calendar" componentAttributesTable={ComponentAttributesTable} />
     <ContainerFluid>
       <Row>
         <Col><CalendarNotes /></Col>

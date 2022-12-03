@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { SimpleHeader } from 'e-ui-react';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 export const WaterfallChartPage = () => {
     
@@ -7,5 +9,7 @@ export const WaterfallChartPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<><SimpleHeader title="WaterfallChart" /></>);
+    return (<>
+    <DocumentHeader title="WaterfallChart" componentAttributesTable={ComponentAttributesTable} />
+    </>);
 };

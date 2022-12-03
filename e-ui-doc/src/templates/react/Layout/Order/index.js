@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { SimpleHeader, Order, Card, Highlight, Colors, ContainerFluid, Row, Col } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS  } from '!!raw-loader!./components/SampleCode.js';
+import { DocumentHeader } from "@DocUtils/DocHeaders.js";
+import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
 const OrderNotes = ()=>{
 console.log(SampleCodeJS.toString());
@@ -54,7 +56,7 @@ export const OrderPage = () => {
     }, []);
     
     return (<div>
-        <SimpleHeader title="Order" />
+        <DocumentHeader title="Order" componentAttributesTable={ComponentAttributesTable} />
         <ContainerFluid>
             <Row>
                 <Col><OrderNotes /></Col>
