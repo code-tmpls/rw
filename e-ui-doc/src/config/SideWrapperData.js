@@ -31,6 +31,7 @@ export const SideWrapperData = [
             { id:"loading", url:"Component/Loading", title:"Loading" },
             { id:"menu", url:"Component/Menu", title:"Menu" },
             { id:"modal", url:"Component/Modal", title:"Modal" },
+            { id:"progressBar", url:"Component/ProgressBar", title:"ProgressBar" },
             { id:"table", url:"Component/Table", title:"Table" },
             { id:"tag", url:"Component/Tag", title:"Tag" },
             { id:"toast", url:"Component/Toast", title:"Toast" },

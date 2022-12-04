@@ -17,6 +17,7 @@ export { Dropdown } from '@LibComponents/Dropdown/index.js';
 export { FontAwesomeIcon } from '@LibComponents/Icons/index.js';
 export { Loading } from '@LibComponents/Loading/index.js';
 export { Modal } from '@LibComponents/Modal/index.js';
+export { ProgressBar } from '@LibComponents/ProgressBar/index.js';
 
 // Navbar
 export { SideWrapperNavbar } from '@LibComponents/Navbar/components/sidewrapper/index.js';
