@@ -35,6 +35,7 @@ import { SpeechListenerPage } from '@DocReactFeatures/SpeechListener/index.js';
 
 import { AutocompletePage } from '@DocReactFormElements/Autocomplete/index.js';
 import { SelectPage } from '@DocReactFormElements/Select/index.js';
+import { SwitchPage } from '@DocReactFormElements/Switch/index.js';
 import { EmailPage } from '@DocReactFormElements/Email/index.js';
 import { PasswordPage } from '@DocReactFormElements/Password/index.js';
 import { TextBoxPage } from '@DocReactFormElements/TextBox/index.js';
@@ -101,9 +102,9 @@ export const Routes = [
     { path:"Feature/AppRouting", component:<Page content={<AppRoutingPage />} activeId="react" /> },
     { path:"Feature/SpeechListener", component:<Page content={<SpeechListenerPage />} activeId="react" /> },
 
-    
     { path:"FormElement/Autocomplete", component:<Page content={<AutocompletePage />} activeId="react" /> },
     { path:"FormElement/SelectDropdown", component:<Page content={<SelectPage />} activeId="react" /> },
+    { path:"FormElement/Switch", component:<Page content={<SwitchPage />} activeId="react" /> },
     { path:"FormElement/Email", component:<Page content={<EmailPage />} activeId="react" /> },
     { path:"FormElement/Password", component:<Page content={<PasswordPage />} activeId="react" /> },
     { path:"FormElement/TextBox", component:<Page content={<TextBoxPage />} activeId="react" /> },

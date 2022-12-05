@@ -56,6 +56,7 @@ export const SideWrapperData = [
               { id:"Password", url:"FormElement/Password", title:"Password" },
               { id:"range", url:"FormElement/Range", title:"Range" },
               { id:"selectDropdown", url:"FormElement/SelectDropdown", title:"Select" },
+              { id:"switch", url:"FormElement/Switch", title:"Switch" },
               { id:"textArea", url:"FormElement/TextArea", title:"TextArea" },
               { id:"textBox", url:"FormElement/TextBox", title:"TextBox" }]
               

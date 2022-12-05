@@ -45,6 +45,7 @@ export { InputGroup } from '@LibFormElements/InputGroup/index.js';
 export { Password } from '@LibFormElements/Password/index.js';
 export { Range } from '@LibFormElements/Range/index.js';
 export { Select } from '@LibFormElements/Select/index.js';
+export { Switch } from '@LibFormElements/Switch/index.js';
 export { TextArea } from '@LibFormElements/TextArea/index.js';
 export { TextBox } from '@LibFormElements/TextBox/index.js';
 export { Form, getForm } from '@LibFormElements/Form/index.js';
