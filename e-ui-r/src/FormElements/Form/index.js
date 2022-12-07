@@ -9,8 +9,9 @@ export const Form = ({ name, children, onSubmit }) =>{
 
   const [ form, updateForm ] = useState({[name]:{}});
   
-  const setForm = (data) => {
-    updateForm({ ...form, ...data } );
+  const setForm = (name, data) => {
+    let d = { [name]: data };
+    updateForm({ ...form, ...d });
   };
 
   const onSubmitForm = ()=>{
@@ -34,15 +35,13 @@ export const Form = ({ name, children, onSubmit }) =>{
   };
 
   useEffect(()=>{
-    console.log( JSON.stringify(form) );
+    console.log("Form Values [Received]: ", JSON.stringify(form) );
   },[form]);
 
   return (
-    <FormContext.Provider value={{ form, setForm }}>
+    <FormContext.Provider value={{ name, form, setForm }}>
       <form id={name} onSubmit={(event)=>onSubmission(event)}>
-     {React.Children.map(children, child => {
-            return React.cloneElement(child, { formContext:{ name, form, setForm } })
-      })}
+       {children}
       <div align="right" style={{ paddingTop:'5px' }}>
         <Button type="success" label="Submit" size={11} onClick={()=>onSubmitForm()} />
         <Button type="danger" label="Reset" size={11} onClick={()=>onResetForm()} />

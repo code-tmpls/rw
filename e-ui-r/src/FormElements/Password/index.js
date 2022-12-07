@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon, FormPasswordValidation } from "e-ui-react";
+import { FontAwesomeIcon, FormPasswordValidation, getForm  } from "e-ui-react";
 
-export const Password =({ name, type, label, value, reference, formContext, validation })=>{
+export const Password =({ name, type, label, value, reference, validation })=>{
  // type="password"
  // type="confirmPassword" ref="name"(This looks using formContext)
+ const formContext = getForm();
  const formName = formContext?.name;
  const form = formContext?.form;
  const [passwordValue, setPasswordValue] = useState((value === undefined) ? '' : value);
@@ -28,11 +29,11 @@ export const Password =({ name, type, label, value, reference, formContext, vali
       }
       // form Data
       if(formName!==undefined && form?.[formName]!==undefined){
-        let updatedContext = {};
+       /* let updatedContext = {};
         updatedContext[formName] = Object.assign(form?.[formName],{
             [name]: result
-        });
-        formContext?.setForm(updatedContext);
+        }); */
+        formContext?.setForm(formName, { [name]: result });
       }
       /*formContext?.setForm(Object.assign(form, {
         [formName]: {

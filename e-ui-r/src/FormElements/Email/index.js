@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { FormInputValidate } from "e-ui-react";
+import { FormInputValidate, getForm } from "e-ui-react";
 
-export const Email =({ name, type, value, formContext, validation })=>{
+export const Email =({ name, type, value, validation })=>{
+ const formContext = getForm();
  const formName = formContext?.name;
  const form = formContext?.form;
  const [emailValue, setEmailValue] = useState((value === undefined) ? '' : value);
@@ -17,11 +18,11 @@ export const Email =({ name, type, value, formContext, validation })=>{
     }
     // form Data
     if(formName!==undefined && form?.[formName]!==undefined){
-      let updatedContext = {};
+      /* let updatedContext = {};
       updatedContext[formName] = Object.assign(form?.[formName],{
         [name]: result
-      });
-      formContext?.setForm(updatedContext);
+      });*/
+      formContext?.setForm(formName, { [name]: result });
     }
  };
 

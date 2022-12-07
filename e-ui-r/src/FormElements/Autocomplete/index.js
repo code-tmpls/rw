@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import HtmlToReactParser from 'html-to-react';
-import { FilterArray, FormInputValidate, KeyPressValidate } from "e-ui-react";
+import { FilterArray, FormInputValidate, KeyPressValidate, getForm } from "e-ui-react";
 import './index.css';
 
 // const data = ["Action","Another Action","Something else here"];
 
-export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData, formContext, validation }) => {
-  
+export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData, validation }) => {
+  const formContext = getForm();
   const formName = formContext?.name;
   const form = formContext?.form;
   const [filteredData, setFilteredData] = useState([]);
@@ -14,7 +14,7 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   const [show, setShow] = useState(false);
   const [autoCompleteValue, setAutoCompleteValue] = useState((value === undefined) ? '' : value);
   const [validationStatus, setValidationStatus] = useState({});
-  console.log( form, formName );
+
   useEffect(()=>{
     if(form?.[formName]?.reset===true){
       setAutoCompleteValue('');
@@ -38,11 +38,11 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
     }
     // form Data
     if(formName!==undefined && form?.[formName]!==undefined){
-      let updatedContext = {};
+     /* let updatedContext = {};
       updatedContext[formName] = Object.assign(form?.[formName],{
         [name]: result
-      });
-      formContext?.setForm(updatedContext);
+      }); */
+      formContext?.setForm(formName, { [name]: result });
     }
     
   }, [autoCompleteValue]);
