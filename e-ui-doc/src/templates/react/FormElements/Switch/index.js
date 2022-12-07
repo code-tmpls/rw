@@ -20,7 +20,20 @@ const SwitchNotes = () => {
       </>);
     };
 
-    return (<Order data={[<Note1 />]} />);
+    const Note2 = () => {
+      return (<>
+        <div className="mtop10p mbot10p"><b>Switch :</b></div>
+        <Card backgroundColor={Colors.grey} component={<>
+          <div className="mbot10p"><b>Sample Code:</b></div>
+          <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
+          <Highlight content={SampleCodeJS.toString()} lang="html" lines={['31T52']} />
+          <div className="mtop10p mbot10p"><b>Output:</b></div>
+          <Card backgroundColor={Colors.light} component={<SampleNote2 />} />
+        </>} />
+      </>);
+    };
+
+    return (<Order data={[<Note1 />,<Note2 />]} />);
   };
 
 export const SwitchPage = () => {

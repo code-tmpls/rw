@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-export const Switch = ({ id, name, label, value, type }) =>{
+export const Switch = ({ name, value, type, formContext, validation }) =>{
+ const formName = formContext?.name;
+ const form = formContext?.form;
+ const [validationStatus, setValidationStatus] = useState({});
  const [ switchValue, setSwitchValue ] = useState(
     value.map((v)=>{
         let check = (v?.checked===undefined)?false:v?.checked;
@@ -12,18 +15,25 @@ export const Switch = ({ id, name, label, value, type }) =>{
  useEffect(()=>{
   console.log(switchValue);
  },[switchValue]);
-    /*
- const [ check, setCheck ] = useState( (checked===undefined)?false:checked );
- useEffect(()=>{
-    console.log( check );
- },[check]);
- let disable = (disabled===undefined)?false:disabled;
- return (<div className="form-check form-switch">
- <input className="form-check-input" type={type} name={name} value={value} id={id} checked={check} 
-    disabled={disable}  onChange={()=>setCheck(!check)}/>
- <label className="form-check-label">{label}</label>
-</div>);
-*/
+
+const handleValidation = (switchValue)=>{
+    // validation
+    let result = {};
+    if (validation !== undefined) {
+       result = FormInputValidate(validation, switchValue);
+       console.log(result);
+       setValidationStatus(result);
+     }
+     // form Data
+     if(formName!==undefined && form?.[formName]!==undefined){
+       let updatedContext = {};
+       updatedContext[formName] = Object.assign(form?.[formName],{
+         [name]: result
+       });
+       formContext?.setForm(updatedContext);
+     }
+};
+
 const handleClick=(type, e, id)=>{
  if(type==='checkbox'){ handleCheckClick(e, id); }
  if(type==='radio'){ handleRadioClick(e, id); }
@@ -35,6 +45,7 @@ const handleCheckClick = (e, id)=>{
         else { return {...obj }; }
     });
     console.log( switchValue, newState );
+    handleValidation(newState);
     setSwitchValue(newState);
 };
 
@@ -44,6 +55,7 @@ const handleRadioClick=(e, id)=>{
   else { return {...obj, checked: false }; }
  });
  console.log( switchValue, newState );
+ handleValidation(newState);
  setSwitchValue(newState);
 };
 
