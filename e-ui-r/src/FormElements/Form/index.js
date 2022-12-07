@@ -10,7 +10,7 @@ export const Form = ({ name, children, onSubmit }) =>{
   const [ form, updateForm ] = useState({[name]:{}});
   
   const setForm = (name, data) => {
-    let d = { [name]: data };
+    let d = { [name]: Object.assign(form[name], data) };
     updateForm({ ...form, ...d });
   };
 

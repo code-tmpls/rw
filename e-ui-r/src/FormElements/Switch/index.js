@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { getForm } from 'e-ui-react';
 
-export const Switch = ({ name, value, type, formContext, validation }) =>{
+export const Switch = ({ name, value, type, validation }) =>{
+ const formContext = getForm();
  const formName = formContext?.name;
  const form = formContext?.form;
  const [validationStatus, setValidationStatus] = useState({});
@@ -18,19 +20,20 @@ export const Switch = ({ name, value, type, formContext, validation }) =>{
 
 const handleValidation = (switchValue)=>{
     // validation
-    let result = {};
+   /* let result = {};
     if (validation !== undefined) {
        result = FormInputValidate(validation, switchValue);
        console.log(result);
        setValidationStatus(result);
-     }
+     }*/
      // form Data
      if(formName!==undefined && form?.[formName]!==undefined){
-       let updatedContext = {};
+       /*let updatedContext = {};
        updatedContext[formName] = Object.assign(form?.[formName],{
          [name]: result
-       });
-       formContext?.setForm(updatedContext);
+       });*/
+       let result = switchValue.filter((v)=>(v?.checked===true));
+       formContext?.setForm(formName, { [name]: result });
      }
 };
 

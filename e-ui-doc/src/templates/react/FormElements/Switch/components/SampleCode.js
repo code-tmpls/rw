@@ -34,7 +34,7 @@ export const SampleNote2 = () =>{
         <Row>
             <Col xl={4}>
                 <div><b>Switch</b></div>
-                <Switch type="checkbox" id="numbers1" name="numbers" label="One" 
+                <Switch type="checkbox" id="numbers1" name="numbers1" label="One" 
                     value={[{ id:1, label:"One", value:"1"},
                             { id:2, label:"Two", value:"2" },
                             { id:3, label:"Three", value:"3" }]} 
@@ -42,7 +42,7 @@ export const SampleNote2 = () =>{
             </Col>
             <Col xl={4}>
                 <div><b>Radio</b></div>
-                <Switch type="radio" id="numbers2" name="numbers" label="One" 
+                <Switch type="radio" id="numbers2" name="numbers2" label="One" 
                     value={[{ id:1, label:"One", value:"1"},
                             { id:2, label:"Two", value:"2" },
                             { id:3, label:"Three", value:"3" }]} 
