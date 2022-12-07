@@ -120,6 +120,41 @@ export const FormInputValidate = (validation, value) => {
     return result;
 };
 
+export const FormSwitchValidate = (validation, value )=>{ // value is an Array 
+  const validationSteps = Object.keys(validation);
+  const validationSuccess = [];
+    let result;
+  for (let validateStep in validationSteps) {
+    const step = validationSteps[validateStep];
+    console.log("step: ",step);
+    let errorMessage = '';
+    if (step === 'validate') {
+      const errorMessage = validation[step](value);
+      if (errorMessage.length === 0) {
+        validationSuccess.push(step);
+      }
+      result = { validationSuccess, value, errorMessage };
+    } 
+    else { 
+      if (
+        (step === 'required' && value.length === 0) ||
+        (step === 'minSelect' && value.length < validation[step]?.value) ||
+        (step === 'maxSelect' && value.length > validation[step]?.value)
+      ) {
+        errorMessage = validation[step]?.errorMessage;
+        result = { validationSuccess, value, errorMessage };
+        console.log("errorMessage: ", errorMessage);
+        break;
+      } else {
+        validationSuccess.push(step);
+        result = { validationSuccess, value, errorMessage };
+      }
+    }
+  }
+  console.log('result', result);
+  return result;
+};
+
 export const KeyPressValidate=(event, pattern, validation)=>{
     if(pattern!==undefined){
       let key = String.fromCharCode(event.which || event.charCode);
@@ -129,3 +164,4 @@ export const KeyPressValidate=(event, pattern, validation)=>{
       }
     }  
 };
+

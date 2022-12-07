@@ -38,7 +38,21 @@ export const SampleNote2 = () =>{
                     value={[{ id:1, label:"One", value:"1"},
                             { id:2, label:"Two", value:"2" },
                             { id:3, label:"Three", value:"3" }]} 
-                    disabled={false} />
+                    disabled={false} 
+                    validation={{
+                        required:{
+                            value: true,
+                            errorMessage : ""
+                        },
+                        minSelect:{
+                            value: 2,
+                            errorMessage: ""
+                        },
+                        maxSelect:{
+                            value: 5,
+                            errorMessage: ""
+                        }
+                    }} />
             </Col>
             <Col xl={4}>
                 <div><b>Radio</b></div>
