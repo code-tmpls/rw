@@ -26,7 +26,7 @@ const SwitchNotes = () => {
         <Card backgroundColor={Colors.grey} component={<>
           <div className="mbot10p"><b>Sample Code:</b></div>
           <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
-          <Highlight content={SampleCodeJS.toString()} lang="html" lines={['31T52']} />
+          <Highlight content={SampleCodeJS.toString()} lang="html" lines={['31T66']} />
           <div className="mtop10p mbot10p"><b>Output:</b></div>
           <Card backgroundColor={Colors.light} component={<SampleNote2 />} />
         </>} />
