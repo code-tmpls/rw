@@ -1,68 +1,53 @@
-import React, { useEffect } from 'react';
-import { SimpleHeader, Card, ContainerFluid, Row, Col, Highlight, Order } from 'e-ui-react';
-import CheckBoxBasic from './components/basic-checkbox.js';
-import RadioBasic from './components/basic-radio.js';
-import CheckBoxChecked from './components/checked-checkbox.js';
-import RadioChecked from './components/checked-radio.js';
-import { default as CheckBoxBasicJS } from '!!raw-loader!./components/basic-checkbox.js';
-import { default as RadioBasicJS } from '!!raw-loader!./components/basic-radio.js';
-import { default as CheckBoxCheckedJS } from '!!raw-loader!./components/checked-checkbox.js';
-import { default as RadioCheckedJS } from '!!raw-loader!./components/checked-radio.js';
+import React, { useEffect } from "react";
+import { SimpleHeader, ContainerFluid, Row, Col, Order, Card, Highlight, Colors } from 'e-ui-react';
+import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
+import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 import { DocumentHeader } from "@DocUtils/DocHeaders.js";
 import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
-const CheckBoxChoice = ({ component, stringComponent }) => {
-  return (<Card component={
-    <ContainerFluid>
-      <Row>
-        <Col sm={1} md={1} lg={1} xl={1} xxl={1}>{component}</Col>
-        <Col sm={10} md={10} lg={10} xl={10} xxl={10}>{stringComponent}</Col>
-      </Row>
-    </ContainerFluid>
-  } />);
-};
+const ChoiceNotes = () => {
 
-const RadioChoice = ({ component, stringComponent }) => {
-  return (<Card component={
-  <ContainerFluid>
-    <Col sm={1} md={1} lg={1} xl={1} xxl={1}>{component}</Col>
-    <Col sm={10} md={10} lg={10} xl={10} xxl={10}>{stringComponent}</Col>
-  </ContainerFluid>
-   } />);
-};
+    const Note1 = () => {
+      return (<>
+        <div className="mtop10p mbot10p"><b>Choice :</b></div>
+        <Card backgroundColor={Colors.grey} component={<>
+          <div className="mbot10p"><b>Sample Code:</b></div>
+          <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
+          <Highlight content={SampleCodeJS.toString()} lang="html" lines={['6T25']} />
+          <div className="mtop10p mbot10p"><b>Output:</b></div>
+          <Card backgroundColor={Colors.light} component={<SampleNote1 />} />
+        </>} />
+      </>);
+    };
 
-const Point1 = () => {
-  return (<>
-    <div className="mbot15p"><b>Implementing Basic CheckBox and Basic Radio Elements:</b></div>
-    <CheckBoxChoice component={<CheckBoxBasic />} stringComponent={<Highlight lang="html" content={CheckBoxBasicJS.toString()} lines={['5T7']} />} />
-    <div align="center" className="pad15p"><b>CheckBox</b></div>
-    <RadioChoice component={<RadioBasic />} stringComponent={<Highlight lang="html" content={RadioBasicJS.toString()} lines={['5T7']} />} />
-    <div align="center" className="pad15p"><b>Radio</b></div>
-  </>);
-}
+    const Note2 = () => {
+      return (<>
+        <div className="mtop10p mbot10p"><b>Choice :</b></div>
+        <Card backgroundColor={Colors.grey} component={<>
+          <div className="mbot10p"><b>Sample Code:</b></div>
+          <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
+          <Highlight content={SampleCodeJS.toString()} lang="html" lines={['31T66']} />
+          <div className="mtop10p mbot10p"><b>Output:</b></div>
+          <Card backgroundColor={Colors.light} component={<SampleNote2 />} />
+        </>} />
+      </>);
+    };
 
-const Point2 = () => {
-  return (<>
-    <div className="mbot15p"><b>Implementing CheckBox and Radio Elements with Checked/UnChecked Options:</b></div>
-    <CheckBoxChoice component={<CheckBoxChecked />} stringComponent={<Highlight lang="html" content={CheckBoxCheckedJS.toString()} lines={['5T7']} />} />
-    <div align="center" className="pad15p"><b>CheckBox</b></div>
-    <RadioChoice component={<RadioChecked />} stringComponent={<Highlight lang="html" content={RadioCheckedJS.toString()} lines={['5T7']} />} />
-    <div align="center" className="pad15p"><b>Radio</b></div>
-  </>);
-}
+    return (<Order data={[<Note1 />,<Note2 />]} />);
+  };
 
 export const ChoicePage = () => {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return (<>
+    return (<>
     <DocumentHeader title="Choice" componentAttributesTable={ComponentAttributesTable} />
     <ContainerFluid>
       <Row>
-        <Col><Order type="number" data={[<Point1 />, <Point2 />]} /></Col>
+        <Col><ChoiceNotes /></Col>
       </Row>
     </ContainerFluid>
-  </>);
+    </>);
 };
