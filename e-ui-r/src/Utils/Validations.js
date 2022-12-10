@@ -101,8 +101,8 @@ export const FormInputValidate = (validation, value) => {
       }
       else { 
         if (
-          (step === 'required' && value.trim().length === 0) ||
-          (step === 'minLength' && value.trim().length < validation[step]?.value) ||
+          (step === 'required' && value?.trim().length === 0) ||
+          (step === 'minLength' && value?.trim().length < validation[step]?.value) ||
           (step === 'pattern' && !validation[step]?.value.test(value)) ||
           (step === 'maxLength' && value.trim().length > validation[step]?.value)
         ) {
