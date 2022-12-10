@@ -39,7 +39,6 @@ export { Autocomplete } from '@LibFormElements/Autocomplete/index.js';
 export { Choice } from '@LibFormElements/Choice/index.js';
 export { ColorPicker } from '@LibFormElements/ColorPicker/index.js';
 export { DateTimePicker } from '@LibFormElements/DateTimePicker/index.js';
-export { DateTimeRangePicker } from '@LibFormElements/DateTimeRangePicker/index.js';
 export { Email } from '@LibFormElements/Email/index.js';
 export { InputGroup } from '@LibFormElements/InputGroup/index.js';
 export { Password } from '@LibFormElements/Password/index.js';

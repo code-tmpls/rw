@@ -42,7 +42,6 @@ import { TextBoxPage } from '@DocReactFormElements/TextBox/index.js';
 import { TextAreaPage } from '@DocReactFormElements/TextArea/index.js';
 import { ColorPickerPage } from '@DocReactFormElements/ColorPicker/index.js';
 import { ChoicePage } from '@DocReactFormElements/Choice/index.js';
-import { DateTimeRangePickerPage } from '@DocReactFormElements/DateTimeRangePicker/index.js';
 import { DateTimePickerPage } from '@DocReactFormElements/DateTimePicker/index.js';
 import { RangePage } from '@DocReactFormElements/Range/index.js';
 import { InputGroupPage } from '@DocReactFormElements/InputGroup/index.js';
@@ -89,7 +88,6 @@ export const Routes = [
     { path:"Component/Card", component:<Page content={<CardPage />} activeId="react" /> },
     { path:"Component/Carousel", component:<Page content={<CarouselPage />} activeId="react" /> },
     { path:"Component/Drawer", component:<Page content={<DrawerPage />} activeId="react" /> },
-    { path:"Component/Dropdown", component:<Page content={<DropdownPage />} activeId="react" /> },
     { path:"Component/Loading", component:<Page content={<LoadingPage />} activeId="react" /> },
     { path:"Component/Modal", component:<Page content={<ModalPage />} activeId="react" /> },
     { path:"Component/ProgressBar", component:<Page content={<ProgressBarPage />} activeId="react" /> },
@@ -105,13 +103,13 @@ export const Routes = [
     { path:"FormElement/Autocomplete", component:<Page content={<AutocompletePage />} activeId="react" /> },
     { path:"FormElement/SelectDropdown", component:<Page content={<SelectPage />} activeId="react" /> },
     { path:"FormElement/Switch", component:<Page content={<SwitchPage />} activeId="react" /> },
+    { path:"FormElement/Dropdown", component:<Page content={<DropdownPage />} activeId="react" /> },
     { path:"FormElement/Email", component:<Page content={<EmailPage />} activeId="react" /> },
     { path:"FormElement/Password", component:<Page content={<PasswordPage />} activeId="react" /> },
     { path:"FormElement/TextBox", component:<Page content={<TextBoxPage />} activeId="react" /> },
     { path:"FormElement/TextArea", component:<Page content={<TextAreaPage />} activeId="react" /> },
     { path:"FormElement/ColorPicker", component:<Page content={<ColorPickerPage />} activeId="react" /> },
     { path:"FormElement/Choice", component:<Page content={<ChoicePage />} activeId="react" /> },
-    { path:"FormElement/DateTimeRangePicker", component:<Page content={<DateTimeRangePickerPage />} activeId="react" /> },
     { path:"FormElement/DateTimePicker", component:<Page content={<DateTimePickerPage />} activeId="react" /> },
     { path:"FormElement/Range", component:<Page content={<RangePage />} activeId="react" /> },
     { path:"FormElement/InputGroup", component:<Page content={<InputGroupPage />} activeId="react" /> },
