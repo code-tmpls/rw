@@ -20,7 +20,7 @@ export const Switch = ({ name, value, type, validation }) =>{
 
 const handleValidation = (switchValue)=>{
     // validation
-    let result = {};
+    let result = { value: switchValue };
     if (validation !== undefined) {
        result = FormSwitchValidate( validation, switchValue.filter((v)=>(v?.checked===true)) );
        console.log(result);

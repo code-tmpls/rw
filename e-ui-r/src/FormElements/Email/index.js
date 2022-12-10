@@ -10,7 +10,7 @@ export const Email =({ name, type, value, validation })=>{
 
  // Validations
  const emailValidations = (email)=>{
-  let result;
+  let result={ value: email };
     if (validation !== undefined) {
         result = FormInputValidate(validation, email);
         console.log(result);

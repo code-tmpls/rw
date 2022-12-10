@@ -20,10 +20,10 @@ export const Password =({ name, type, label, value, reference, validation })=>{
 
  console.log(errorMessage, "lowerCaseValidation", lowerCaseValidation);
 
- const passwordValidations = (email)=>{
-    let result;
+ const passwordValidations = (pwd)=>{
+    let result = { value: pwd };
       if (validation !== undefined) {
-          result = FormPasswordValidation(validation, email);
+          result = FormPasswordValidation(validation, pwd);
           console.log(result);
           setValidationStatus(result);
       }

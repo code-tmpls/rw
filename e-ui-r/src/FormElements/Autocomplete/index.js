@@ -30,7 +30,7 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   useEffect(() => {
     console.log( autoCompleteValue );
     // validation
-    let result = {};
+    let result = { value: autoCompleteValue };
     if (validation !== undefined) {
       result = FormInputValidate(validation, autoCompleteValue);
       console.log(result);

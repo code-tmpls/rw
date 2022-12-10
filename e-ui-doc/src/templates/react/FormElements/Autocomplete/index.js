@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SimpleHeader, Button, ContainerFluid, Row, Col, Order, Card, Highlight, Colors, Modal, Table  } from 'e-ui-react';
+import { ContainerFluid, Row, Col, Order, Card, Highlight, Colors  } from 'e-ui-react';
 import { SampleNote1, SampleNote2, SampleNote3 } from './components/SampleCode.js';
 import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 import { DocumentHeader } from "@DocUtils/DocHeaders.js";
