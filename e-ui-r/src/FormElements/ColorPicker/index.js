@@ -29,7 +29,10 @@ export const ColorPicker = ({ name, label, value, validation }) =>{
  };
 
  return (<div className="Colorpicker">
-    <label className="form-label"><b>{label} :</b></label>
+    <label className={((form?.[formName]?.submitted || colorPickerValue?.length > 0) ?
+      ((validationStatus?.errorMessage?.length > 0) ? "form-label form-label-validation-invalid" :
+        "form-label form-label-validation-valid")
+      : "form-label")}><b>{label} :</b></label>
     <input type="color" className="form-control form-control-color" id={name} name={name} value={colorPickerValue}
     title="Choose your color" 
     onChange={(event)=>ColorPickerChange(event.target.value)} />

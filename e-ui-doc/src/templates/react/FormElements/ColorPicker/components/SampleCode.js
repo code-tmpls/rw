@@ -4,7 +4,7 @@ import { Form } from 'e-ui-react';
 
 export const SampleNote1 = () =>{
   return (<>
-    <ColorPicker name="color" label="Choose a Color" value="#e66465" />
+    <ColorPicker name="color" label="Choose a Color" />
   </>);
 };
 
