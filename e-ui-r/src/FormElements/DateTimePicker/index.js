@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { InputGroup } from 'e-ui-react';
 
-export const DateTimePicker = ({ type, id, name, value }) =>{
+export const DateTimePicker = ({ type, id, name, value, minValue, maxValue }) =>{
  let t = (type===undefined)?'':type?.toLowerCase();
  console.log(type, t);
  const [ params, setParams ] = useState([]);
@@ -15,8 +15,19 @@ export const DateTimePicker = ({ type, id, name, value }) =>{
  },[]);
 console.log(t);
  return (<>
- {t==='datepicker' && (<div className="mb-3"><input type="date" id={id} name={name} value={value} class="form-control"/></div>)}
- {t==='timepicker' && (<div className="mb-3"><input type="time" id={id} name={name} value={value} class="form-control"/></div>)}
- {t==='datetimepicker' && (<InputGroup data={params} />)}
+
+ {t==='datepicker' && 
+ (<div className="mb-3">
+    <input type="date" id={id} name={name} value={value} min={minValue} max={maxValue} class="form-control"/>
+  </div>)}
+
+ {t==='timepicker' && 
+ (<div className="mb-3">
+  <input type="time" id={id} name={name} value={value} class="form-control"/>
+  </div>)}
+
+ {t==='datetimepicker' && 
+ (<InputGroup data={params} />)}
+
  </>);
 };
