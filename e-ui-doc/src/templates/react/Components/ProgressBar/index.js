@@ -12,13 +12,13 @@ export const ProgressBarPage = () => {
          const Note1 = () =>{
           return (<>
           <div className="mtop10p mbot10p"><b>ProgressBar:</b></div>
-          <Card backgroundColor={Colors.grey} component={<>
+          <Card backgroundColor={Colors.grey}>
           <div className="mbot10p"><b>Sample Code:</b></div>
           <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
           <Highlight content={SampleCodeJS.toString()} lang="html" lines={['6','9','12','15','18']} />
           <div className="mtop10p mbot10p"><b>Output:</b></div>
-          <Card component={<SampleNote1 />}></Card>
-          </>} />
+          <Card><SampleNote1 /></Card>
+          </Card>
           </>);
          };
 

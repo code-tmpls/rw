@@ -24,14 +24,14 @@ const BarChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Simple Bar Chart:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
       <ContainerFluid>
         <Row>
           <Col sm={5}><NoteChart /></Col>
           <Col sm={7}><NoteCode /></Col>
         </Row>
       </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };
@@ -54,14 +54,14 @@ const BarChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Stacked Bar Chart:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <ContainerFluid>
         <Row>
           <Col sm={5}><NoteChart /></Col>
           <Col sm={7}><NoteCode /></Col>
         </Row>
       </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };
@@ -85,14 +85,14 @@ const BarChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Mixed Bar Chart (Combination of Simple and Stacked):</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <ContainerFluid>
           <Row>
             <Col sm={5}><NoteChart /></Col>
             <Col sm={7}><NoteCode /></Col>
           </Row>
         </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };
@@ -115,14 +115,14 @@ const BarChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Positive and Negative Bar Chart:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <ContainerFluid>
           <Row>
             <Col sm={5}><NoteChart /></Col>
             <Col sm={7}><NoteCode /></Col>
           </Row>
         </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };
@@ -145,14 +145,14 @@ const BarChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Brush Bar Chart:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <ContainerFluid>
           <Row>
             <Col sm={5}><NoteChart /></Col>
             <Col sm={7}><NoteCode /></Col>
           </Row>
         </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };

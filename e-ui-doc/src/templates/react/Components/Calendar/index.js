@@ -23,14 +23,14 @@ const CalendarNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Simple Calendar:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <ContainerFluid>
           <Row>
             <Col xl={5}><NoteOutput /></Col>
             <Col xl={7}><NoteCode /></Col>
           </Row>
         </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };

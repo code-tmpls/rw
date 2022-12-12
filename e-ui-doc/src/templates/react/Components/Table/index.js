@@ -10,70 +10,70 @@ const TableNotes = ()=>{
  const Note1 = () =>{
   return (<>
   <div className="mtop10p mbot10p"><b>A Simple Table where DataSettings is not defined:</b></div>
-  <Card backgroundColor={Colors.grey} component={<>
+  <Card backgroundColor={Colors.grey}>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
   <Highlight content={SampleCodeJS.toString()} lang="html" lines={['14']} />
   <div className="mtop10p mbot10p"><b>Output:</b></div>
   <SampleNote1 />
-  </>} />
+  </Card>
   </>);
  };
 
  const Note2 = () =>{
   return (<>
   <div className="mtop10p mbot10p"><b>A Simple Table where DataSettings defined and Empty:</b></div>
-  <Card backgroundColor={Colors.grey} component={<>
+  <Card backgroundColor={Colors.grey}>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
   <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
   <Highlight content={SampleCodeJS.toString()} lang="html" lines={['20']} />
   <div className="mtop10p mbot10p"><b>Output:</b></div>
   <SampleNote2 />
-  </>} />
+  </Card>
   </>);
  };
 
  const Note3 = () =>{
    return (<>
    <div className="mtop10p mbot10p"><b>A Simple Table where DataSettings defined and it is true:</b></div>
-   <Card backgroundColor={Colors.grey} component={<>
+   <Card backgroundColor={Colors.grey}>
    <div className="mbot10p"><b>Sample Code:</b></div>
    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
    <Highlight content={SampleCodeJS.toString()} lang="html" lines={['26']} />
    <div className="mtop10p mbot10p"><b>Output:</b></div>
    <SampleNote3 />
-   </>} />
+   </Card>
    </>);
  };
 
  const Note4 = () =>{
    return (<>
    <div className="mtop10p mbot10p"><b>A Simple Table where DataSettings defined and it is false:</b></div>
-   <Card backgroundColor={Colors.grey} component={<>
+   <Card backgroundColor={Colors.grey}>
    <div className="mbot10p"><b>Sample Code:</b></div>
    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
    <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
    <Highlight content={SampleCodeJS.toString()} lang="html" lines={['32']} />
    <div className="mtop10p mbot10p"><b>Output:</b></div>
    <SampleNote4 />
-   </>} />
+   </Card>
    </>);
   };
 
   const Note5 = () =>{
     return (<>
     <div className="mtop10p mbot10p"><b>A Simple Table where DataSettings defined and with Search Required:</b></div>
-    <Card backgroundColor={Colors.grey} component={<>
+    <Card backgroundColor={Colors.grey}>
     <div className="mbot10p"><b>Sample Code:</b></div>
     <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
     <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['3T10']} />
     <Highlight content={SampleCodeJS.toString()} lang="html" lines={['38T41']} />
     <div className="mtop10p mbot10p"><b>Output:</b></div>
     <SampleNote5 />
-    </>} />
+    </Card>
     </>);
    };
 

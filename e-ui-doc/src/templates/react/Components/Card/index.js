@@ -9,14 +9,14 @@ const CardNotes = () => {
   const Note1 = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Simple Card:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <div className="mbot10p"><b>Sample Code:</b></div>
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['5T7']} />
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['10']} />
         <div className="mtop10p mbot10p"><b>Output:</b></div>
         <SampleNote1 />
-      </>} />
+      </Card>
     </>);
   };
   return (<Order data={[<Note1 />]} />);

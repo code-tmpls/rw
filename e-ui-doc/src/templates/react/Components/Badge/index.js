@@ -10,24 +10,24 @@ const BadgeNotes = ()=>{
   const Note1 = () =>{
     return (<>
     <div className="mtop10p mbot10p"><b>Simple Badges:</b></div>
-    <Card backgroundColor={Colors.grey} component={<>
+    <Card backgroundColor={Colors.grey}>
     <div className="mbot10p"><b>Sample Code:</b></div>
     <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1','2','5T12']} />
     <div className="mtop10p mbot10p"><b>Output:</b></div>
     <SampleNote1 />
-    </>} />
+    </Card>
     </>);
   };
 
   const Note2 = () =>{
     return (<>
     <div className="mtop10p mbot10p"><b>Rounded-Pill Badges:</b></div>
-    <Card backgroundColor={Colors.grey} component={<>
+    <Card backgroundColor={Colors.grey}>
     <div className="mbot10p"><b>Sample Code:</b></div>
     <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1','2','18T25']} />
     <div className="mtop10p mbot10p"><b>Output:</b></div>
     <SampleNote2 />
-    </>} />
+    </Card>
     </>);
   };
 

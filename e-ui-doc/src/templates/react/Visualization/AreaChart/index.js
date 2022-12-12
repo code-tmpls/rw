@@ -24,14 +24,14 @@ const AreaChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Simple Area Chart:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
       <ContainerFluid>
         <Row>
           <Col sm={5}><NoteChart /></Col>
           <Col sm={7}><NoteCode /></Col>
         </Row>
       </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };
@@ -54,15 +54,14 @@ const AreaChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>Percentage Area Chart:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <ContainerFluid>
         <Row>
           <Col sm={5}><NoteChart /></Col>
           <Col sm={7}><NoteCode /></Col>
         </Row>
       </ContainerFluid>
-      </>} />
-
+      </Card>
     </>);
   };
 
@@ -84,14 +83,14 @@ const AreaChartNotes = () => {
 
     return (<>
       <div className="mtop10p mbot10p"><b>FillByValue Area Chart:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <ContainerFluid>
           <Row>
             <Col sm={5}><NoteChart /></Col>
             <Col sm={7}><NoteCode /></Col>
           </Row>
         </ContainerFluid>
-      </>} />
+      </Card>
 
     </>);
   };

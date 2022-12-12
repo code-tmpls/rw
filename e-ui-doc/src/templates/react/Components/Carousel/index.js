@@ -10,7 +10,7 @@ const CarouselNotes = () => {
   const Note1 = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Card Carousel:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <div className="mbot10p"><b>Sample Code:</b></div>
         <Highlight content={SampleCodeCSS.toString()} lang="css" />
         <div align="center" className="mbot10p"><b>SampleCode.css</b></div>
@@ -21,7 +21,7 @@ const CarouselNotes = () => {
         <div align="center"><b>SampleCode.js</b></div>
         <div className="mtop10p mbot10p"><b>Output:</b></div>
         <SampleNote1 />
-      </>} />
+      </Card>
     </>);
   };
   return (<Order data={[<Note1 />]} />);

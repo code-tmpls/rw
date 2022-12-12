@@ -7,7 +7,7 @@ export const Choice = ({ name, value, type, validation }) =>{
  const form = formContext?.form;
  const [validationStatus, setValidationStatus] = useState({});
  const [ choiceValue, setChoiceValue ] = useState(
-    value.map((v)=>{
+    value?.map((v)=>{
         let check = (v?.checked===undefined)?false:v?.checked;
         let disable = (v?.checked===undefined)?false:v?.disabled;
         return {...v, checked: check, disabled: disable };

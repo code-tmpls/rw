@@ -11,96 +11,96 @@ const AlertNotes1 = ()=>{
  const Note1 = () =>{
    return (<>
     <div className="mtop10p mbot10p"><b>Primary Alert:</b></div>
-    <Card backgroundColor={Colors.grey} component={<>
+    <Card backgroundColor={Colors.grey}>
         <div className="mbot10p"><b>Sample Code:</b></div>
         <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['5']} />
         <div className="mtop10p mbot10p"><b>Output:</b></div>
         <SampleNote1 />
-    </>} />
+    </Card>
    </>);
  };
 
  const Note2 = () =>{
     return (<>
         <div className="mtop10p mbot10p"><b>Secondary Alert:</b></div>
-        <Card backgroundColor={Colors.grey} component={<>
+        <Card backgroundColor={Colors.grey}>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['11']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote2 />
-        </>} />
+        </Card>
     </>);
  };
 
  const Note3 = () =>{
     return (<>
         <div className="mtop10p mbot10p"><b>Success Alert:</b></div>
-        <Card backgroundColor={Colors.grey} component={<>
+        <Card backgroundColor={Colors.grey}>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['17']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote3 />
-        </>} />
+        </Card>
     </>);
  };
 
  const Note4 = () =>{
     return (<>
         <div className="mtop10p mbot10p"><b>Danger Alert:</b></div>
-        <Card backgroundColor={Colors.grey} component={<>
+        <Card backgroundColor={Colors.grey}>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['23']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote4 />
-        </>} />
+        </Card>
     </>);
  };
 
  const Note5 = () =>{
     return (<>
         <div className="mtop10p mbot10p"><b>Warning Alert:</b></div>
-        <Card backgroundColor={Colors.grey} component={<>
+        <Card backgroundColor={Colors.grey}>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['29']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote5 />
-        </>} />
+        </Card>
     </>);
  };
 
  const Note6 = () =>{
     return (<>
         <div className="mtop10p mbot10p"><b>Info Alert:</b></div>
-        <Card backgroundColor={Colors.grey} component={<>
+        <Card backgroundColor={Colors.grey}>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['35']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote6 />
-        </>} />
+        </Card>
     </>);
  };
 
  const Note7 = () =>{
     return (<>
         <div className="mtop10p mbot10p"><b>Dark Alert:</b></div>
-        <Card backgroundColor={Colors.grey} component={<>
+        <Card backgroundColor={Colors.grey}>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['41']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote7 />
-        </>} />
+        </Card>
     </>);
  };
 
  const Note8 = () =>{
     return (<>
         <div className="mtop10p mbot10p"><b>Light Alert:</b></div>
-        <Card backgroundColor={Colors.grey} component={<>
+        <Card backgroundColor={Colors.grey}>
             <div className="mbot10p"><b>Sample Code:</b></div>
             <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['47']} />
             <div className="mtop10p mbot10p"><b>Output:</b></div>
             <SampleNote8 />
-        </>} />
+        </Card>
     </>);
  };
 
@@ -113,96 +113,96 @@ const AlertNotes2 = ()=>{
     const Note1 = () =>{
       return (<>
        <div className="mtop10p mbot10p"><b>Primary Alert:</b></div>
-       <Card backgroundColor={Colors.grey} component={<>
+       <Card backgroundColor={Colors.grey}>
            <div className="mbot10p"><b>Sample Code:</b></div>
            <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['53']} />
            <div className="mtop10p mbot10p"><b>Output:</b></div>
            <SampleNote9 />
-       </>} />
+       </Card>
       </>);
     };
    
     const Note2 = () =>{
        return (<>
            <div className="mtop10p mbot10p"><b>Secondary Alert:</b></div>
-           <Card backgroundColor={Colors.grey} component={<>
+           <Card backgroundColor={Colors.grey}>
                <div className="mbot10p"><b>Sample Code:</b></div>
                <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['59']} />
                <div className="mtop10p mbot10p"><b>Output:</b></div>
                <SampleNote10 />
-           </>} />
+           </Card>
        </>);
     };
    
     const Note3 = () =>{
        return (<>
            <div className="mtop10p mbot10p"><b>Success Alert:</b></div>
-           <Card backgroundColor={Colors.grey} component={<>
+           <Card backgroundColor={Colors.grey}>
                <div className="mbot10p"><b>Sample Code:</b></div>
                <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['65']} />
                <div className="mtop10p mbot10p"><b>Output:</b></div>
                <SampleNote11 />
-           </>} />
+           </Card>
        </>);
     };
    
     const Note4 = () =>{
        return (<>
            <div className="mtop10p mbot10p"><b>Danger Alert:</b></div>
-           <Card backgroundColor={Colors.grey} component={<>
+           <Card backgroundColor={Colors.grey}>
                <div className="mbot10p"><b>Sample Code:</b></div>
                <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['71']} />
                <div className="mtop10p mbot10p"><b>Output:</b></div>
                <SampleNote12 />
-           </>} />
+           </Card>
        </>);
     };
    
     const Note5 = () =>{
        return (<>
            <div className="mtop10p mbot10p"><b>Warning Alert:</b></div>
-           <Card backgroundColor={Colors.grey} component={<>
+           <Card backgroundColor={Colors.grey}>
                <div className="mbot10p"><b>Sample Code:</b></div>
                <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['77']} />
                <div className="mtop10p mbot10p"><b>Output:</b></div>
                <SampleNote13 />
-           </>} />
+           </Card>
        </>);
     };
    
     const Note6 = () =>{
        return (<>
            <div className="mtop10p mbot10p"><b>Info Alert:</b></div>
-           <Card backgroundColor={Colors.grey} component={<>
+           <Card backgroundColor={Colors.grey}>
                <div className="mbot10p"><b>Sample Code:</b></div>
                <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['83']} />
                <div className="mtop10p mbot10p"><b>Output:</b></div>
                <SampleNote14 />
-           </>} />
+           </Card>
        </>);
     };
    
     const Note7 = () =>{
        return (<>
            <div className="mtop10p mbot10p"><b>Dark Alert:</b></div>
-           <Card backgroundColor={Colors.grey} component={<>
+           <Card backgroundColor={Colors.grey}>
                <div className="mbot10p"><b>Sample Code:</b></div>
                <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['89']} />
                <div className="mtop10p mbot10p"><b>Output:</b></div>
                <SampleNote15 />
-           </>} />
+           </Card>
        </>);
     };
    
     const Note8 = () =>{
        return (<>
            <div className="mtop10p mbot10p"><b>Light Alert:</b></div>
-           <Card backgroundColor={Colors.grey} component={<>
+           <Card backgroundColor={Colors.grey}>
                <div className="mbot10p"><b>Sample Code:</b></div>
                <Highlight content={SampleCodeJS.trim().toString()} lang="javascript" lines={['95']} />
                <div className="mtop10p mbot10p"><b>Output:</b></div>
                <SampleNote16 />
-           </>} />
+           </Card>
        </>);
     };
    

@@ -11,43 +11,43 @@ const AutocompleteNotes = () => {
   const Note1 = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Autocomplete (With Static Data):</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <div className="mbot10p"><b>Sample Code:</b></div>
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['6']} />
         <Highlight content={SampleCodeJS.toString()} lang="html" lines={['9']} />
         <div className="mtop10p mbot10p"><b>Output:</b></div>
-        <Card backgroundColor={Colors.light} component={<SampleNote1 />} />
-      </>} />
+        <Card backgroundColor={Colors.light}><SampleNote1 /></Card>
+      </Card>
     </>);
   };
 
   const Note2 = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Autocomplete (From API):</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <div className="mbot10p"><b>Sample Code:</b></div>
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['0', '1']} />
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['14']} />
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['16T26']} />
         <Highlight content={SampleCodeJS.toString()} lang="html" lines={['30']} />
         <div className="mtop10p mbot10p"><b>Output:</b></div>
-        <Card backgroundColor={Colors.light} component={<SampleNote2 />} />
-      </>} />
+        <Card backgroundColor={Colors.light}><SampleNote2 /></Card>
+      </Card>
     </>);
   };
 
   const Note3 = () => {
     return (<>
       <div className="mtop10p mbot10p"><b>Autocomplete with Form:</b></div>
-      <Card backgroundColor={Colors.grey} component={<>
+      <Card backgroundColor={Colors.grey}>
         <div className="mbot10p"><b>Sample Code:</b></div>
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1', '2']} />
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['36']} />
         <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['38T52']} />
         <div className="mtop10p mbot10p"><b>Output:</b></div>
-        <Card backgroundColor={Colors.light} component={<SampleNote3 />} />
-      </>} />
+        <Card backgroundColor={Colors.light}><SampleNote3 /></Card>
+      </Card>
     </>);
   };
 

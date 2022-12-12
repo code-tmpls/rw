@@ -32,7 +32,7 @@ const StackblitzNotes = ()=>{
 
   return (<>
   <div className="mtop10p mbot10p"><b>Simple Stackblitz Notebook ( Open in New Window ):</b></div>
-  <Card backgroundColor={Colors.grey} component={<>
+  <Card backgroundColor={Colors.grey}>
   <div className="mbot10p"><b>Sample Code:</b></div>
   <ContainerFluid>
     <Row>
@@ -48,7 +48,7 @@ const StackblitzNotes = ()=>{
   </ContainerFluid>
   <div className="mtop10p mbot10p"><b>Output:</b></div>
   <SampleNote1 />
-  </>} />
+  </Card>
   </>);
  };
 
