@@ -6,5 +6,34 @@ export const ComponentAttributesTable = {
         { "columnName": "Description", "id": "description", "dataAlign":"left", "width": "30%" },
         { "columnName": "Example", "id": "example", "dataAlign":"left", "width": "40%" }
     ],
-    "data": []
+    "data": [{
+        "attributeName": (<div>name <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>label <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>value <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>minValue <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>maxValue <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>validation <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    }]
 };

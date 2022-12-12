@@ -6,5 +6,24 @@ export const ComponentAttributesTable = {
         { "columnName": "Description", "id": "description", "dataAlign":"left", "width": "30%" },
         { "columnName": "Example", "id": "example", "dataAlign":"left", "width": "40%" }
     ],
-    "data": []
+    "data": [{
+        "attributeName": (<div>placeholder <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>searchLabel <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>menu <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    },
+    {
+        "attributeName": (<div>value <Badge type="success" label="Mandatory" size="11" /></div>),
+        "description": "",
+        "example": (<div align="center"><b>-</b></div>)
+    }]
 };
