@@ -81,7 +81,7 @@ export const SideWrapperData = [
     { id:"themes",
       url:"#", 
       title:"Themes",
-      children:[{ id:"appColors", url:"Themes/AppColors", title:"App Colors" }]
+      children:[{ id:"appColors", url:"Themes/AppThemes", title:"AppThemes" }]
     },
     { id:"Visualization",
       url:"#", 

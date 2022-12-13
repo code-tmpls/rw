@@ -67,7 +67,7 @@ export { TwoByTwoChart } from '@LibVisualization/TwoByTwoChart/index.js';
 export { VennChart } from '@LibVisualization/VennChart/index.js';
 export { WaterfallChart } from '@LibVisualization/WaterfallChart/index.js';
 
-export { AppColors } from '@LibThemes/AppColors/index.js';
+export { AppThemes } from '@LibThemes/AppThemes/index.js';
 
 export { Highlight, HtmlStringToReactJSXConverter, ReactJSXToHtmlStringConverter, ReactJSXToOutputViewer } from '@LibCodeEditorsViewers/Highlight/index.js';
 export { Stackblitz } from '@LibCodeEditorsViewers/Stackblitz/index.js';

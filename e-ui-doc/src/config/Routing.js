@@ -55,7 +55,7 @@ import { AuthenticationPage } from '@DocReactReadyMadeScreen/Authentication/inde
 import { ImageGalleryPage } from '@DocReactReadyMadeScreen/ImageGallery/index.js';
 import { ReadyMadeDropdownsPage } from '@DocReactReadyMadeScreen/ReadyMadeDropdowns/index.js';
 
-import { AppColorsPage } from '@DocReactThemes/AppColors/index.js';
+import { AppThemesPage } from '@DocReactThemes/AppThemes/index.js';
 
 import { AreaChartPage } from '@DocReactVisualization/AreaChart/index.js';
 import { BarChartPage } from '@DocReactVisualization/BarChart/index.js';
@@ -136,7 +136,7 @@ export const Routes = [
     { path:"Visualization/VennChart", component:<Page content={<VennChartPage />} activeId="react" /> },
     { path:"Visualization/WaterfallChart", component:<Page content={<WaterfallChartPage />} activeId="react" /> },
 
-    { path:"Themes/AppColors", component:<Page content={<AppColorsPage />} activeId="react" /> },
+    { path:"Themes/AppThemes", component:<Page content={<AppThemesPage />} activeId="react" /> },
 
     { path:"CodeEditorsViewers/Highlight", component:<Page content={<HighlightPage />} activeId="react" /> },
     { path:"CodeEditorsViewers/Stackblitz", component:<Page content={<StackblitzPage />} activeId="react" /> },
