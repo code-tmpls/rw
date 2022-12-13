@@ -44,7 +44,6 @@ import { ColorPickerPage } from '@DocReactFormElements/ColorPicker/index.js';
 import { ChoicePage } from '@DocReactFormElements/Choice/index.js';
 import { DateTimePickerPage } from '@DocReactFormElements/DateTimePicker/index.js';
 import { RangePage } from '@DocReactFormElements/Range/index.js';
-import { InputGroupPage } from '@DocReactFormElements/InputGroup/index.js';
 
 import { HeadingPage } from '@DocReactHeadersAndFooters/Heading/index.js';
 
@@ -112,7 +111,6 @@ export const Routes = [
     { path:"FormElement/Choice", component:<Page content={<ChoicePage />} activeId="react" /> },
     { path:"FormElement/DateTimePicker", component:<Page content={<DateTimePickerPage />} activeId="react" /> },
     { path:"FormElement/Range", component:<Page content={<RangePage />} activeId="react" /> },
-    { path:"FormElement/InputGroup", component:<Page content={<InputGroupPage />} activeId="react" /> },
 
     { path:"HeadersAndFooters/Headings", component:<Page content={<HeadingPage />} activeId="react" /> },
     

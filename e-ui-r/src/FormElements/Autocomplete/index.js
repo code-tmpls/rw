@@ -48,10 +48,10 @@ export const Autocomplete = ({ name, label, placeholder, value, autoCompleteData
   }, [autoCompleteValue]);
 
   return (<>
-    <label className={((form?.[formName]?.submitted || autoCompleteValue.length > 0) ?
+    {label && (<label className={((form?.[formName]?.submitted || autoCompleteValue.length > 0) ?
       ((validationStatus?.errorMessage?.length > 0) ? "form-label form-label-validation-invalid" :
         "form-label form-label-validation-valid")
-      : "form-label")}><b>{label} :</b></label>
+      : "form-label")}><b>{label} :</b></label>)}
     <div className="dropdown"
       tabIndex={1}
       onBlur={(e) => {
