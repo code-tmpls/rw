@@ -3,7 +3,8 @@ import { Select, NavBarTabs } from 'e-ui-react';
 
 const ChooseTheme = () =>{
  return (<Select 
-    label="Select Theme" 
+    placeholder="Select Theme"
+    value="Light" 
     options={[{ id:'light', label:'Light Theme', value:'Light' },
             { id:'dark', label:'Dark Theme', value:'Dark' }]}
     className="navbar-layout float-md-end float-xs-start" 

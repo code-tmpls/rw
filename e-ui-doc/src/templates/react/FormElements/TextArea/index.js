@@ -1,15 +1,55 @@
-import React, { useEffect } from 'react';
-import { SimpleHeader, TextArea } from 'e-ui-react';
+import React, { useState, useEffect } from "react";
+import { ContainerFluid, Row, Col, Order, Card, Highlight, Colors  } from 'e-ui-react';
+import { SampleNote1, SampleNote2 } from './components/SampleCode.js';
+import { default as SampleCodeJS } from '!!raw-loader!./components/SampleCode.js';
 import { DocumentHeader } from "@DocUtils/DocHeaders.js";
 import { ComponentAttributesTable } from "./temp-data/ComponentAttributesTable.js";
 
-export const TextAreaPage = () => {
-    
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
+const TextAreaNotes = () => {
+
+  const Note1 = () => {
     return (<>
-    <DocumentHeader title="TextArea" componentAttributesTable={ComponentAttributesTable} />
-    <TextArea /></>);
+      <div className="mtop10p mbot10p"><b>TextArea:</b></div>
+      <Card backgroundColor={Colors.grey}>
+        <div className="mbot10p"><b>Sample Code:</b></div>
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1']} />
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['6']} />
+        <div className="mtop10p mbot10p"><b>Output:</b></div>
+        <Card backgroundColor={Colors.light}><SampleNote1 /></Card>
+      </Card>
+    </>);
+  };
+
+  const Note2 = () => {
+    return (<>
+      <div className="mtop10p mbot10p"><b>TextArea with Form:</b></div>
+      <Card backgroundColor={Colors.grey}>
+        <div className="mbot10p"><b>Sample Code:</b></div>
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['1', '2']} />
+        <Highlight content={SampleCodeJS.toString()} lang="javascript" lines={['12T27']} />
+        <div className="mtop10p mbot10p"><b>Output:</b></div>
+        <Card backgroundColor={Colors.light}><SampleNote2 /></Card>
+      </Card>
+    </>);
+  };
+
+  return (<Order data={[<Note1 />, <Note2 />]} />);
 };
+
+export const TextAreaPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (<>
+    <DocumentHeader title="TextArea" componentAttributesTable={ComponentAttributesTable} />
+    <ContainerFluid>
+      <Row>
+        <Col><TextAreaNotes /></Col>
+      </Row>
+    </ContainerFluid>
+  </>);
+};
+
