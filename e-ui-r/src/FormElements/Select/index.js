@@ -7,26 +7,26 @@ export const Select = ({ name, label, placeholder, value, validation, options, c
   const form = formContext?.form;
 
   const [show, setShow] = useState(false);
-  const [textAreaValue, setTextAreaValue] = useState((value === undefined) ? '' : value);
+  const [selectValue, setSelectValue] = useState((value === undefined) ? '' : value);
   const [validationStatus, setValidationStatus] = useState({});
 
   useEffect(()=>{
     if(form?.[formName]?.reset===true){
-      setTextAreaValue('');
+      setSelectValue('');
     }
   }, [form]);
 
   const DataFilter = (val, status) => {
-    setTextAreaValue(val);
+    setSelectValue(val);
     setShow(status);
   };
 
   useEffect(() => {
-    console.log( textAreaValue );
+    console.log( selectValue );
     // validation
-    let result = { value: textAreaValue };
+    let result = { value: selectValue };
     if (validation !== undefined) {
-      result = FormInputValidate(validation, textAreaValue);
+      result = FormInputValidate(validation, selectValue);
       console.log(result);
       setValidationStatus(result);
     }
@@ -39,14 +39,14 @@ export const Select = ({ name, label, placeholder, value, validation, options, c
       formContext?.setForm(formName, { [name]: result });
     }
     
-  }, [textAreaValue]);
+  }, [selectValue]);
 
   let sClassName = (className===undefined)?'':className;
   let sWidth = (width===undefined)?'':width;
   let sfontSize = (fontSize===undefined)?'':fontSize;
 
   return (<>
-    {label && (<label className={((form?.[formName]?.submitted || textAreaValue.length > 0) ?
+    {label && (<label className={((form?.[formName]?.submitted || selectValue.length > 0) ?
       ((validationStatus?.errorMessage?.length > 0) ? "form-label form-label-validation-invalid" :
         "form-label form-label-validation-valid")
       : "form-label")}><b>{label} :</b></label>)}
@@ -57,17 +57,17 @@ export const Select = ({ name, label, placeholder, value, validation, options, c
           setShow(false);
         }
       }}>
-      <select className={((form?.[formName]?.submitted || textAreaValue.length > 0) ?
+      <select className={((form?.[formName]?.submitted || selectValue.length > 0) ?
           ((validationStatus?.errorMessage?.length > 0) ? "form-select form-control-validation-invalid "+sClassName :
             "form-select form-control-validation-valid "+sClassName)
           : "form-select "+sClassName)}
         style={{ width: sWidth+'px',fontSize: sfontSize+'px' }} 
       onChange={(event)=>{ onChange(event);DataFilter(e.target.value, true); }}>
      <option value="">{placeholder}</option>
-     {options.map((option, index)=><option selected={option.value===textAreaValue} key={index} id={option.id} value={option.value}>{option.label}</option>)}
+     {options.map((option, index)=><option selected={option.value===selectValue} key={index} id={option.id} value={option.value}>{option.label}</option>)}
     </select>
       
-      {((form?.[formName]?.submitted || textAreaValue.length > 0) &&
+      {((form?.[formName]?.submitted || selectValue.length > 0) &&
         validationStatus?.errorMessage?.length > 0) &&
         <div align="right" className="form-feedback-validation-invalid">
           {validationStatus?.errorMessage}</div>
