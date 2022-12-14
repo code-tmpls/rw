@@ -1,5 +1,5 @@
 import React from "react";
-import { AppThemes, ContainerFluid, Row, Col, Card, Accordian } from 'e-ui-react';
+import { AppThemes, ContainerFluid, Row, Col, Card, Accordian, Button } from 'e-ui-react';
 
 const Header = ()=>{
  return (<ContainerFluid className="mb-1">
@@ -70,6 +70,32 @@ const ThemeSettings = ()=>{
         </Row>
     </ContainerFluid>);
  };
+
+ const ThemeBody = ()=>{
+    return (<ContainerFluid>
+        <Row>
+            <Col xl={12}><b>Background Color</b></Col>
+        </Row>
+        <Row className="mt-3">
+            <Col xl={3}><b>Colors</b></Col>
+            <Col xl={9}>
+                <b>Theme-01 Primary</b><br/>
+                <b>Theme-01 Secondary</b><br/>
+                <b>Theme-02 Primary</b><br/>
+                <b>Theme-02 Secondary</b>
+            </Col>
+        </Row>
+        <Row className="mt-3">
+            <Col xl={3}><b>Fonts</b></Col>
+            <Col xl={9}>
+                <b>Font Family</b><br/>
+                <b>Font Size</b><br/>
+                <b>Font Color</b>
+            </Col>
+        </Row>
+    </ContainerFluid>);
+ };
+
  return (<Accordian id="AccordianExample"
  data={[{ id:"Item#1", 
           title: (<ThemeTitle title="NavBars" />), 
@@ -81,19 +107,23 @@ const ThemeSettings = ()=>{
         },
         {   id:"Item#3", 
             title:(<ThemeTitle title="Body" />), 
-            component:"This is the Third item's accordion body"  
+            component:<ThemeBody />
         }]} 
 />);
 };
 
 export const AppThemeBuilder = ()=>{
  return (<ContainerFluid>
-    <Row  className="mt-1">
+    <Row className="mt-1">
         <Col xl={4}>
             <Card>
                 {/** */}
                 <Header />
                 <ThemeSettings />
+                <div align="right" className="mt-2">
+                <Button type="primary" label="Create a New Theme" size={11} />
+                </div>
+                
                 {/** */}
             </Card>
         </Col>

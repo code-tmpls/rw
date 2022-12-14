@@ -1,7 +1,8 @@
 import React,  { useState, useEffect } from 'react';
-import { FormInputValidate } from "e-ui-react";
+import { FormInputValidate, getForm } from "e-ui-react";
 
-export const TextBox = ({ name, label, placeholder, value, formContext, validation  }) =>{
+export const TextBox = ({ name, label, placeholder, value, validation  }) =>{
+ const formContext = getForm();
  const formName = formContext?.name;
  const form = formContext?.form;
  const [textBoxValue, setTextBoxValue] = useState((value === undefined) ? '' : value);
