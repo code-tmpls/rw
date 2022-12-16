@@ -40,6 +40,7 @@ export { Choice } from '@LibFormElements/Choice/index.js';
 export { ColorPicker } from '@LibFormElements/ColorPicker/index.js';
 export { DateTimePicker } from '@LibFormElements/DateTimePicker/index.js';
 export { Email } from '@LibFormElements/Email/index.js';
+export { FileUpload } from '@LibFormElements/FileUpload/index.js';
 export { Password } from '@LibFormElements/Password/index.js';
 export { Range } from '@LibFormElements/Range/index.js';
 export { Select } from '@LibFormElements/Select/index.js';

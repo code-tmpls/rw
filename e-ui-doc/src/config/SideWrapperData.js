@@ -51,6 +51,7 @@ export const SideWrapperData = [
               { id:"dateTimePicker", url:"FormElement/DateTimePicker", title:"DateTimePicker" },
               { id:"dropdown", url:"FormElement/Dropdown", title:"Dropdown" },
               { id:"Email", url:"FormElement/Email", title:"Email" },
+              { id:"FileUpload", url:"FormElement/FileUpload", title:"FileUpload" },
               { id:"Password", url:"FormElement/Password", title:"Password" },
               { id:"range", url:"FormElement/Range", title:"Range" },
               { id:"selectDropdown", url:"FormElement/SelectDropdown", title:"Select" },

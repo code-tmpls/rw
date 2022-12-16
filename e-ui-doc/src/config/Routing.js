@@ -37,6 +37,7 @@ import { AutocompletePage } from '@DocReactFormElements/Autocomplete/index.js';
 import { SelectPage } from '@DocReactFormElements/Select/index.js';
 import { SwitchPage } from '@DocReactFormElements/Switch/index.js';
 import { EmailPage } from '@DocReactFormElements/Email/index.js';
+import { FileUploadPage } from '@DocReactFormElements/FileUpload/index.js';
 import { PasswordPage } from '@DocReactFormElements/Password/index.js';
 import { TextBoxPage } from '@DocReactFormElements/TextBox/index.js';
 import { TextAreaPage } from '@DocReactFormElements/TextArea/index.js';
@@ -104,6 +105,7 @@ export const Routes = [
     { path:"FormElement/Switch", component:<Page content={<SwitchPage />} activeId="react" /> },
     { path:"FormElement/Dropdown", component:<Page content={<DropdownPage />} activeId="react" /> },
     { path:"FormElement/Email", component:<Page content={<EmailPage />} activeId="react" /> },
+    { path:"FormElement/FileUpload", component:<Page content={<FileUploadPage />} activeId="react" /> },
     { path:"FormElement/Password", component:<Page content={<PasswordPage />} activeId="react" /> },
     { path:"FormElement/TextBox", component:<Page content={<TextBoxPage />} activeId="react" /> },
     { path:"FormElement/TextArea", component:<Page content={<TextAreaPage />} activeId="react" /> },
