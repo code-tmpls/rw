@@ -1,5 +1,7 @@
 import React from "react";
-import { Select, NavBarTabs } from 'e-ui-react';
+import { Select, NavBarTabs, UrlParams } from 'e-ui-react';
+
+const url = UrlParams().basePrefix;
 
 const ChooseTheme = () =>{
  return (<Select 
@@ -23,7 +25,7 @@ const ChooseTheme = () =>{
 export const NavMenuHeader = ( activeId ) =>[
  { xs:12, md:8, component:<NavBarTabs menulinks={[{ id:'get-started', url:'/', label:'Get Started' },
                                                 { id:'javascript', url:'#', label:'Javascript' },
-                                                { id:'react', url:'Component/AccordianList', label:'React' },
+                                                { id:'react', url: url+'/Component/AccordianList', label:'React' },
                                                 { id:'reactNative', url:'#', label:'React Native' },
                                                 { id:'php', url:'#', label:'PHP' },
                                                 { id:'knowledge', url:'#', label:'Knowledge' },
