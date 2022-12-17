@@ -1,6 +1,6 @@
 import React from 'react';
 import { SideWrapperNavbar, AccordianListItems, Colors, UrlParams } from 'e-ui-react';
-import { SideWrapperData } from '@DocConfig/SideWrapperData.js';
+import { SideWrapperData } from '@DocConfig/react/SideWrapperData.js';
 import { NavMenuHeader }  from '@DocConfig/Header.js';
 
 const Page = ({ content, activeId }) =>{
@@ -11,7 +11,7 @@ const Page = ({ content, activeId }) =>{
  return (<>
  <SideWrapperNavbar 
             barTheme="outline-primary" 
-            title="Documentation" 
+            // title="Documentation" 
             sideWrapperContent={<>
             <AccordianListItems 
                 highlightColor={Colors.primary} 

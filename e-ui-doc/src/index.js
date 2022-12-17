@@ -1,7 +1,7 @@
 import React from "react";
 import './index.css';
 import RootProvider, { AppRouting } from 'e-ui-react';
-import  { Routes } from '@DocConfig/Routing.js';
+import  { Routes } from '@DocConfig/GlobalRouting.js';
 
 import("react-dom/client").then((ReactDOM)=>{
  ReactDOM.createRoot(document.getElementById("root"))
