@@ -1,6 +1,6 @@
 import React from 'react';
 import { SideWrapperNavbar, AccordianListItems, Colors, UrlParams } from 'e-ui-react';
-import { SideWrapperData } from '@DocConfig/react/SideWrapperData.js';
+import { SideWrapperData } from '@DocConfig/backend/SideWrapperData.js';
 import { NavMenuHeader }  from '@DocConfig/Header.js';
 
 const Page = ({ content, activeId }) =>{

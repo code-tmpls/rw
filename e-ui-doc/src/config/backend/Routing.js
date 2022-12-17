@@ -1,8 +1,7 @@
 import React from 'react';
-import { AccordianPage } from '@DocReactComponents/Accordian/index.js';
 
-const ReactPage  = React.lazy( ()=>import('@DocCore/backend/Page.js') );
+const BackendPage  = React.lazy( ()=>import('@DocCore/backend/Page.js') );
 
 export const BackendRoutes = [
- { path:"Component/BackendServices", component:<ReactPage content={<div>Test</div>} activeId="backend" /> },
+ { path:"CloudStorage/SelfFileUpload", component:<BackendPage content={<div>Test</div>} activeId="backend" /> },
 ];
